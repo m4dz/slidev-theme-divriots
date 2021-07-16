@@ -1,0 +1,11 @@
+// inherit from base layouts, remove it to get full customizations
+@import '@slidev/client/styles/layouts-base.css';
+
+@import '../../base/src/base';
+@import '../../code/src/code';
+@import '../../forms/src/forms';
+@import '../../links/src/links';
+@import '../../misc/src/misc';
+@import '../../print/src/print';
+@import '../../range/src/range';
+@import '../../typography/src/typography';

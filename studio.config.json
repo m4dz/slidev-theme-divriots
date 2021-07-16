@@ -1,0 +1,54 @@
+{
+  "packages": {
+    "dir": "",
+    "menu": [
+      [
+        "layouts",
+        [
+          "default",
+          "cover",
+          "end",
+          "leaf",
+          "media",
+          "punch",
+          "quote",
+          "two-cols-footer"
+        ]
+      ],
+      [
+        "components",
+        [
+          "figure",
+          "footer",
+          "giphy"
+        ]
+      ],
+      [
+        "parts",
+        [
+          "base",
+          "code",
+          "forms",
+          "links",
+          "misc",
+          "print",
+          "range",
+          "typography"
+        ]
+      ],
+      [
+        "tokens",
+        [
+          "dark",
+          "light"
+        ]
+      ],
+      [
+        "infrastructure",
+        [
+          "main"
+        ]
+      ]
+    ]
+  }
+}

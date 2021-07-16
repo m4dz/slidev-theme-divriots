@@ -1,0 +1,33 @@
+{
+	"name": "@backlight-dev/divriots.slidev",
+	"version": "0.0.0",
+	"description": "",
+	"license": "ISC",
+	"type": "module",
+	"homepage": "{{ homepage }}",
+	"scripts": {
+		"serve": "dsd-cli serve eFLUQfY0zrR6dOuX5llT --open"
+	},
+	"dependencies": {
+		"@slidev/types": "^0.19.9",
+		"@vueuse/motion": "^1.5.6",
+		"codemirror-theme-vars": "^0.1.1",
+		"prism-theme-vars": "^0.2.2",
+		"theme-vitesse": "^0.1.12"
+	},
+	"devDependencies": {
+		"dsd-cli": "latest"
+    "@slidev/cli": "^0.19.8"
+	},
+	"slidev": {
+		"colorSchema": "dark",
+		"highlighter": "shiki",
+		"defaults": {
+			"fonts": {
+				"sans": "Space Grotesk",
+				"mono": "Fira Code"
+			},
+			"hightlighter": "shiki"
+		}
+	}
+}
