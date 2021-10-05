@@ -1,0 +1,42 @@
+:root {
+  --divriots-bkl-primary: #f8c307;
+
+  --divriots-theme-primary: #35dab0;
+  --divriots-theme-secondary: var(--divriots-bkl-primary);
+
+  // can be overrided by uses `themeConfig` option
+  --slidev-theme-primary: var(--divriots-theme-primary);
+  --slidev-theme-secondary: var(--divriots-theme-secondary);
+}
+
+.slidev-layout {
+  a,
+  strong,
+  .slideno .icon {
+    color: var(--slidev-theme-primary);
+  }
+
+  mark {
+    @apply bg-transparent;
+    @apply text-shadow text-current;
+  }
+  mark::before {
+    @apply opacity-70 shadow-inner shadow-true-gray-50;
+    background-color: var(--slidev-theme-secondary);
+  }
+}
+
+.slidev-layout.punch {
+  .icon {
+    @apply text-true-gray-400;
+  }
+}
+
+.dark {
+  .slidev-layout {
+    @apply bg-dark-800;
+  }
+}
+
+.light {
+}

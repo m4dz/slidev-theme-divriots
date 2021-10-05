@@ -1,0 +1,11 @@
+.slidev-layout.leaf {
+    h1 {
+        @apply mb-0 text-6xl;
+    }
+
+    .icon,
+    hr {
+        color: var(--slidev-theme-primary);
+        border-color: currentColor;
+    }
+}

@@ -1,0 +1,91 @@
+@font-face {
+  font-family: "Good Brush";
+  src: local("Good Brush"), url("../fonts/Good_Brush.woff") format("woff");
+  font-display: block;
+}
+
+.slidev-layout {
+  h1,
+  h2,
+  h3 {
+    @apply font-heading;
+  }
+
+  h2 {
+    @apply border-bottom-1px border-dashed pb-0.2rem mb-0.5rem;
+    border-color: var(--slidev-theme-primary);
+  }
+
+  em {
+    @apply underline underline-dashed underline-offset-0.5rem;
+    text-decoration-color: var(--slidev-theme-primary);
+  }
+
+  ul {
+    @apply text-xl;
+  }
+
+  blockquote {
+    @apply bg-true-gray-800 bg-opacity-20;
+    @apply border-none px-6 py-4;
+    @apply ring ring-w-6 ring-true-gray-300 ring-opacity-20;
+
+    p {
+      @apply text-5xl leading-16;
+    }
+  }
+
+  & > footer {
+    @apply text-xs;
+    @apply font-heading;
+
+    ul,
+    li {
+        @apply m-0 p-0;
+        @apply text-xs leading-snug;
+    }
+
+    a {
+        @apply no-underline border-none;
+    }
+  }
+}
+
+.slidev-layout.punch {
+  @apply text-5xl;
+  @apply font-heading;
+
+  p {
+    @apply leading-snug;
+  }
+
+}
+
+.slidev-layout.sm,
+.slidev-layout.text-sm {
+
+  &.punch,
+  &.quote p,
+  blockquote p {
+    @apply text-4xl leading-relaxed;
+  }
+
+  ul {
+    @apply text-sm;
+  }
+
+}
+
+.slidev-layout.text-lg {
+
+  &.punch,
+  &.quote p,
+  blockquote p {
+    @apply text-7xl leading-relaxed;
+  }
+
+  ul {
+    @apply text-lg;
+  }
+
+}

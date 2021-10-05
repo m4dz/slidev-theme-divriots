@@ -1,0 +1,30 @@
+.slidev-layout.cover {
+  @apply h-full grid;
+
+  @apply bg-no-repeat;
+  background-image: url(../img/divriots_-_Icon_Black.svg);
+  background-size: 50%;
+  background-position: 20px center;
+
+  h1 {
+    @apply text-9xl;
+    @apply text-cool-gray-100;
+  }
+
+  h1 + p {
+    @apply pb-5 border-b-2 border-dashed border-opacity-70;
+
+    color: var(--slidev-theme-primary);
+    @apply border-cool-gray-500;
+    @apply text-3xl;
+  }
+
+  a {
+    @apply text-cool-gray-300;
+    @apply border-none;
+  }
+
+  footer .icon {
+    color: var(--slidev-theme-primary);
+  }
+}

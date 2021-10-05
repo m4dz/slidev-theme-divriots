@@ -1,0 +1,25 @@
+.slidev-layout.media {
+  figure {
+    @apply text-sm text-blue-gray-200;
+  }
+
+  video,
+  img {
+    @apply shadow-md border-2 rounded-lg;
+  }
+
+  figcaption {
+    @apply italic;
+
+    .icon {
+        color: var(--slidev-theme-primary);
+    }
+  }
+}
+
+.dark .slidev-layout.media {
+  video,
+  img {
+    @apply shadow-light-50 border-gray-700;
+  }
+}

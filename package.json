@@ -1,0 +1,39 @@
+{
+  "name": "slidev-theme-divRIOTS",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=14.0.0",
+    "slidev": ">=0.19.3"
+  },
+  "keywords": [
+    "slidev-theme",
+    "slidev"
+  ],
+  "slidev": {
+    "colorSchema": "dark",
+    "highlighter": "shiki",
+    "defaults": {
+      "fonts": {
+        "sans": "Space Grotesk",
+        "mono": "Fira Code"
+      },
+      "hightlighter": "shiki"
+    }
+  },
+  "scripts": {
+    "dev": "slidev example.md",
+    "build": "slidev build example.md",
+    "export": "slidev export example.md",
+    "screenshot": "slidev export example.md --format png"
+  },
+  "dependencies": {
+    "@slidev/types": "^0.22.7",
+    "@vueuse/motion": "^1.6.0",
+    "codemirror-theme-vars": "^0.1.1",
+    "prism-theme-vars": "^0.2.2",
+    "theme-vitesse": "^0.1.12"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^0.22.7"
+  }
+}
