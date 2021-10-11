@@ -45,6 +45,8 @@
     "@iconify-json/mdi": "^1.0.4",
     "@iconify-json/mdi-light": "^1.0.1",
     "@slidev/cli": "^0.27.5",
+    "eslint": "^8.0.0",
+    "eslint-plugin-vue": "^7.19.1",
     "vite-svg-loader": "^2.2.0"
   }
 }
