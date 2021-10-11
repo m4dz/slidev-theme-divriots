@@ -1,0 +1,26 @@
+:root {
+    --gradient-drc-base: linear-gradient(to bottom, var(--color-base) 20%, var(--color-transparent) 150%);
+    --gradient-drc-stops: var(--color-gradient-from), var(--color-gradient-to);
+    --gradient-drc-color: linear-gradient(to right, var(--gradient-drc-stops));
+    --gradient-drc:var(--gradient-drc-base), var(--gradient-drc-color);
+
+    --gradient-spark: linear-gradient(to left, var(--color-transparent), rgba(255, 255, 255, 0.95) 20%, var(--color-transparent));
+    --gradient-separator: linear-gradient(to left, var(--color-transparent), var(--color-primary) 10%, var(--color-primary) 35%, var(--color-transparent));
+
+    --color-transparent: rgba(255, 255, 255, 0);
+    --color-gradient-from: theme('colors.gradient.from');
+    --color-gradient-to: theme('colors.gradient.to');
+    --color-dark: theme('colors.dark.DEFAULT');
+    --color-light: theme('colors.light.DEFAULT');
+    --color-primary: theme('colors.primary');
+}
+
+html.dark {
+    --color-base: var(--color-dark);
+    --color-base-invert: var(--color-light);
+}
+
+html.light {
+    --color-base: var(--color-light);
+    --color-base-invert: var(--color-dark);
+}

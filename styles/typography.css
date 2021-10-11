@@ -5,6 +5,12 @@
 }
 
 .slidev-layout {
+  h1 {
+    @apply font-heading;
+  }
+}
+
+/* .slidev-layout {
   h1,
   h2,
   h3 {
@@ -88,4 +94,4 @@
     @apply text-lg;
   }
 
-}
+} */

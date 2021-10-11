@@ -10,14 +10,16 @@
     "slidev"
   ],
   "slidev": {
-    "colorSchema": "dark",
+    "colorSchema": "both",
     "highlighter": "shiki",
     "defaults": {
+      "routerMode": "hash",
+      "colorSchema": "dark",
+      "highlighter": "shiki",
       "fonts": {
         "sans": "Space Grotesk",
         "mono": "Fira Code"
-      },
-      "hightlighter": "shiki"
+      }
     }
   },
   "scripts": {
@@ -27,15 +29,22 @@
     "screenshot": "slidev export example.md --format png"
   },
   "dependencies": {
-    "@slidev/types": "^0.27.4",
+    "@slidev/types": "^0.27.5",
     "@vueuse/motion": "^2.0.0-beta.4",
     "codemirror-theme-vars": "^0.1.1",
-    "prism-theme-vars": "^0.2.2",
-    "theme-vitesse": "^0.1.12"
+    "date-fns": "^2.25.0",
+    "markdown-it-mark": "^3.0.1",
+    "markdown-it-smartarrows": "^1.0.1",
+    "qrcode.vue": "^3.3.2"
   },
   "devDependencies": {
     "@iconify-json/bi": "^1.0.1",
     "@iconify-json/bx": "^1.0.1",
-    "@slidev/cli": "^0.27.4"
+    "@iconify-json/codicon": "^1.0.4",
+    "@iconify-json/emojione": "^1.0.2",
+    "@iconify-json/mdi": "^1.0.4",
+    "@iconify-json/mdi-light": "^1.0.1",
+    "@slidev/cli": "^0.27.5",
+    "vite-svg-loader": "^2.2.0"
   }
 }

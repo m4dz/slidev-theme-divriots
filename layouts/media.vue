@@ -1,12 +1,161 @@
+<script setup lang="ts">
+import { computed } from "vue";
+import Gif from "../components/gif.vue";
+import Default from "./default.vue";
+
+const props =
+  defineProps<{
+    url: string;
+    variant?: string;
+    overlay?: boolean;
+  }>();
+
+const isGif = computed(() => {
+  const r = /^<Gif/;
+  return r.test(props.url);
+});
+
+const gifAttrs = computed(() => {
+  const r_id = /id="([a-zA-Z0-9]+)"/;
+  const id = props.url.match(r_id)?.[1];
+  return {
+    id,
+  };
+});
+
+const isFull = computed(() => {
+  return props.variant === "full";
+});
+
+const isSplit = computed(() => {
+  return props.variant && props.variant != "full";
+});
+
+const classes = computed(() => {
+  let classes = ["in-media"];
+
+  if (!props.variant) classes.push("embed");
+  if (props.overlay) classes.push("blur");
+
+  return classes.join(" ");
+});
+
+const style = computed(() => {
+  return `background-image:url(${props.url})`;
+});
+</script>
+
 <template>
-  <div class="slidev-layout media grid w-full h-full center">
-    <div class="m-auto w-7/12 h-full overflow-hidden flex flex-col items-center justify-center">
-      <slot />
-    </div>
-    <Footer>
-      <template v-slot:linkroll>
-        <slot name="linkroll"></slot>
-      </template>
-    </Footer>
-  </div>
+  <Default class="media" :class="variant">
+    <!-- TODO: Make a custom component for `in-media` variants (gif, img) -->
+    <template v-if="isFull">
+      <div class="in-media" :style="style"></div>
+    </template>
+
+    <slot />
+
+    <template v-if="!variant">
+      <div :class="classes">
+        <img :src="url" alt="" />
+      </div>
+    </template>
+
+    <template v-if="isSplit" v-slot:col2>
+      <div>
+        <component
+          v-if="isGif"
+          :is="Gif"
+          :id="gifAttrs.id"
+          :class="classes"
+        ></component>
+        <div v-else :class="classes" :style="style"></div>
+
+        <template v-if="overlay">
+          <div>
+            <component
+              v-if="isGif"
+              :is="Gif"
+              :id="gifAttrs.id"
+              class="overlay"
+            ></component>
+            <img v-else :src="url" alt="" class="overlay" />
+          </div>
+        </template>
+      </div>
+    </template>
+  </Default>
 </template>
+
+<style scoped>
+.in-media.embed {
+  @apply max-w-8/10 m-auto p-1 overflow-hidden;
+  @apply rounded border-2 dark:border-dark-700;
+  @apply bg-dark;
+  @apply shadow-md dark:shadow-dark-400;
+
+  img {
+    @apply rounded;
+    /* max-width: calc(100% - 0.5rem); */
+    /* max-height: calc(100% - 0.5rem); */
+    /* height: unset; */
+  }
+}
+
+.blur {
+  @apply filter blur opacity-80;
+  @apply -z-1;
+}
+
+.overlay {
+  @apply relative;
+  @apply shadow-lg;
+  @apply rounded;
+}
+.left .overlay {
+  @apply transform -translate-x-4;
+}
+.right .overlay {
+  @apply transform translate-x-4;
+}
+
+.media.full {
+  .in-media {
+    @apply absolute inset-2;
+    @apply rounded bg-cover;
+    @apply ring-0 ring-light-800;
+  }
+}
+
+.media.left,
+.media.right {
+  .in-media {
+    @apply absolute inset-y-0 m-0;
+    @apply bg-cover;
+  }
+}
+
+.media.left .in-media {
+  @apply left-1/2 right-0 bg-left;
+  @apply ml-4;
+}
+
+.media.left.ratio-2\/3 .in-media {
+  @apply left-1/3;
+}
+
+.media.right .in-media {
+  @apply left-0 right-1/2 bg-right;
+  @apply mr-4;
+}
+
+.media.right.ratio-2\/3 .in-media {
+  @apply right-2/3;
+}
+</style>
+
+<style>
+.media.full .links {
+  /* TODO: Tokenize links bg opacity */
+  @apply bg-dark bg-opacity-65;
+}
+</style>
