@@ -10,7 +10,7 @@ const props = withDefaults(
     links?: Array<string>;
     logo?: string;
     ratio?: string;
-    noFooter: boolean
+    noFooter?: boolean
   }>(),
   {
     ratio: "1/1",
@@ -35,8 +35,9 @@ const hasLogo = computed(() => {
   return !!currentRoute.value?.meta?.logo;
 });
 
+// TODO: move to props
 const showAvatar = computed(() => {
-  return currentRoute.value?.meta?.layout != 'thanks';
+  return !['thanks', 'author'].includes(currentRoute.value?.meta?.layout);
 })
 </script>
 
@@ -85,6 +86,10 @@ const showAvatar = computed(() => {
 
 .cols {
   @apply grid gap-8;
+}
+
+.col {
+  @apply grid;
 }
 
 .in-logo {

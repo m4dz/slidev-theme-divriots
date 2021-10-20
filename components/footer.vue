@@ -9,7 +9,7 @@ const props =
     twitter?: string;
     permalink?: string;
     links?: Array<string>
-    noAvatar: boolean;
+    noAvatar?: boolean;
   }>();
 
 const linkrolls = computed(() => {

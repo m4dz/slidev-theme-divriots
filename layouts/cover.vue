@@ -4,12 +4,23 @@ import { configs } from "@slidev/client/env";
 import { format, closestIndexTo, isPast } from "date-fns";
 import Logo from '../img/divriots_square_typo_black.svg'
 
-const nextDateIndex = computed(() => {
-  let now = new Date();
-  let dates = configs.dates.map((date) => new Date(date.datetime));
-  let index = closestIndexTo(now, dates);
+const now = new Date();
 
-  return isPast(dates[index]) ? false : index;
+const dates = computed(() => {
+  return configs.dates?.map((date) => {
+    const _d = new Date(date.datetime);
+    return {
+      ...date,
+      _d,
+      i18n: format(_d, "PP"),
+      logo: new URL(`../img/${date.logo}?url`, import.meta.url).href
+    }
+  })
+})
+
+const nextDateIndex = computed(() => {
+  let index = closestIndexTo(now, dates.value.map((date) => date._d));
+  return isPast(dates.value[index]._d) ? false : index;
 });
 </script>
 
@@ -17,21 +28,23 @@ const nextDateIndex = computed(() => {
   <div class="slidev-layout cover">
     <header>
       <div class="logo"><Logo class="logo-svg" /></div>
-      <ul v-if="$slidev.configs.dates">
+      <ul v-if="dates">
         <li
           class="datetime"
-          v-for="(date, index) in $slidev.configs.dates"
+          v-for="(date, index) in dates"
           :key="index"
           v-show="index === nextDateIndex"
         >
           <div>
-            <span>{{ date.name }}</span
-            ><br />
-            <time :datetime="date.datetime">{{
-              format(new Date(date.datetime), "PP")
-            }}</time>
+            <span>{{ date.name }}</span>
+            <br>
+            <time :datetime="date.datetime">{{ date.i18n }}</time>
           </div>
-          <img v-if="date.logo" :src="`../img/${date.logo}`" alt="" />
+          <img
+            v-if="date.logo"
+            :src="date.logo"
+            alt=""
+          >
         </li>
       </ul>
     </header>

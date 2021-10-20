@@ -10,7 +10,7 @@ import Backlight from '../img/Backlight_-_Icon_YB.svg'
     <template v-slot:default>
       <div class="thanks">
         <h1>Thanks!</h1>
-        <p class="link">
+        <p class="link" v-if="$slidev.configs.permalink">
           <qrcode-vue
             class="qrcode"
             :value="permalink"

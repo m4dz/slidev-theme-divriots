@@ -44,5 +44,6 @@ const show = computed(() => {
 <style>
 .slidev-layout.section h1 {
   @apply m-0;
+  @apply text-4xl;
 }
 </style>

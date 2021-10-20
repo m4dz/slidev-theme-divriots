@@ -1,7 +1,17 @@
+<script setup lang="ts">
+import { computed } from "vue";
+import { configs } from "@slidev/client/env";
+
+const src = computed(() => {
+  return new URL(`../img/${configs.author}.png`, import.meta.url).href;
+})
+
+</script>
+
 <template>
   <div class="avatar" v-if="$slidev.configs.author">
     <img
-      :src="`../img/${$slidev.configs.author}.png`"
+      :src="src"
       width="512"
       height="512"
       alt=""

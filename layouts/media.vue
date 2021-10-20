@@ -41,7 +41,9 @@ const classes = computed(() => {
 });
 
 const style = computed(() => {
-  return `background-image:url(${props.url})`;
+  const url = new URL(props.url, import.meta.url).href
+  console.log(url)
+  return `background-image:url(${url})`;
 });
 </script>
 
@@ -61,7 +63,7 @@ const style = computed(() => {
     </template>
 
     <template v-if="isSplit" v-slot:col2>
-      <div>
+      <div class="my-auto">
         <component
           v-if="isGif"
           :is="Gif"
@@ -121,7 +123,7 @@ const style = computed(() => {
 .media.full {
   .in-media {
     @apply absolute inset-2;
-    @apply rounded bg-cover;
+    @apply rounded bg-cover bg-center;
     @apply ring-0 ring-light-800;
   }
 }
@@ -135,7 +137,7 @@ const style = computed(() => {
 }
 
 .media.left .in-media {
-  @apply left-1/2 right-0 bg-left;
+  @apply left-1/2 right-0 bg-right;
   @apply ml-4;
 }
 
@@ -144,7 +146,7 @@ const style = computed(() => {
 }
 
 .media.right .in-media {
-  @apply left-0 right-1/2 bg-right;
+  @apply left-0 right-1/2 bg-left;
   @apply mr-4;
 }
 

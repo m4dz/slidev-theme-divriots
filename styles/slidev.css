@@ -1,9 +1,19 @@
+h1 {
+    @apply text-4xl;
+}
+
 #slide-content {
     @apply dark:(bg-dark text-light) light:(bg-light text-dark);
 }
+
 .slidev-layout {
-    p {
-        line-height: unset;
+    @apply text-lg;
+
+    h1,
+    p,
+    blockquote {
+        font-size: revert;
+        line-height: revert;
     }
 
     code {
@@ -19,6 +29,11 @@
 
     ul {
         @apply list-circle;
+    }
+
+    blockquote {
+        @apply px-8 py-2;
+        @apply border-primary border-l-4 rounded-none;
     }
 
     strong {
