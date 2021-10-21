@@ -192,7 +192,7 @@ layout: section
 background: https://source.unsplash.com/YLSwjSy7stw/1920x1080
 ---
 
-# Developing a Design System library
+# A Design System library
 
 ---
 layout: media

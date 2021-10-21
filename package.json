@@ -23,10 +23,10 @@
     }
   },
   "scripts": {
-    "dev": "slidev bbl-cleverage.slides.md",
-    "build": "slidev build bbl-cleverage.slides.md",
-    "export": "slidev export bbl-cleverage.slides.md",
-    "screenshot": "slidev export bbl-cleverage.slides.md --format png"
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md",
+    "export": "slidev export slides.md",
+    "screenshot": "slidev export slides.md --format png"
   },
   "dependencies": {
     "@slidev/types": "^0.27.5",
