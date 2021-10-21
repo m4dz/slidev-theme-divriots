@@ -76,6 +76,7 @@ const urlCover = computed(() => {
 }
 
 .logo {
+  @apply grid items-center;
   @apply w-8 h-8 p-1;
   @apply rounded;
   @apply dark:bg-light;

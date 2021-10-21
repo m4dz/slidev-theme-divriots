@@ -68,7 +68,7 @@ const style = computed(() => {
     </template>
 
     <template v-if="isSplit" v-slot:col2>
-      <div class="my-auto">
+      <div>
         <component
           v-if="isGif"
           :is="Gif"
@@ -78,15 +78,13 @@ const style = computed(() => {
         <div v-else :class="classes" :style="style"></div>
 
         <template v-if="overlay">
-          <div>
-            <component
-              v-if="isGif"
-              :is="Gif"
-              :id="gifAttrs.id"
-              class="overlay"
-            ></component>
-            <img v-else :src="mURL" alt="" class="overlay" />
-          </div>
+          <component
+            v-if="isGif"
+            :is="Gif"
+            :id="gifAttrs.id"
+            class="overlay"
+          ></component>
+          <img v-else :src="mURL" alt="" class="overlay" />
         </template>
       </div>
     </template>
@@ -121,15 +119,29 @@ const style = computed(() => {
 }
 
 .overlay {
-  @apply relative;
+  @apply relative w-full;
   @apply shadow-lg;
   @apply rounded;
 }
-.left .overlay {
-  @apply transform -translate-x-4;
+
+.left {
+  @apply text-left;
+
+  .overlay {
+    @apply transform -translate-x-4;
+  }
 }
-.right .overlay {
-  @apply transform translate-x-4;
+
+.right {
+  @apply text-right;
+
+.overlay {
+    @apply transform translate-x-4;
+  }
+}
+
+.col-2 {
+  @apply self-center;
 }
 
 .media.full {

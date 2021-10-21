@@ -35,6 +35,10 @@ const show = computed(() => {
 </template>
 
 <style scoped>
+.section {
+  @apply bg-gradient-to-l to-opacity-90 dark:to-dark-800;
+  @apply text-shadow;
+}
 .background {
   @apply absolute bottom-0 left-0 w-full h-full -z-1;
   @apply bg-cover;

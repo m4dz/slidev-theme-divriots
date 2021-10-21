@@ -117,6 +117,10 @@ const showAvatar = computed(() => {
   @apply order-1;
 }
 
+.media .col-2 {
+  @apply self-center;
+}
+
 /* TODO: Make all ratios dynamic */
 .left.ratio-2\/3 .col-2 {
   @apply col-span-2;
