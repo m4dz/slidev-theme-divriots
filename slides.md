@@ -6,9 +6,9 @@ theme: ./
 permalink: https://domain.tld/t/permalink
 # Display avatar in footer
 # Must have a PNG in `img` named as the value
-author: m4dz
+author: MdiFaceMan
 # Display Twitter link on cover
-twitter: m4d_z
+twitter: foo_bar
 
 info: >
   Here is the slides content description for SEO
@@ -19,9 +19,9 @@ info: >
 # - datetime: datetime
 # Only one date displayed, the closest upcoming one
 dates:
-  - name: ConfName
-    logo: confname.svg
-    datetime: 2021-10-10T15:00:00+02:00
+  - name: Event Name
+    logo: event.svg
+    datetime: 2030-01-10T15:00:00+02:00
 
 # `light` or `dark`
 colorSchema: dark
@@ -49,7 +49,7 @@ It can has a regular `<p>` content.
 `links` prop enable the linkrolls in the footer 👇
 
 ---
-logo: ../img/confname.svg
+logo: ./img/logo.svg
 ---
 
 # The default layout can also contains
@@ -89,10 +89,10 @@ function updateUser(id: number, update: Partial<User>) {
 
 ---
 layout: section
-background: ../img/unsplash/133200.jpg
+background: ./img/133200.jpg
 ---
 
-# To Separate Parts, use a section layout
+# Use a section to split content
 
 ---
 layout: media
@@ -172,6 +172,8 @@ cite: Tim Berners-Lee
 url: https://amazingworkz.com/wp-content/uploads/2019/12/00_13-930x620.jpg
 ---
 
+<!-- TODO -->
+
 > The goal of the Web is to serve humanity. We build it now so that those who come to it later will be able to create things that we cannot ourselves imagine.
 
 You can add `quote` blocks everywhere, but the `quote` layout with a proper `cite` prop enables a view with a portrait.
@@ -182,33 +184,40 @@ You can add `quote` blocks everywhere, but the `quote` layout with a proper `cit
 
 All layouts come with a build in support for up to 3 cols.
 
-::col-2::
+::col2::
 
-Simply prefix content with the marker `::col-2::` to start the second one.
+Simply prefix content with the marker `::col2::` to start the second one.
 
 ---
 
-# For a 3 cols view
-
 Do the same
 
-::col-2::
+::col2::
 
 Just start a new col
 
-::col-3::
+::col3::
 
-With the `::col-3::` prefix.
+With the `::col3::` prefix.
+You can also use a `::header::` section to put a top-section.
+
+::header::
+
+# For a 3 cols view
 
 ---
 class: center
 ---
 
-# The `center` layout prop class center the contentn horizontally
+<!-- TODO -->
+
+# The `center` layout prop class center the content horizontally
 
 ---
-class: text-8xl
+class: text-6xl
 ---
+
+<!-- TODO: Remove and create a `takeaway` class/component? -->
 
 Important content can be emphasized using the regular tailwind `text-` classes.
 
@@ -222,10 +231,14 @@ You can also rely on built-in [Slidev](https://sli.dev) components, like tweets:
 
 Or YouTube embeded videos:
 
-<!-- <Youtube id="luoMHjh-XcQ" /> -->
+<Youtube id="luoMHjh-XcQ" />
 
 ---
 layout: qa
 ---
 
 <!-- The `qa` layout is a variant of the `section` one to introduce Q/A sessions. -->
+
+---
+layout: thanks
+---

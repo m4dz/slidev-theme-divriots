@@ -5,7 +5,7 @@ import { format, closestIndexTo, isPast } from "date-fns";
 
 const imgs = import.meta.globEager('../img/**/*');
 
-import logo from '../img/divriots_square_typo_black.svg?raw'
+import logo from '../img/logo.svg?raw'
 
 const props =
   defineProps<{
