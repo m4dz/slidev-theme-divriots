@@ -1,5 +1,5 @@
 h1 {
-    @apply text-4xl;
+    @apply text-4xl font-normal;
 }
 
 #slide-content {
@@ -14,6 +14,10 @@ h1 {
     blockquote {
         font-size: revert;
         line-height: revert;
+    }
+
+    h1 strong {
+        @apply font-normal;
     }
 
     code {
