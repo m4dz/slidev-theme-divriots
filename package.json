@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build slides.md",
+    "build": "slidev build --base /t/mdx-docs/ slides.md",
     "export": "slidev export slides.md",
     "screenshot": "slidev export slides.md --format png"
   },

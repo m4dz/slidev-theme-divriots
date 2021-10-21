@@ -245,7 +245,7 @@ export default function MDXContent({ components, ...props }) {
 
 ---
 layout: media
-url: ../img/backlight.png
+url: ./img/backlight.png
 ---
 
 # Organizing your project
@@ -253,7 +253,7 @@ url: ../img/backlight.png
 ---
 layout: media
 variant: full
-url: ../img/backlight_folders.png
+url: ./img/backlight_folders.png
 ---
 
 ---
@@ -389,7 +389,7 @@ overlay: true
 # Writing Documentation outside of writing code is ==non-sense==
 
 ---
-logo: ../img/Backlight_-_Icon_YW.svg
+logo: ./img/Backlight_-_Icon_YW.svg
 class: text-5xl leading-18
 ---
 
