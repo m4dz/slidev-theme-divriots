@@ -18,13 +18,14 @@ const props = withDefaults(
 );
 
 const cols = computed(() => {
-  return props.ratio != "1/1"
+  const cols = props.ratio != "1/1"
     ? `grid-cols-${props.ratio.split("/").pop().trim()}`
     : !!slots.col3
       ? "grid-cols-3"
       : !!slots.col2
         ? "grid-cols-2"
         : "grid-cols-1";
+  return `${cols} items-start`
 });
 
 const classes = computed(() => {
@@ -51,15 +52,15 @@ const showAvatar = computed(() => {
       <div class="wrapper">
         <slot name="header" />
         <div class="cols" :class="cols">
-          <div class="col col-1">
+          <div class="col col-1" :class="class">
             <slot />
           </div>
 
-          <div v-if="slots.col2" class="col col-2">
+          <div v-if="slots.col2" class="col col-2" :class="class">
             <slot name="col2" />
           </div>
 
-          <div v-if="slots.col3" class="col col-3">
+          <div v-if="slots.col3" class="col col-3" :class="class">
             <slot name="col3" />
           </div>
         </div>
@@ -72,12 +73,12 @@ const showAvatar = computed(() => {
 
 <style scoped>
 .slidev-layout {
-  @apply flex flex-col;
+  @apply grid;
   @apply bg-gradient-to-br from-transparent dark:to-dark-800 light:to-light-800;
 }
 
 .content {
-  @apply flex-auto grid;
+  @apply my-auto grid;
 }
 
 .wrapper {
@@ -90,6 +91,10 @@ const showAvatar = computed(() => {
 
 .col {
   @apply grid;
+
+  &.self-end :last-child {
+    @apply mb-0;
+  }
 }
 
 .in-logo {
