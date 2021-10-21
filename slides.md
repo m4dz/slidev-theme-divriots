@@ -215,7 +215,7 @@ links:
 ---
 layout: media
 variant: left
-url: ../img/dtcg.png
+url: ./img/dtcg.png
 links:
   - https://www.w3.org/community/design-tokens/
 ---
