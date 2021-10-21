@@ -23,10 +23,10 @@
     }
   },
   "scripts": {
-    "dev": "slidev example.md",
-    "build": "slidev build example.md",
-    "export": "slidev export example.md",
-    "screenshot": "slidev export example.md --format png"
+    "dev": "slidev slides.md",
+    "build": "slidev build slides.md",
+    "export": "slidev export slides.md",
+    "screenshot": "slidev export slides.md --format png"
   },
   "dependencies": {
     "@slidev/types": "^0.27.5",
@@ -42,11 +42,11 @@
     "@iconify-json/bx": "^1.0.1",
     "@iconify-json/codicon": "^1.0.4",
     "@iconify-json/emojione": "^1.0.2",
+    "@iconify-json/ic": "^1.0.2",
     "@iconify-json/mdi": "^1.0.4",
     "@iconify-json/mdi-light": "^1.0.1",
     "@slidev/cli": "^0.27.5",
     "eslint": "^8.0.0",
-    "eslint-plugin-vue": "^7.19.1",
-    "vite-svg-loader": "^2.2.0"
+    "eslint-plugin-vue": "^7.19.1"
   }
 }

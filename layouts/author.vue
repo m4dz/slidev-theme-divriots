@@ -4,8 +4,9 @@ import { currentRoute } from "@slidev/client/logic/nav";
 import { configs } from "@slidev/client/env";
 
 import Media from './media.vue'
-import Divriots from '../img/divriots_square_typo_black.svg'
-import Backlight from '../img/Backlight_-_Icon_YB.svg'
+
+import drc from '../img/divriots_square_typo_black.svg?raw'
+import bkl from '../img/Backlight_-_Icon_YB.svg?raw'
 
 const showAvatar = computed(() => {
   return currentRoute.value?.meta?.layout === 'author';
@@ -32,11 +33,11 @@ const urlCover = computed(() => {
       </div>
       <div class="company">
         <div>
-          <Divriots class="logo divriots" />
+          <span class="logo divriots" v-html="drc"></span>
           <span>‹div›RIOTS · http://divriots.com</span>
         </div>
         <div>
-          <Backlight class="logo backlight" />
+          <span class="logo backlight" v-html="bkl"></span>
           <span>Backlight.dev · http://backlight.dev</span>
         </div>
       </div>

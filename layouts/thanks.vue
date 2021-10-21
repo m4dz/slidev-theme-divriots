@@ -1,12 +1,13 @@
 <script setup lang="ts">
 import Default from './default.vue'
-import QrcodeVue from "qrcode.vue";
-import Divriots from '../img/divriots_square_typo_black.svg'
-import Backlight from '../img/Backlight_-_Icon_YB.svg'
+import QrcodeVue from 'qrcode.vue'
+
+import drc from '../img/divriots_square_typo_black.svg?raw'
+import bkl from '../img/Backlight_-_Icon_YB.svg?raw'
 </script>
 
 <template>
-  <Default>
+  <Default class="self-center">
     <template v-slot:default>
       <div class="thanks">
         <h1>Thanks!</h1>
@@ -31,10 +32,10 @@ import Backlight from '../img/Backlight_-_Icon_YB.svg'
         <p>Principal Developer Advocate</p>
         <div class="company">
           <div>
-            <Divriots class="logo divriots" /> <span>‹div›RIOTS · http://divriots.com</span>
+            <span class="logo divriots" v-html="drc"></span> <span>‹div›RIOTS · http://divriots.com</span>
           </div>
           <div>
-            <Backlight class="logo backlight" /> <span>Backlight.dev · http://backlight.dev</span>
+            <span class="logo backlight" v-html="bkl"></span> <span>Backlight.dev · http://backlight.dev</span>
           </div>
         </div>
       </div>
@@ -78,6 +79,7 @@ import Backlight from '../img/Backlight_-_Icon_YB.svg'
 }
 
 .logo {
+  @apply grid items-center;
   @apply w-8 h-8 p-1;
   @apply rounded;
   @apply dark:bg-light;

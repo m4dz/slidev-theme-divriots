@@ -3,6 +3,8 @@ import { computed } from "vue";
 import Gif from "../components/gif.vue";
 import Default from "./default.vue";
 
+const imgs = import.meta.globEager('../img/**/*');
+
 const props =
   defineProps<{
     url: string;
@@ -40,10 +42,13 @@ const classes = computed(() => {
   return classes.join(" ");
 });
 
+const mURL = computed(() => {
+  const resource = imgs[`.${props.url}`]
+  return resource ? resource.default : props.url
+})
+
 const style = computed(() => {
-  const url = new URL(props.url, import.meta.url).href
-  console.log(url)
-  return `background-image:url(${url})`;
+  return `background-image:url(${mURL.value})`;
 });
 </script>
 
@@ -58,7 +63,7 @@ const style = computed(() => {
 
     <template v-if="!variant">
       <div :class="classes">
-        <img :src="url" alt="" />
+        <img :src="mURL" alt="" />
       </div>
     </template>
 
@@ -80,7 +85,7 @@ const style = computed(() => {
               :id="gifAttrs.id"
               class="overlay"
             ></component>
-            <img v-else :src="url" alt="" class="overlay" />
+            <img v-else :src="mURL" alt="" class="overlay" />
           </div>
         </template>
       </div>
@@ -101,6 +106,13 @@ const style = computed(() => {
     /* max-height: calc(100% - 0.5rem); */
     /* height: unset; */
   }
+}
+.no-border .in-media {
+  @apply border-none shadow-none;
+}
+
+.no-bg .in-media {
+  @apply bg-transparent;
 }
 
 .blur {

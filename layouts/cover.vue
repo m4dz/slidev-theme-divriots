@@ -2,7 +2,17 @@
 import { computed } from "vue";
 import { configs } from "@slidev/client/env";
 import { format, closestIndexTo, isPast } from "date-fns";
-import Logo from '../img/divriots_square_typo_black.svg'
+
+const imgs = import.meta.globEager('../img/**/*');
+
+import logo from '../img/divriots_square_typo_black.svg?raw'
+
+const props =
+  defineProps<{
+    permalink?: string;
+    twitter?: string;
+    author?: string;
+  }>();
 
 const now = new Date();
 
@@ -13,7 +23,7 @@ const dates = computed(() => {
       ...date,
       _d,
       i18n: format(_d, "PP"),
-      logo: new URL(`../img/${date.logo}?url`, import.meta.url).href
+      logo: imgs[`../img/${date.logo}`].default
     }
   })
 })
@@ -27,7 +37,7 @@ const nextDateIndex = computed(() => {
 <template>
   <div class="slidev-layout cover">
     <header>
-      <div class="logo"><Logo class="logo-svg" /></div>
+      <div class="logo" v-html="logo"></div>
       <ul v-if="dates">
         <li
           class="datetime"
@@ -40,11 +50,7 @@ const nextDateIndex = computed(() => {
             <br>
             <time :datetime="date.datetime">{{ date.i18n }}</time>
           </div>
-          <img
-            v-if="date.logo"
-            :src="date.logo"
-            alt=""
-          >
+          <img v-if="date.logo" :src="date.logo" alt />
         </li>
       </ul>
     </header>
@@ -55,8 +61,8 @@ const nextDateIndex = computed(() => {
 
     <Footer
       class="footer"
-      :permalink="$slidev.configs.permalink"
-      :twitter="$slidev.configs.twitter"
+      :permalink="permalink"
+      :twitter="twitter"
       no-slideno
     />
   </div>
@@ -78,9 +84,6 @@ const nextDateIndex = computed(() => {
 
   .logo {
     @apply flex-auto;
-  }
-
-  .logo-svg {
     @apply h-14;
     @apply fill-current dark:text-light light:text-dark;
   }
@@ -130,6 +133,10 @@ const nextDateIndex = computed(() => {
     @apply absolute inset-x-20 -bottom-1px h-1px;
     @apply z-1;
     background-image: var(--gradient-spark);
+  }
+
+  .logo svg {
+    @apply h-full;
   }
 }
 </style>
