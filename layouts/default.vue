@@ -4,6 +4,8 @@ import { currentRoute } from "@slidev/client/logic/nav";
 
 const slots = useSlots();
 
+const imgs = import.meta.globEager('../img/**/*');
+
 const props = withDefaults(
   defineProps<{
     class?: string;
@@ -36,6 +38,10 @@ const hasLogo = computed(() => {
   return !!currentRoute.value?.meta?.logo;
 });
 
+const mLogo = computed(() => {
+  return imgs[`.${props.logo}`]?.default
+})
+
 // TODO: move to props
 const showAvatar = computed(() => {
   return !['thanks', 'author'].includes(currentRoute.value?.meta?.layout);
@@ -45,7 +51,7 @@ const showAvatar = computed(() => {
 <template>
   <div class="slidev-layout" :class="classes">
     <template v-if="logo">
-      <img v-if="hasLogo" v-motion-pop class="in-logo" :src="logo" alt="" />
+      <img v-if="hasLogo" v-motion-pop class="in-logo" :src="mLogo" alt="" />
     </template>
 
     <div class="content">
