@@ -53,7 +53,7 @@ const style = computed(() => {
 </script>
 
 <template>
-  <Default class="media" :class="variant">
+  <Default class="media" :class="`${variant} ${overlay? 'overlay': ''}`">
     <!-- TODO: Make a custom component for `in-media` variants (gif, img) -->
     <template v-if="isFull">
       <div class="in-media" :style="style"></div>
@@ -124,7 +124,7 @@ const style = computed(() => {
   @apply rounded;
 }
 
-.left {
+.left.overlay {
   @apply text-left;
 
   .overlay {
@@ -132,10 +132,10 @@ const style = computed(() => {
   }
 }
 
-.right {
+.right.overlay {
   @apply text-right;
 
-.overlay {
+  .overlay {
     @apply transform translate-x-4;
   }
 }
