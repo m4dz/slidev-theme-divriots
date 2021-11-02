@@ -10,6 +10,10 @@ dates:
     logo: devfest_color_text_white_white.svg
     datetime: 2021-10-21T14:00:00+02:00
     permalink: https://devfest2021.gdgnantes.com/sessions/don_t_miss_the_deno_train/
+  - name: HolyJS
+    logo: holyjs.svg
+    datetime: 2021-11-02T18:45:00+03:00
+    permalink: https://holyjs-moscow.ru/en/talks/dont-miss-the-deno-train/
 
 colorSchema: dark
 ---
@@ -55,7 +59,7 @@ class: self-end
 
 - was here when no-one was
 - was made in 10 days
-- survive the Browsers War(s)
+- survived the Browsers War(s)
 - wasn't made for this sh*t
 
 <style>
@@ -126,6 +130,8 @@ overlay: true
 layout: media
 url: https://source.unsplash.com/9Phf8qd1YAg/1920x1080
 variant: left
+links:
+  - https://martinmck.com/posts/deno-a-simple-guide/
 ---
 
 # Node.js Regrets
@@ -142,17 +148,17 @@ variant: left
 
 ---
 
-# The modules ecosystems came ==after==
+# The Main Mistake: <br> modules ecosystem came ==after==
 
 <style>
-  h1 { @apply text-7xl leading-24 }
+  h1 { @apply text-6xl leading-18 }
 </style>
 
 ---
 preload: false
 ---
 
-# Needs
+# Modern Needs
 
 <ul class="tiles">
   <v-clicks>
@@ -191,7 +197,7 @@ preload: false
 
 ---
 layout: media
-url: https://deno.land/logo.svg
+url: ./img/deno.svg
 variant: right
 ---
 
@@ -217,6 +223,26 @@ variant: right
 
 ---
 
+# Promises at top-level
+
+- No callbacks
+- Deno async APIs always return a `<Promise>`
+- Top-level async encapsulation
+
+```ts
+const file = await Deno.open("/etc/passwd");
+
+try {
+  await Deno.readFile(file, Deno.stdout);
+} catch (err) {
+	console.error("Error reading file!", err);
+}
+
+file.close();
+```
+
+---
+
 # **Deno** <div>friendly CDN</div>
 
 <style>
@@ -231,11 +257,29 @@ variant: right
 
 ::col2::
 
-- ES Module format
-- Resolve all the dependencies
-- Type definitions
+<v-clicks>
+
+- No package manager
+- No local dependencies
+- Resolve all the dependencies from CDNs
+- ES Module format only
+- Types definitions
 - Polyfill the built-in Node.js modules
 - Semver matching for packages
+
+</v-clicks>
+
+---
+layout: media
+url: <Gif id="GB0lKzzxIv1te" />
+variant: right
+---
+
+# Get rid of the **package.json** pain point
+
+<style>
+  h1 { @apply text-6xl leading-20 }
+</style>
 
 ---
 links:
@@ -301,14 +345,18 @@ deno run --allow-read https://deno.land/std@0.112.0/examples/cat.ts /etc/passwd
 ```
 
 ---
-class: self-end
+class: self-center
 ---
 
 # Standard Modules
 
+<style>
+  h1 { @apply mb-0 text-6xl leading-18 }
+</style>
+
 ::col2::
 
-- audited by deno maintainers
+- audited by Deno maintainers
 - located at `deno_std` workspace
 - accessible at https://deno.land/std
 
@@ -337,7 +385,7 @@ links:
 # Overlap with the browser
 
 - ES Modules
-- Promises (+ top-level await)
+- Promises
 - Top-level objects (`window`...)
 - Wasm Support
 - Private namespace for internal stuff (`deno.*`)
