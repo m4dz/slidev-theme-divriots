@@ -22,6 +22,9 @@ const base = computed(() => {
     case "gifer":
       base = `https://i.gifer.com/${props.id}`;
       break;
+    case "tenor":
+      base = `https://c.tenor.com/${props.id}`
+      break;
   }
   return base;
 });
@@ -32,7 +35,8 @@ const base = computed(() => {
     <div>
       <video muted playsinline autoplay loop>
         <source :src="`${base}.mp4`" />
-        <img :src="`${base}.gif`" alt="" />
+        <source :src="`${base}.mp4`" v-if="props.provider === 'tenor'" />
+        <img :src="`${base}.gif`" alt="" v-if="props.provider != 'tenor'" />
       </video>
     </div>
     <figcaption v-if="caption">

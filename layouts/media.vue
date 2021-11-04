@@ -18,10 +18,13 @@ const isGif = computed(() => {
 });
 
 const gifAttrs = computed(() => {
-  const r_id = /id="([a-zA-Z0-9]+)"/;
+  const r_id = /id="([a-zA-Z0-9/-]+)"/;
+  const r_provider = /provider="([a-zA-Z0-9]+)"/;
   const id = props.url.match(r_id)?.[1];
-  return {
+  const provider = props.url.match(r_provider)?.[1];
+return {
     id,
+    provider
   };
 });
 
@@ -73,6 +76,7 @@ const style = computed(() => {
           v-if="isGif"
           :is="Gif"
           :id="gifAttrs.id"
+          :provider="gifAttrs.provider"
           :class="classes"
         ></component>
         <div v-else :class="classes" :style="style"></div>
@@ -82,6 +86,7 @@ const style = computed(() => {
             v-if="isGif"
             :is="Gif"
             :id="gifAttrs.id"
+            :provider="gifAttrs.provider"
             class="overlay"
           ></component>
           <img v-else :src="mURL" alt="" class="overlay" />
