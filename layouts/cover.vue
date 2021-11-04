@@ -3,8 +3,6 @@ import { computed } from "vue";
 import { configs } from "@slidev/client/env";
 import { format, closestIndexTo, isPast } from "date-fns";
 
-const imgs = import.meta.globEager('../img/**/*');
-
 import logo from '../img/divriots_square_typo_black.svg?raw'
 
 const props =
@@ -19,11 +17,12 @@ const now = new Date();
 const dates = computed(() => {
   return configs.dates?.map((date) => {
     const _d = new Date(date.datetime);
+    const logo = new URL(`../img/${date.logo}`, import.meta.url).href;
     return {
       ...date,
       _d,
       i18n: format(_d, "PP"),
-      logo: imgs[`../img/${date.logo}`].default
+      logo
     }
   })
 })
