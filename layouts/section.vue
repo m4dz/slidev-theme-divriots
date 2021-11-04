@@ -3,13 +3,19 @@ import { computed } from "vue";
 import { currentRoute } from '@slidev/client/logic/nav'
 import Default from './default.vue'
 
+const imgs = import.meta.globEager('../img/**/*');
+const isRelUrl = /^\.\.?\//
+
 const props =
   defineProps<{
-    background: string;
-  }>();
+    background: string
+  }>()
 
 const style = computed(() => {
-  return `background-image:url(${props.background})`
+  const bgUrl = isRelUrl.test(props.background)
+    ? imgs[`.${props.background}`]?.default
+    : props.background
+  return `background-image:url(${bgUrl})`
 })
 
 const show = computed(() => {
