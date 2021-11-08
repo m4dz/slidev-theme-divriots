@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build slides.md",
+    "build": "slidev build --base /t/bbl/ slides.md",
     "export": "slidev export slides.md",
     "screenshot": "slidev export slides.md --format png"
   },
@@ -45,6 +45,7 @@
     "@iconify-json/ic": "^1.0.2",
     "@iconify-json/mdi": "^1.0.4",
     "@iconify-json/mdi-light": "^1.0.1",
+    "@iconify-json/wpf": "^1.0.1",
     "@slidev/cli": "^0.27.5",
     "eslint": "^8.0.0",
     "eslint-plugin-vue": "^7.19.1"

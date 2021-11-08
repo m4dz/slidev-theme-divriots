@@ -126,6 +126,13 @@
   dependencies:
     "@iconify/types" "^1.0.7"
 
+"@iconify-json/wpf@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@iconify-json/wpf/-/wpf-1.0.1.tgz#509018ca1e7d4a265c99a2cfd2a231a392b38a42"
+  integrity sha512-X34r1h1lifE5crXrACo+0siqxe0JgZ5bvgUYbPcxMc4Fok4jSXnnCqB+v6xYOXEsGYkq1YCDVXNh9X+Yn951zQ==
+  dependencies:
+    "@iconify/types" "^1.0.7"
+
 "@iconify/json-tools@^1.0.10":
   version "1.0.10"
   resolved "https://registry.yarnpkg.com/@iconify/json-tools/-/json-tools-1.0.10.tgz#d9a7050dbbe8bb29d684d4b3f9446ed2d0bea3cc"

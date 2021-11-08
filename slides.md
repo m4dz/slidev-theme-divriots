@@ -19,6 +19,9 @@ dates:
   - name: Clever Age
     logo: cleverage.svg
     datetime: 2021-10-15T13:00:00+02:00
+  - name: 365 Talents
+    logo: 365talents.svg
+    datetime: 2021-11-08T12:30:00+01:00
 
 # `light` or `dark`
 colorSchema: dark
@@ -57,11 +60,12 @@ variant: right
 </style>
 
 ---
-class: text-4xl leading-18
----
 
-The UI/UX for end-users is a ==success key==, <br>
-as developer you're a part of it.
+# The end-users UI/UX is a ==success key==, <br> as developer you're a part of it.
+
+<style>
+  h1 {@apply text-5xl leading-18}
+</style>
 
 ---
 layout: section
@@ -99,6 +103,8 @@ variant: left
 </v-clicks>
 
 ---
+class: self-center
+---
 
 # Starting a CDD project
 
@@ -113,21 +119,24 @@ variant: left
 
 ::col2::
 
-<h1 v-after class="!text-6xl !leading-16 !m-0">
+<h1 v-after>
 
 Isn't that a **Design System** approach?
 
 </h1>
 
 <style>
+  .col-2 h1 { @apply text-6xl leading-16 m-0 }
   p { @apply p-0 m-0; }
 </style>
 
 ---
-class: text-4xl
----
 
 # What about **Interfaces**?
+
+<style>
+  h1 { @apply text-7xl }
+</style>
 
 ---
 layout: section
@@ -150,25 +159,33 @@ overlay: true
 </style>
 
 ---
+class: self-center
 links:
   - https://www.designsystems.com/
   - https://www.invisionapp.com/inside-design/guide-to-design-systems/ | A comprehensive guide to design systems
 ---
 
-# A Visual Design Language
+# A Visual <br> Design <br> ==Language==
+
+::col2::
 
 1. 🧩 Tokens
-- Color
-- Typography
-- Sizing and spacing
-- Imagery
+   - Color
+   - Typography
+   - Sizing and spacing
+   - Imagery
 2. 📦 Patterns library
 3. 📖 Comprehensive Documentation
 
+<style>
+  h1 { @apply text-6xl leading-20 }
+</style>
+
 ---
 links:
-  - https://medium.com/@aviaviaviii/10-tips-for-a-sustainable-component-library-as-a-part-of-your-design-system-7edc6d7697a9
+  - https://medium.com/@aviaviaviii/component-library-as-a-part-of-your-design-system-7edc6d7697a9
   - https://twitter.com/aviaviaviii/status/1447612370109427712
+  - https://twitter.com/mayankd_/status/1455871676277682182
 ---
 
 ::header::
@@ -177,15 +194,12 @@ links:
 
 ::default::
 
-<Tweet id="1447612377491394561" scale=0.55 />
+<Tweet id="1455871676277682182" scale=0.80 />
 
 ::col2::
 
-<Tweet id="1447612444348616708" scale=0.6 />
+<Tweet id="1455872693056651268" scale=0.68 />
 
-::col3::
-
-<Tweet id="1447612414212464641" scale=0.6 />
 
 ---
 layout: section
@@ -240,7 +254,7 @@ links:
 # Designing components <br> **Best practices**
 
 <style>
-  h1 { @apply leading-10; }
+  h1 { @apply leading-12 }
 </style>
 
 ::col2::
@@ -254,12 +268,51 @@ links:
 </v-clicks>
 
 ---
+logo: ./img/VaadinPackage.svg
+---
 
-# 📦 Publishing as a **library**
+# Publishing as a **library**
 
 <style>
   h1 { @apply text-7xl; }
 </style>
+
+---
+logo: ./img/WpfBooks.svg
+class: self-center
+links :
+   - https://m4dz.net/t/mdx-docs | Componentize your documentation
+   - https://github.com/divriots/dockit-react
+---
+
+# **Painless** Documentation
+
+- Playgrounds
+- PropsTables
+- Reflection
+- ShowCases
+
+::col2::
+
+```mdx
+import { Button } from '../index';
+
+# Button
+
+<Description of={Button} />
+
+## Example
+
+<Playground scope={{ Button }} code={`
+<Button variant="primary">Primary</Button>
+<Button disabled>Disabled</Button>
+`}
+/>
+
+## Props
+
+<Props of={Button} />
+```
 
 ---
 preload: false
@@ -282,8 +335,8 @@ url: <Gif id="5V9hAgndJLwcw" />
 variant: left
 overlay: true
 ---
-<!-- Outro -->
 
+<!-- Outro -->
 # No **Lock-in**!
 
 <style>
