@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { configs } from "@slidev/client/env";
-import { format, closestIndexTo, isPast } from "date-fns";
+import { format, closestIndexTo, isPast, addHours } from "date-fns";
 
 import logo from '../img/divriots_square_typo_black.svg?raw'
 
@@ -29,7 +29,7 @@ const dates = computed(() => {
 
 const nextDateIndex = computed(() => {
   let index = closestIndexTo(now, dates.value.map((date) => date._d));
-  return isPast(dates.value[index]._d) ? false : index;
+  return isPast(addHours(dates.value[index]._d, 1)) ? false : index;
 });
 </script>
 
