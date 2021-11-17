@@ -21,7 +21,6 @@ h1 {
     }
 
     code {
-        @apply px-0.75 py-0.25;
         @apply rounded-sm border-1 border-opacity-60 border-primary;
         @apply dark:bg-dark-700 light:bg-light-700;
         @apply text-sm;
