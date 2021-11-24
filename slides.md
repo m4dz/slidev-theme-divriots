@@ -32,6 +32,9 @@ dates:
     datetime: 2021-09-08
   - name: ‹ React Global ›
     datetime: 2021-11-04T18:40:00+00:00
+  - name: WeAreDevelopers JavaScript Congress
+    logo: wearedevelopers.png
+    datetime: 2021-11-25T21:00:00+01:00
 ---
 
 <p class="tagline">The Eternal Sunshine of the</p>
@@ -103,7 +106,7 @@ variant: full
 # Did you see ==HTML/CSS/JS== <br> in the previous list?
 
 <style>
-  h1 { @apply text-7xl leading-22 }
+  .slidev-layout h1 { @apply text-7xl leading-22 }
 </style>
 
 ---
@@ -116,7 +119,7 @@ overlay: true
 `npm install`
 
 <style>
-  code { @apply text-4xl }
+  .slidev-layout code { @apply text-4xl }
 </style>
 
 ---
@@ -131,7 +134,7 @@ background: ./img/danist-8Gg2Ne_uTcM-unsplash.jpg
 # Developer eXperience is bloated, <br> thanks to our ==DevTools==
 
 <style>
-  h1 { @apply text-5xl leading-22 }
+  .slidev-layout h1 { @apply text-5xl leading-22 }
 </style>
 
 ---
@@ -143,7 +146,7 @@ class: self-center
 # Coding in the Browser, the Antique Way
 
 <style>
-  h1 { @apply text-4xl leading-12 }
+  .slidev-layout h1 { @apply text-4xl leading-12 }
 </style>
 
 ::col2::
@@ -179,7 +182,7 @@ links:
 - Bundling for the Web (Browserify, etc.)
 
 <style>
-  h1 { @apply leading-12 }
+  .slidev-layout h1 { @apply leading-12 }
 </style>
 
 ::col2::
@@ -253,7 +256,7 @@ class: text-left
 </v-clicks>
 
 <style>
-  h1 { @apply text-4xl leading-12 }
+  .slidev-layout h1 { @apply text-4xl leading-12 }
 </style>
 
 ---
@@ -269,7 +272,7 @@ class: text-left
 </v-clicks>
 
 <style>
-  h1 { @apply text-5xl leading-16 }
+  .slidev-layout h1 { @apply text-5xl leading-16 }
 </style>
 
 ---
@@ -305,7 +308,7 @@ variant: left
 # ==Easier== developers life <br> means ==overly complex== <br> DevTools Stack
 
 <style>
-  h1 { @apply text-7xl leading-24 }
+  .slidev-layout h1 { @apply text-7xl leading-24 }
 </style>
 
 ---
@@ -326,7 +329,7 @@ can wait eternally rather than coding my stuff
 # **Compiling** for production <br> doesn't mean we need it <br> during ==development==
 
 <style>
-  h1 { @apply text-7xl leading-22 }
+  .slidev-layout h1 { @apply text-7xl leading-22 }
 </style>
 
 ---
@@ -504,7 +507,7 @@ overlay: true
 - Better cache
 
 <style>
-  h1 { @apply leading-12 }
+  .slidev-layout h1 { @apply leading-12 }
 </style>
 
 ---
@@ -522,7 +525,7 @@ variant: left
 # The ==Challengers==
 
 <style>
-  h1 { @apply text-7xl leading-22 }
+  .slidev-layout h1 { @apply text-7xl leading-22 }
 </style>
 
 ---
@@ -565,7 +568,7 @@ variant: left
 # The Challengers
 
 <style>
-  h1 { @apply mb-12 }
+  .slidev-layout h1 { @apply mb-12 }
   h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
 </style>
 
@@ -617,7 +620,7 @@ links:
 # Is it Hot?
 
 <style>
-  h1 { @apply mb-12 }
+  .slidev-layout h1 { @apply mb-12 }
   h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
 </style>
 
@@ -633,7 +636,7 @@ background: ./img/caroline-selfors-r2jpr8MDw0I-unsplash.jpg
 # You're <small>(probably)</small> not your ==end-user==
 
 <style>
-  h1 { @apply text-8xl leading-28 }
+  .slidev-layout h1 { @apply text-8xl leading-28 }
 </style>
 
 ---
@@ -666,7 +669,7 @@ links:
 # The **Treeshaking** Mystery
 
 <style>
-  h1 { @apply text-7xl leading-22 }
+  .slidev-layout h1 { @apply text-7xl leading-22 }
 </style>
 
 ---
@@ -690,7 +693,7 @@ variant: right
 # It's a new generation of Devtools <br> built by great **communities** <br> <small>(Skypack, Vue, Preact...)</small>
 
 <style>
-  h1 { @apply text-5xl leading-18 }
+  .slidev-layout h1 { @apply text-5xl leading-18 }
 </style>
 
 ---
@@ -709,16 +712,18 @@ links:
 
 ## New Advanced <emojione-high-voltage /> Tools
 
-- [Vitepress](vitepress.vuejs.org/)
+- [Vitepress](https://vitepress.vuejs.org/)
 - [Slidev](https://sli.dev/)
 - [Viteshot](https://viteshot.com/)
+- [Astro](https://astro.build/)
+- [îles](https://iles-docs.netlify.app/)
 
 ::header::
 
 # <emojione-waving-hand />
 
 <style>
-  h1 { @apply mb-12 }
+  .slidev-layout h1 { @apply mb-12 }
   h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
 </style>
 
@@ -759,7 +764,7 @@ export default defineConfig({
 </v-after>
 
 <style>
-  h1 { @apply leading-12 }
+  .slidev-layout h1 { @apply leading-12 }
 </style>
 
 ---
@@ -774,10 +779,6 @@ author: https://www.telegraph.co.uk/multimedia/archive/02751/George-Orwell-_2751
 
 > Who Controls the Past
 > Controls the Future
-
----
-layout: qa
----
 
 ---
 layout: thanks
