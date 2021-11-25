@@ -106,7 +106,7 @@ variant: full
 # Did you see ==HTML/CSS/JS== <br> in the previous list?
 
 <style>
-  .slidev-layout h1 { @apply text-7xl leading-22 }
+  h1 { @apply text-7xl leading-22 }
 </style>
 
 ---
@@ -119,7 +119,7 @@ overlay: true
 `npm install`
 
 <style>
-  .slidev-layout code { @apply text-4xl }
+  code { @apply text-4xl }
 </style>
 
 ---
@@ -134,7 +134,7 @@ background: ./img/danist-8Gg2Ne_uTcM-unsplash.jpg
 # Developer eXperience is bloated, <br> thanks to our ==DevTools==
 
 <style>
-  .slidev-layout h1 { @apply text-5xl leading-22 }
+  h1 { @apply text-5xl leading-22 }
 </style>
 
 ---
@@ -146,7 +146,7 @@ class: self-center
 # Coding in the Browser, the Antique Way
 
 <style>
-  .slidev-layout h1 { @apply text-4xl leading-12 }
+  h1 { @apply text-4xl leading-12 }
 </style>
 
 ::col2::
@@ -182,7 +182,7 @@ links:
 - Bundling for the Web (Browserify, etc.)
 
 <style>
-  .slidev-layout h1 { @apply leading-12 }
+  h1 { @apply leading-12 }
 </style>
 
 ::col2::
@@ -256,7 +256,7 @@ class: text-left
 </v-clicks>
 
 <style>
-  .slidev-layout h1 { @apply text-4xl leading-12 }
+  h1 { @apply text-4xl leading-12 }
 </style>
 
 ---
@@ -272,7 +272,7 @@ class: text-left
 </v-clicks>
 
 <style>
-  .slidev-layout h1 { @apply text-5xl leading-16 }
+  h1 { @apply text-5xl leading-16 }
 </style>
 
 ---
@@ -308,7 +308,7 @@ variant: left
 # ==Easier== developers life <br> means ==overly complex== <br> DevTools Stack
 
 <style>
-  .slidev-layout h1 { @apply text-7xl leading-24 }
+  h1 { @apply text-7xl leading-24 }
 </style>
 
 ---
@@ -329,7 +329,7 @@ can wait eternally rather than coding my stuff
 # **Compiling** for production <br> doesn't mean we need it <br> during ==development==
 
 <style>
-  .slidev-layout h1 { @apply text-7xl leading-22 }
+  h1 { @apply text-7xl leading-22 }
 </style>
 
 ---
@@ -507,7 +507,7 @@ overlay: true
 - Better cache
 
 <style>
-  .slidev-layout h1 { @apply leading-12 }
+  h1 { @apply leading-12 }
 </style>
 
 ---
@@ -525,7 +525,7 @@ variant: left
 # The ==Challengers==
 
 <style>
-  .slidev-layout h1 { @apply text-7xl leading-22 }
+  h1 { @apply text-7xl leading-22 }
 </style>
 
 ---
@@ -568,7 +568,7 @@ variant: left
 # The Challengers
 
 <style>
-  .slidev-layout h1 { @apply mb-12 }
+  h1 { @apply mb-12 }
   h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
 </style>
 
@@ -620,7 +620,7 @@ links:
 # Is it Hot?
 
 <style>
-  .slidev-layout h1 { @apply mb-12 }
+  h1 { @apply mb-12 }
   h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
 </style>
 
@@ -636,7 +636,7 @@ background: ./img/caroline-selfors-r2jpr8MDw0I-unsplash.jpg
 # You're <small>(probably)</small> not your ==end-user==
 
 <style>
-  .slidev-layout h1 { @apply text-8xl leading-28 }
+  h1 { @apply text-8xl leading-28 }
 </style>
 
 ---
@@ -669,7 +669,7 @@ links:
 # The **Treeshaking** Mystery
 
 <style>
-  .slidev-layout h1 { @apply text-7xl leading-22 }
+  h1 { @apply text-7xl leading-22 }
 </style>
 
 ---
@@ -693,7 +693,7 @@ variant: right
 # It's a new generation of Devtools <br> built by great **communities** <br> <small>(Skypack, Vue, Preact...)</small>
 
 <style>
-  .slidev-layout h1 { @apply text-5xl leading-18 }
+  h1 { @apply text-5xl leading-18 }
 </style>
 
 ---
@@ -723,7 +723,7 @@ links:
 # <emojione-waving-hand />
 
 <style>
-  .slidev-layout h1 { @apply mb-12 }
+  h1 { @apply mb-12 }
   h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
 </style>
 
@@ -764,7 +764,7 @@ export default defineConfig({
 </v-after>
 
 <style>
-  .slidev-layout h1 { @apply leading-12 }
+  h1 { @apply leading-12 }
 </style>
 
 ---
