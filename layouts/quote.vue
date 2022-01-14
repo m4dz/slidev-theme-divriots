@@ -17,7 +17,7 @@ const style = computed(() => {
   <Default class="quote" :class="class">
     <span class="author" :style="style" v-if="author" />
     <slot />
-    <cite v-if="cite">{{ cite }}</cite>
+    <cite v-if="cite">– {{ cite }}</cite>
   </Default>
 </template>
 
