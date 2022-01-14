@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build slides.md",
+    "build": "slidev build --base /t/web-standards/ slides.md",
     "export": "slidev export slides.md",
     "screenshot": "slidev export slides.md --format png"
   },
@@ -43,8 +43,10 @@
     "@iconify-json/codicon": "^1.0.4",
     "@iconify-json/emojione": "^1.0.2",
     "@iconify-json/ic": "^1.0.2",
+    "@iconify-json/icon-park-outline": "^1.0.2",
     "@iconify-json/mdi": "^1.0.4",
     "@iconify-json/mdi-light": "^1.0.1",
+    "@iconify-json/uil": "^1.0.2",
     "@slidev/cli": "^0.27.5",
     "eslint": "^8.0.0",
     "eslint-plugin-vue": "^7.19.1"
