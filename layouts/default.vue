@@ -12,7 +12,8 @@ const props = withDefaults(
     links?: Array<string>;
     logo?: string;
     ratio?: string;
-    noFooter?: boolean
+    noFooter?: boolean;
+    background?: string;
   }>(),
   {
     ratio: "1/1",
@@ -29,6 +30,10 @@ const cols = computed(() => {
         : "grid-cols-1";
   return `${cols} items-start`
 });
+
+const styles = computed(() => {
+  return props.background && `background: ${props.background}`;
+})
 
 const classes = computed(() => {
   return `${props.class} ratio-${props.ratio}`
@@ -49,7 +54,7 @@ const showAvatar = computed(() => {
 </script>
 
 <template>
-  <div class="slidev-layout" :class="classes">
+  <div class="slidev-layout" :class="classes" :style="styles">
     <template v-if="logo">
       <img v-if="hasLogo" v-motion-pop class="in-logo" :src="mLogo" alt="" />
     </template>

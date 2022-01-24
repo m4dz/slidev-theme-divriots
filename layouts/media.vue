@@ -10,6 +10,7 @@ const props =
     url: string;
     variant?: string;
     overlay?: boolean;
+    background?: string;
   }>();
 
 const isGif = computed(() => {
@@ -51,7 +52,7 @@ const mURL = computed(() => {
 })
 
 const style = computed(() => {
-  return `background-image:url(${mURL.value})`;
+  return `${props.background? `background:${props.background}`:''};background-image:url(${mURL.value}); background-repeat: no-repeat; background-position: center;`;
 });
 </script>
 
