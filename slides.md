@@ -14,6 +14,9 @@ dates:
     logo: holyjs.svg
     datetime: 2021-11-02T18:45:00+03:00
     permalink: https://holyjs-moscow.ru/en/talks/dont-miss-the-deno-train/
+  - name: SFEIR QuarterBack
+    logo: sfeir.png
+    datetime: 2022-01-25T19:30+0100
 
 colorSchema: dark
 ---
@@ -30,9 +33,10 @@ class: no-border no-bg
 
 ---
 layout: media
+url: <Gif id="wVcNP3TnXbl84" />
 variant: left
 overlay: true
-url: <Gif id="wVcNP3TnXbl84" />
+class: text-4xl leading-20
 ---
 
 # This is **not** an angry talk
@@ -45,15 +49,11 @@ Undefined is not a function
 
 </v-click>
 
-<style>
-  h1 { @apply text-6xl leading-18 }
-</style>
-
 ---
-class: self-end
+class: self-end text-2xl
 ---
 
-# Don't blame JS
+# Don't ==blame== JS
 
 ::col2::
 
@@ -63,16 +63,14 @@ class: self-end
 - wasn't made for this sh*t
 
 <style>
-  h1 { @apply text-6xl }
+  .slidev-layout h1 { @apply text-9xl }
 </style>
 
 ---
+class: text-5xl leading-28
+---
 
 # Running on the ==server==, really?
-
-<style>
-  h1 { @apply text-8xl leading-30 }
-</style>
 
 ---
 layout: section
@@ -90,41 +88,32 @@ links:
 ---
 
 ---
+class: text-5xl leading-26
+---
 
 # ==2009== <br> The IO challenge
 
-<style>
-  h1 { @apply text-7xl leading-24 }
-</style>
-
+---
+class: text-5xl leading-26
 ---
 
 # ==2018== <br> Fast, Secured, Servers
-
-<style>
-  h1 { @apply text-7xl leading-24 }
-</style>
 
 ---
 layout: media
 url: <Gif id="9FZONYU8o41b63mil9" />
 variant: right
 overlay: true
+class: text-xl leading-16 text-left
 ---
 
-# Dynamic Languages <br> _vs._ <br> Typed Languages
+# Dynamic Languages <br> ==_vs._== <br> Typed Languages
 
-<style>
-  h1 { @apply text-4xl }
-</style>
-
+---
+class: text-6xl leading-28
 ---
 
 # Could Node <br> and Javascript <br> be **fixed**?
-
-<style>
-  h1 { @apply text-8xl }
-</style>
 
 ---
 layout: media
@@ -132,6 +121,7 @@ url: https://source.unsplash.com/9Phf8qd1YAg/1920x1080
 variant: left
 links:
   - https://martinmck.com/posts/deno-a-simple-guide/
+class: text-2xl
 ---
 
 # Node.js Regrets
@@ -147,12 +137,10 @@ links:
 </v-clicks>
 
 ---
+class: text-3xl leading-22
+---
 
 # The Main Mistake: <br> modules ecosystem came ==after==
-
-<style>
-  h1 { @apply text-6xl leading-18 }
-</style>
 
 ---
 preload: false
@@ -199,28 +187,19 @@ preload: false
 layout: media
 url: ./img/deno.svg
 variant: right
+class: text-4xl leading-22
 ---
 
 # **Deno** <br> JS/TS runtime in V8
 
-<style>
-  h1 { @apply text-7xl leading-22 }
-</style>
-
+---
+class: text-3xl leading-16
 ---
 
-# TypeScript <div>First-class citizen language</div>
+# <small>**TypeScript**</small> <br>First-class citizen language
 
-<style>
-  h1 {
-    @apply text-8xl;
-
-    div {
-      @apply text-5xl my-2;
-    }
-  }
-</style>
-
+---
+class: text-xl
 ---
 
 # Promises at top-level
@@ -229,34 +208,26 @@ variant: right
 - Deno async APIs always return a `<Promise>`
 - Top-level async encapsulation
 
+::col2::
 ```ts
 const file = await Deno.open("/etc/passwd");
 
 try {
   await Deno.readFile(file, Deno.stdout);
 } catch (err) {
-	console.error("Error reading file!", err);
+  console.error("Error reading file!", err);
 }
 
 file.close();
 ```
 
 ---
+class: text-2xl leading-12 self-center
+---
 
-# **Deno** <div>friendly CDN</div>
-
-<style>
-  h1 {
-    @apply text-8xl;
-
-    div {
-      @apply text-5xl my-2;
-    }
-  }
-</style>
+# <small>**Deno**</small> <br>friendly CDN
 
 ::col2::
-
 <v-clicks>
 
 - No package manager
@@ -273,20 +244,18 @@ file.close();
 layout: media
 url: <Gif id="GB0lKzzxIv1te" />
 variant: right
+class: text-3xl leading-16
 ---
 
 # Get rid of the **package.json** pain point
 
-<style>
-  h1 { @apply text-6xl leading-20 }
-</style>
-
 ---
 links:
   - https://deno.land/
+class: text-2xl
 ---
 
-# Running Deno
+# **Running** Deno
 
 <v-clicks>
 
@@ -316,14 +285,13 @@ url: <Gif id="1I2NwmjvSzNS0"/>
 variant: left
 links:
   - https://doc.deno.land/builtin/stable
+class: text-4xl leading-18
 ---
 
-# One runtime, <div v-click>endless possibilities</div>
+# <small>One runtime,</small> <br><span v-click>**endless** possibilities</span>
 
-<style>
-h1 { @apply text-6xl; div { @apply text-4xl my-2 }}
-</style>
-
+---
+class: text-xl
 ---
 
 # From CLI to Web apps backends
@@ -345,14 +313,10 @@ deno run --allow-read https://deno.land/std@0.112.0/examples/cat.ts /etc/passwd
 ```
 
 ---
-class: self-center
+class: self-center text-2xl
 ---
 
-# Standard Modules
-
-<style>
-  h1 { @apply mb-0 text-6xl leading-18 }
-</style>
+# **Standard** Modules
 
 ::col2::
 
@@ -370,9 +334,10 @@ links:
   - https://www.jsdelivr.com/
   - https://esm.sh/
   - https://unpkg.com/
+class: text-2xl
 ---
 
-# Community Modules
+# **Community** Modules
 
 - Served from CDN
 - Curated list at deno.land/x
@@ -380,6 +345,7 @@ links:
 ---
 links:
   - https://deno.land/manual@v1.15.2/runtime/web_platform_apis
+class: text-2xl
 ---
 
 # Overlap with the browser
@@ -394,6 +360,7 @@ links:
 links:
   - https://deno.land/manual@v1.15.2/getting_started/permissions#permissions-list
   - https://www.youtube.com/watch?v=r5F6dekUmdE#t=34m57
+class: text-2xl
 ---
 
 # Permissions
@@ -414,13 +381,10 @@ url: ./img/deno_stats.png
 variant: left
 links:
   - https://github.com/denolib/awesome-deno
+class: text-2xl leading-14
 ---
 
-# Large community-based ==modules and Frameworks== for Deno
-
-<style>
-  h1 { @apply text-4xl leading-14 }
-</style>
+# Large community-based modules and Frameworks **for Deno**
 
 ---
 
@@ -456,19 +420,17 @@ links:
 # For the Web
 
 <style>
-  h2 { @apply text-2xl mt-4 mb-2 }
+  .slidev-layout h1 { @apply mb-12 }
+  .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
 </style>
 
 ---
 links:
   - https://alephjs.org/docs
+class: text-4xl leading-20
 ---
 
-# React in Deno <div>**Aleph.js**, the Next.js inspired alternative</div>
-
-<style>
-  h1 { @apply text-8xl; div { @apply text-4xl my-2 }}
-</style>
+# <small>React in Deno</small> <br>**Aleph.js**, the Next.js inspired alternative
 
 ---
 layout: section
@@ -613,34 +575,33 @@ ratio: 2/3
 - Static pages generated server-side
 - Client-side events hydration
 
-::col2::
+<style>
+  .slidev-layout h1 { @apply mb-4 }
+  .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
+</style>
 
+::col2::
 ```tsx
 import React from 'https://esm.sh/react'
 import type { SSROptions } from 'https://deno.land/x/aleph/types.d.ts'
 
 export const ssr: SSROptions = {
-  props: async req => {
-    return {
-      $revalidate: 1, // revalidate props after 1 second
-      username: await auth(req.headers.get('Auth-Token')),
-      serverTime: Date.now()
-    }
-  }
+  props: async req => {{
+    $revalidate: 1, // revalidate props after 1 second
+    username: await auth(req.headers.get('Auth-Token')),
+    serverTime: Date.now()
+  }}
 }
 
 export default function Page(props) {
-  return (
-    <p>
-      Welcome back {props.username},
-      the server time is {props.serverTime}
-    </p>
-  )
+  return (<p>
+    Welcome back {props.username},
+    the server time is {props.serverTime}
+  </p>)
 }
 ```
 
 ::header::
-
 # SSR/SSG
 
 <style>
@@ -692,11 +653,12 @@ export class MyNameIs {
 
 ---
 layout: media
-url: ./img/stencil_bg.svg
+url: ./img/stencil.svg
 variant: left
 links:
   - https://stenciljs.com/docs/static-site-generation
   - https://stenciljs.com/docs/hydrate-app
+class: text-2xl leading-10
 ---
 
 # Stencil SSR
@@ -736,7 +698,6 @@ links:
 - Not *real* SSG but can be hydrated on the server
 
 ::col2::
-
 ```ts
 import type { Plugin } from 'https://deno.land/x/aleph/types.d.ts'
 import 'http://esm.sh/@skatejs/ssr/register'
@@ -756,35 +717,26 @@ export default <Plugin> {
 }
 ```
 
+--- <!-- Outro -->
+class: text-3xl leading-18
 ---
-
-<!-- Outro -->
 
 # Deno is a bright future for any server-side tool, **secured**, with **Typescript** first-class citizen
 
-<style>
-  h1 { @apply text-6xl leading-20}
-</style>
-
+---
+class: text-4xl leading-20
 ---
 
 # Frontend performance implies **proper SSR**
-
-<style>
-  h1 { @apply text-6xl leading-20 }
-</style>
 
 ---
 layout: media
 url: <Gif id="NSPRepE2PvAcg" />
 variant: left
+class: text-2xl leading-14
 ---
 
 # Don't trust people who says Web Components can't be rendered on the server
-
-<style>
-  h1 { @apply text-4xl leading-12 }
-</style>
 
 ---
 layout: media
@@ -795,6 +747,7 @@ links:
   - WebComponents.dev | http://webcomponents.dev
   - Style Dictionary Playground | https://style-dictionary-play.dev
   - https://amzn.github.io/style-dictionary/
+class: text-2xl leading-12
 ---
 
 # Next step <div>~~Node~~ Deno in the browser?</div>
@@ -802,10 +755,6 @@ links:
 - Imports from CDN
 - Multi-threads w/ workers
 - Performance first
-
-<style>
-  h1 { @apply text-4xl leading-12; div { @apply text-2xl }}
-</style>
 
 ---
 layout: author
