@@ -29,24 +29,24 @@
     "screenshot": "slidev export slides.md --format png"
   },
   "dependencies": {
-    "@slidev/types": "^0.27.5",
-    "@vueuse/motion": "^2.0.0-beta.4",
+    "@slidev/types": "^0.27.20",
+    "@vueuse/motion": "^2.0.0-beta.9",
     "codemirror-theme-vars": "^0.1.1",
-    "date-fns": "^2.25.0",
+    "date-fns": "^2.28.0",
     "markdown-it-mark": "^3.0.1",
     "markdown-it-smartarrows": "^1.0.1",
-    "qrcode.vue": "^3.3.2"
+    "qrcode.vue": "^3.3.3"
   },
   "devDependencies": {
-    "@iconify-json/bi": "^1.0.1",
-    "@iconify-json/bx": "^1.0.1",
-    "@iconify-json/codicon": "^1.0.4",
+    "@iconify-json/bi": "^1.0.10",
+    "@iconify-json/bx": "^1.0.3",
+    "@iconify-json/codicon": "^1.0.11",
     "@iconify-json/emojione": "^1.0.2",
-    "@iconify-json/ic": "^1.0.2",
-    "@iconify-json/mdi": "^1.0.4",
+    "@iconify-json/ic": "^1.0.8",
+    "@iconify-json/mdi": "^1.0.13",
     "@iconify-json/mdi-light": "^1.0.1",
-    "@slidev/cli": "^0.27.5",
-    "eslint": "^8.0.0",
-    "eslint-plugin-vue": "^7.19.1"
+    "@slidev/cli": "^0.27.20",
+    "eslint": "^8.7.0",
+    "eslint-plugin-vue": "^7.20.0"
   }
 }
