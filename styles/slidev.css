@@ -6,6 +6,17 @@ h1 {
     @apply dark:(bg-dark text-light) light:(bg-light text-dark);
 }
 
+:where(.slidev-layout) {
+    code {
+        @apply rounded-sm border-1 border-opacity-60 border-primary;
+        @apply dark:bg-dark-700 light:bg-light-700;
+        font-size: 0.875em;
+    }
+
+    pre code {
+        @apply !bg-transparent border-none text-base;
+    }
+}
 .slidev-layout {
     @apply text-lg;
 
@@ -18,17 +29,6 @@ h1 {
 
     h1 strong {
         @apply font-normal;
-    }
-
-    code {
-        @apply px-0.75 py-0.25;
-        @apply rounded-sm border-1 border-opacity-60 border-primary;
-        @apply dark:bg-dark-700 light:bg-light-700;
-        @apply text-sm;
-    }
-
-    pre code {
-        @apply !bg-transparent border-none text-base;
     }
 
     ul {

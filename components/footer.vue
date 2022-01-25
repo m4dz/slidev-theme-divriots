@@ -67,7 +67,12 @@ const hasLinks = computed(() => {
           <li v-for="link in linkrolls">
             <codicon-pinned class="icon" />
             <a :href="link.url">
-              <template v-if="link.title">{{ link.title }}<ic-baseline-chevron-right /></template>{{ link.url }}
+              <template v-if="link.title">
+                {{ link.title }}
+                <br>
+              </template>
+              <ic-baseline-chevron-right class="chevron" />
+              {{ link.url }}
             </a>
           </li>
         </ul>
@@ -138,12 +143,20 @@ footer {
 
   li {
     @apply list-none p-0 m-0;
+    @apply flex items-start;
+  }
+
+  a {
     @apply flex items-center;
   }
 
   .icon {
-    @apply mr-1;
+    @apply mr-1 mt-1;
     @apply transform -rotate-35;
+  }
+
+  .chevron {
+    @apply -ml-1;
   }
 }
 </style>

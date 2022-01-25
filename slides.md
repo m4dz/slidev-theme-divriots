@@ -3,7 +3,7 @@ theme: ./
 
 author: m4dz
 twitter: m4d_z
-permalink: http://m4dz.net/t/deno
+permalink: http://m4dz.net/t/deno/
 
 dates:
   - name: Devfest Nantes
@@ -319,7 +319,6 @@ class: self-center text-2xl
 # **Standard** Modules
 
 ::col2::
-
 - audited by Deno maintainers
 - located at `deno_std` workspace
 - accessible at https://deno.land/std
@@ -420,8 +419,8 @@ class: text-2xl leading-14
 # For the Web
 
 <style>
-  .slidev-layout h1 { @apply mb-12 }
-  .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
+  .slidev-layout h1 { @apply mb-6 }
+  .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-2 mt-6 }
 </style>
 
 ---
@@ -495,7 +494,6 @@ export default function About() {
 ```
 
 ::col2::
-
 ```tsx
 // ~/components/nav.tsx
 import React from 'https://esm.sh/react'
@@ -512,7 +510,6 @@ export function Nav() {
 ```
 
 ::header::
-
 # Pages and Routing
 
 ---
@@ -577,7 +574,7 @@ ratio: 2/3
 
 <style>
   .slidev-layout h1 { @apply mb-4 }
-  .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
+  .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 my-2 mt-6 }
 </style>
 
 ::col2::
@@ -603,12 +600,6 @@ export default function Page(props) {
 
 ::header::
 # SSR/SSG
-
-<style>
-  h2 { @apply text-2xl my-4 }
-  ul { @apply mb-4 }
-  pre code { @apply !text-sm }
-</style>
 
 ---
 layout: media

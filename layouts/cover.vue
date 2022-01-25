@@ -1,9 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { configs } from "@slidev/client/env";
-import { format, closestIndexTo, isPast } from "date-fns";
-
-const imgs = import.meta.globEager('../img/**/*');
+import { format, closestIndexTo, isPast, addHours } from "date-fns";
 
 import logo from '../img/divriots_square_typo_black.svg?raw'
 
@@ -19,18 +17,19 @@ const now = new Date();
 const dates = computed(() => {
   return configs.dates?.map((date) => {
     const _d = new Date(date.datetime);
+    const logo = new URL(`../img/${date.logo}`, import.meta.url).href;
     return {
       ...date,
       _d,
       i18n: format(_d, "PP"),
-      logo: imgs[`../img/${date.logo}`].default
+      logo
     }
   })
 })
 
 const nextDateIndex = computed(() => {
   let index = closestIndexTo(now, dates.value.map((date) => date._d));
-  return isPast(dates.value[index]._d) ? false : index;
+  return isPast(addHours(dates.value[index]._d, 1)) ? false : index;
 });
 </script>
 
