@@ -28,6 +28,10 @@ themeConfig:
     - name: Codemotion
       datetime: 2021-12-02T15:55:00+01:00
       logo: codemotion-logo.png
+    - name: DevConf.CZ
+      datetime: 2022-01-28T10:00+0100
+      logo: devconf-logo-cz-reverse.svg
+      permalink: https://devconfcz2022.sched.com/event/siHC/design-systems-of-a-down-steal-this-guide
 ---
 
 <p class="tagline">Design Systems of a Down</p>
@@ -44,7 +48,7 @@ url: <Gif id="3og0ISJtoddt1HkX9S" />
 # We Talked ==UX== For Years <br> but Developers Are **Users** Too
 
 <style>
-  h1 { @apply text-3xl leading-14 }
+  .slidev-layout h1 { @apply text-6xl leading-18 }
 </style>
 
 ---
@@ -58,7 +62,7 @@ links:
 # We’ve Got Plenty of ==Designers’ Resources==, <br> but Not That Much **Dev Oriented**
 
 <style>
-  h1 { @apply text-6xl leading-18 }
+  .slidev-layout h1 { @apply text-6xl leading-18 }
 </style>
 
 ---
@@ -146,14 +150,6 @@ url: ./img/1630569192609.jpg
 
 ---
 
-# ==Fun Fact==: Devs May Not Be Able to Design Well, but They Know **How to Name** Things!
-
-<style>
-  h1 { @apply text-6xl leading-18 }
-</style>
-
----
-
 # We Want to Build **Components** That Are:
 
 <ul class="tiles">
@@ -209,7 +205,7 @@ url: <Gif id="9UqRcQHzBou6A" />
 # 1. Design **Tokens**
 
 <style>
-  h1 { @apply text-6xl leading-18 }
+  .slidev-layout h1 { @apply text-6xl leading-18 }
 </style>
 
 ---
@@ -264,7 +260,7 @@ url: <Gif id="26xBC0xYwcSWzTL2g" />
 # 2. Creating Your <br> **Base Components**
 
 <style>
-  h1 { @apply text-5xl leading-18 }
+  .slidev-layout h1 { @apply text-5xl leading-18 }
 </style>
 
 ---
@@ -311,7 +307,6 @@ export const Button = ({
 ```
 
 ::col2::
-
 ```tsx
 import { Button } from '../index';
 
@@ -340,7 +335,7 @@ export const medium_button = () => (
 ```
 
 <style>
-  pre code { @apply !text-xs; }
+  .slidev-layout pre code { @apply !text-xs; }
 </style>
 
 ---
@@ -381,7 +376,7 @@ export const medium_button = () => (
 # Exploiting Tokens
 
 <style>
-  pre code { @apply !text-sm; }
+  .slidev-layout pre code { @apply !text-sm; }
 </style>
 
 ---
@@ -394,7 +389,7 @@ url: <Gif id="WoWm8YzFQJg5i" />
 # 3. **Documentation**, the Right Way
 
 <style>
-  h1 { @apply text-5xl leading-18 }
+  .slidev-layout h1 { @apply text-5xl leading-18 }
 </style>
 
 ---
@@ -447,8 +442,8 @@ export const JsStory = () => html`
 # Advanced Documentation: <br> MDX / Markdown JavaScript
 
 <style>
-  h1 { @apply leading-10 }
-  pre code { @apply !text-sm; }
+  .slidev-layout h1 { @apply leading-10 }
+  .slidev-layout pre code { @apply !text-sm; }
 </style>
 
 ---
@@ -486,7 +481,7 @@ import { Button } from '../index';
 ```
 
 <style>
-  pre code { @apply !text-xs; }
+  .slidev-layout pre code { @apply !text-xs; }
 </style>
 
 ---
@@ -499,7 +494,7 @@ url: <Gif id="l0MYGb1LuZ3n7dRnO" />
 # 4. **Test** 'em Hard
 
 <style>
-  h1 { @apply text-5xl leading-18 }
+  .slidev-layout h1 { @apply text-5xl leading-18 }
 </style>
 
 ---
@@ -529,7 +524,7 @@ it("has a default rendering", () => {
 ```
 
 <style>
-  pre code { @apply !text-sm; }
+  .slidev-layout pre code { @apply !text-sm; }
 </style>
 
 ---
@@ -556,13 +551,13 @@ background: https://source.unsplash.com/Kj2SaNHG-hg/1920x1080
 layout: media
 variant: left
 overlay: true
-url: <Gif id="u6apJg41ba6JMjFImN" />
+url: <Gif id="R9zXHWAHyTjnq" />
 ---
 
 # 5. Themes and **Variants**
 
 <style>
-  h1 { @apply text-5xl leading-18 }
+  .slidev-layout h1 { @apply text-5xl leading-18 }
 </style>
 
 ---
@@ -571,7 +566,7 @@ links:
 ---
 
 ```css
-html {
+:where(html) {
   /* light */
   --brand-light: var(--orange-6);
 
@@ -629,7 +624,7 @@ html {
 # Extends the defaults
 
 <style>
-  pre code { @apply !text-xs; }
+  .slidev-layout pre code { @apply !text-xs; }
 </style>
 
 ---
@@ -662,7 +657,7 @@ url: https://source.unsplash.com/d30sszrW7Vw/1920x1080
 ```
 
 <style>
-  pre code { @apply !text-sm; }
+  .slidev-layout pre code { @apply !text-sm; }
 </style>
 
 ---
@@ -681,7 +676,7 @@ url: <Gif id="OqprHEhrBpmdq" />
 # 6. Advanced **Composition**
 
 <style>
-  h1 { @apply text-5xl leading-18 }
+  .slidev-layout h1 { @apply text-5xl leading-18 }
 </style>
 
 ---
@@ -715,7 +710,7 @@ url: <Gif id="OqprHEhrBpmdq" />
 ```
 
 <style>
-  pre code { @apply !text-xs; }
+  .slidev-layout pre code { @apply !text-xs; }
 </style>
 
 ---
@@ -779,20 +774,7 @@ url: <Gif id="OqprHEhrBpmdq" />
 # Composition Tokens
 
 <style>
-  pre code { @apply !text-xs; }
-</style>
-
----
-layout: media
-variant: right
-ratio: 2/3
-url: <Gif id="2csuIJj6TmuKA" />
----
-
-# **Cascading** the Tokens
-
-<style>
-  h1 { @apply text-7xl leading-22; }
+  .slidev-layout pre code { @apply !text-xs; }
 </style>
 
 ---
@@ -805,7 +787,7 @@ url: <Gif id="GdJz3mScUhC5W" />
 # 7. **Release** and Share
 
 <style>
-  h1 { @apply text-5xl leading-18 }
+  .slidev-layout h1 { @apply text-5xl leading-18 }
 </style>
 
 ---
@@ -867,7 +849,7 @@ url: https://source.unsplash.com/TxP44VIqlA8/1920x1080
 # Designers Have ==High-Level Tools==, **Developers Need** the Same
 
 <style>
-  h1 { @apply text-5xl leading-18; }
+  .slidev-layout h1 { @apply text-5xl leading-18; }
 </style>
 
 ---
@@ -879,7 +861,7 @@ url: <Gif id="32dfpYx8kBX1bXSEu8" />
 # **Shift left** to your Design Sytems
 
 <style>
-  h1 { @apply text-5xl leading-18; }
+  .slidev-layout h1 { @apply text-5xl leading-18; }
 </style>
 
 
