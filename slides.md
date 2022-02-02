@@ -1,231 +1,848 @@
 ---
 theme: ./
 
-# Display a permalink on the cover / end slides
-# with an automated QRCode
-permalink: https://domain.tld/t/permalink
-# Display avatar in footer
-# Must have a PNG in `img` named as the value
+permalink: https://m4dz.net/t/mushin-way/
+
 author: m4dz
-# Display Twitter link on cover
 twitter: m4d_z
 
 info: >
-  Here is the slides content description for SEO
+  Have you ever imagined that your task as a User Interface Developer would one day become that complex? We had to support responsive design, and it was already difficult at some point. Truth is it was only the smallest of our daemons.
 
-# Dates the talk is given, collection of objects:
-# - name: string, event name
-# - logo?: string, logo SVG file in `img`
-# - datetime: datetime
-# Only one date displayed, the closest upcoming one
+  It's 2022. We still have to address devices with very non-homogeneous screen sizes, but also very diverse SoC, performance variations, users prefs-based themes, network issues from Edge to 5G or WiFi. And the list will go on growing.
+
+  Facing this, we can't continue to handle interfaces the way we did for the last years. We need to shift left, and burn into our Design Systems how to address configurations depending on the context. By moving the responsibility to the components level, we would be able to test, adapt, and deploy at scale complex interfaces without having to fear unexpected issues on some configurations.
+
+  Here's how to proceed to build context-proof UI as an Interface Developer in 2022.
+
 dates:
-  - name: ConfName
-    logo: confname.svg
-    datetime: 2021-10-10T15:00:00+02:00
-
-# `light` or `dark`
-colorSchema: dark
+  - name: SnowCamp
+    datetime: 2022-02-03T14:00+0100
+    permalink: https://snowcamp2022.sched.com/event/vebU/the-mushin-way-to-frontend-performance-switch-left-to-a-pure-design-system
+    logo: snowcamp.webp
 ---
 
-<p class="tagline">Here is the Intro tagline</p>
+<p class="tagline">The Mushin Way to Frontend Performance</p>
 
-# Here Is The Complete Title
-
----
-links:
-  - http://backlight.dev/
-  - https://divriots.com/blog/kaelig-joins-our-advisory-board | Kaelig joins our Advisory board - ‹div›RIOTS
----
-
-# This is the default layout
-
-It can has a regular `<p>` content.
-
-- As well as lists
-- With multiple items
-- 🧩 Some with regular emojis
-- <mdi-light-bullhorn /> Others with inlined icons
-
-`links` prop enable the linkrolls in the footer 👇
+# Switch Left to a Pure Design System
 
 ---
-logo: ../img/confname.svg
+class: text-3xl leading-22
 ---
 
-# The default layout can also contains
-
-<v-clicks>
-
-1. Items appearing on click
-2. Or at the next step
-3. For an impressive effect 🤯
-
-</v-clicks>
-
-Note: If you add a `logo` prop in layout config with a filepath, then a logo is automatically embedded in the slide.
+# It's 2022, <br> we use the **Web** ==everywhere==
 
 ---
 
-# In any layout, you can add
+# We build ==apps==
 
-any kind of content, that can be *in italic form*, in a **bold version**, can be ~~strikethrough parts~~, or ==marked for highlighting==.
+<ul class="tiles">
+  <v-clicks>
+    <li><oi-browser class="inline" /> Browsers</li>
+    <li><oi-monitor class="inline" /> Desktops/Laptops</li>
+    <li><oi-tablet class="inline" /> Mobiles/Tablets</li>
+  </v-clicks>
+</ul>
 
-You can also have codeblocks:
+<style>
+  .tiles {
+    @apply grid grid-cols-3 gap-8;
+    @apply my-10;
 
-```ts
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
+    li {
+      @apply list-none m-0 text-center;
+      @apply flex flex-col items-center;
+      @apply max-w-2/3 mx-auto;
 
-function updateUser(id: number, update: Partial<User>) {
-  const user = getUser(id)
-  const newUser = {...user, ...update}
-  saveUser(id, newUser)
-}
-```
+      &.slidev-vclick-target {
+        transition-property: transform, opacity;
+        transform: translateZ(0) scale(0); opacity: 0;
+      }
+      &.slidev-vclick-prior,
+      &.slidev-vclick-current {
+        transform: translateZ(0) scale(1); opacity: 1;
+      }
+    }
+
+    .slidev-icon {
+      @apply w-20 h-auto;
+      @apply mb-4;
+    }
+  }
+</style>
+
+---
+class: text-3xl leading-22
+---
+
+# Sad News: <br> the web is still **versatile**
+
+---
+layout: media
+url: <Gif id="H6DymKKx6vLvXXJcM6"/>
+variant: left
+class: text-3xl leading-22
+---
+
+# A **World** of Inconsistencies
+
+---
+layout: media
+url: <Gif id="zOvBKUUEERdNm"/>
+variant: right
+overlay: true
+class: text-3xl leading-22
+---
+
+# How Could We Focus On **Features** ==Rather== than **Bugfixing**?
 
 ---
 layout: section
-background: ../img/unsplash/133200.jpg
+background: https://source.unsplash.com/MskbR8VLNrA/1920x1080
 ---
 
-# To Separate Parts, use a section layout
-
----
-layout: media
-url: https://source.unsplash.com/collection/94734566/1920x1080
----
-
-# Layout: media helps you to embed content
-
-The content is centered by default
-(next slide is `variant: full`)
+# The 2022 complexity
 
 ---
 layout: media
+url: ./img/caniuse_webp.png
 variant: full
-url: https://source.unsplash.com/collection/94734566/1920x1080
-links:
-  - https://talks.m4dz.net
 ---
+
+<!-- browsers don't have all capabilities -->
 
 ---
 layout: media
-url: https://source.unsplash.com/collection/94734566/1920x1080
+url: https://techcrunch.com/wp-content/uploads/2016/07/device_testing_lab_facebook.jpg
 variant: left
+class: text-3xl leading-22
+links:
+  - https://techcrunch.com/2016/07/13/facebook-lifts-the-veil-on-its-mobile-device-lab/
 ---
 
-# You can have content with lefty media
+# Different ==Devices==, Different **Capabilities**
 
-Then you have you content on the right side
+---
+class: text-3xl leading-22
+---
 
-```
-with code blocks content
-```
+# Usage may vary **between** users,
 
-Or more regular content
+<v-click>
 
-- like
-- list
-- of items
+# sometimes for the **same** user
+
+</v-click>
 
 ---
 layout: media
-url: https://source.unsplash.com/collection/94734566/1920x1080
+url: <Gif id="kvl2YhR110qsBrHid2"/>
+variant: left
+class: text-4xl leading-22
+---
+
+Issue #1:
+# Screensizes
+
+---
+layout: media
+url: <Gif id="908fS3eQFUodG"/>
 variant: right
-ratio: 2/3
+class: text-4xl leading-22
 ---
 
-# You content can also be righty
-
-And you can also specify a `ratio` for your content
-
-The layout's _props_ are:
-
-```yaml {3-4}
-layout: media
-url: # local path | url | <Gif /> co  mponent
-variant?: right # full | left | right
-ratio?: 2/3 # cols ratio,
-  # defaults: `1/2` for `left|right` variants
-```
+Issue #2:
+# Network
 
 ---
 layout: media
-url: <Gif id="3orieJI3IdkKWIsAGA" caption="Web is 30 years old" />
+url: <Gif id="1xkMJIvxeKiDS"/>
+variant: left
+class: text-4xl leading-22
+---
+
+Issue #3:
+# GPU / SoC / Hardware
+
+---
+layout: media
+url: <Gif id="aZupxNI7bBNS0"/>
+variant: right
+class: text-4xl leading-22
+---
+
+Issue #4:
+# Battery
+
+---
+layout: media
+url: <Gif id="SKGo6OYe24EBG"/>
+variant: left
+class: text-4xl leading-22
+---
+
+Issue #5:
+# Dark Mode, Color-blind Mode, a11y
+
+---
+layout: media
+url: <Gif id="56ikf9jD4ZK6s"/>
+variant: right
+class: text-4xl leading-22
+---
+
+Issue #6:
+# Captive Market
+<small>_(I can see you iOS Safari 👀)_</small>
+
+---
+layout: media
+url: <Gif id="dncu2L87Y5sT6"/>
+variant: left
+class: text-4xl leading-22
+---
+
+Issue #7:
+# Performance & Best-practices
+
+---
+class: text-3xl leading-18
+---
+
+# You have to deal with **all of them** <span v-click>at the same time,</span> <span v-click>combined,</span> <span v-click>in **one** codebase</span><span v-click>? <mdi-sunglasses/></span>
+
+---
+layout: media
+url: <Gif id="92S5gReZGnDgY"/>
 variant: left
 overlay: true
+class: text-4xl leading-22
 ---
 
-# You can enable an Overlay
-
-With the `variant: left|right`, add an `overlay: true` layout prop, so the media is duplicated as an overlay on the content.
-
-Oh, and you can pass a `<Gif />` component as `url` as well 💥
+# How do you ==proceed==?
 
 ---
-layout: quote
-cite: Tim Berners-Lee
-url: https://amazingworkz.com/wp-content/uploads/2019/12/00_13-930x620.jpg
+layout: section
+background: https://source.unsplash.com/5AiWn2U10cw/1920x1080
 ---
 
-> The goal of the Web is to serve humanity. We build it now so that those who come to it later will be able to create things that we cannot ourselves imagine.
+# Pure Design System
 
-You can add `quote` blocks everywhere, but the `quote` layout with a proper `cite` prop enables a view with a portrait.
+---
+links:
+  - https://www.designsystems.com/
+  - https://backlight.dev/mastery/
+---
+
+# Design **System**
+
+<ul class="tiles">
+  <v-clicks>
+    <li><clarity-atom-solid class="inline" /> Design Tokens</li>
+    <li><clarity-design-solid class="inline" /> Design Kit</li>
+    <li><clarity-blocks-group-solid class="inline" /> Components Library</li>
+    <li><clarity-lightbulb-solid class="inline" /> Dynamic Documentation</li>
+  </v-clicks>
+</ul>
+
+<style>
+  .tiles {
+    @apply grid grid-cols-4 gap-8;
+    @apply my-10;
+
+    li {
+      @apply list-none m-0 text-center;
+      @apply flex flex-col items-center;
+      @apply max-w-2/3 mx-auto;
+
+      &.slidev-vclick-target {
+        transition-property: transform, opacity;
+        transform: translateZ(0) scale(0); opacity: 0;
+      }
+      &.slidev-vclick-prior,
+      &.slidev-vclick-current {
+        transform: translateZ(0) scale(1); opacity: 1;
+      }
+    }
+
+    .slidev-icon {
+      @apply w-20 h-auto;
+      @apply mb-4;
+    }
+  }
+</style>
+
+---
+layout: author
+---
+
+---
+class: text-5xl text-center
+---
+
+# Design **<mdi-cards-heart/>** Tokens
+
+---
+layout: media
+url: ./img/design-systems.jpg
+variant: full
+---
+
+---
+links:
+  - https://youtu.be/mYmYJv-A2b8
+---
+
+# The Tokens **inheritance**
+
+<ul class="tiles">
+  <v-clicks>
+    <li>
+      <mdi-palette-swatch class="inline" /> Design Tokens
+      <ul>
+        <li><code>--color-red</code></li>
+        <li><code>--width-lg</code></li>
+        <li><code>--radius-sm</code></li>
+      </ul>
+    </li>
+    <li>
+      <mdi-application-array class="inline" /> Application Tokens
+      <ul>
+        <li><code>--app-c-primary: var(--color-red)</code></li>
+        <li><code>--app-b-lg: var(--width-lg)</code></li>
+        <li><code>--app-r-sm: var(--r-sm)</code></li>
+      </ul>
+    </li>
+    <li>
+      <icon-park-outline-components class="inline" /> Components Tokens
+      <ul>
+        <li><code>--key-surface: var(--app-c-primary)</code></li>
+        <li><code>--key-size: var(--app-b-lg)</code></li>
+        <li><code>--key-radius: var(--app-r-sm)</code></li>
+      </ul>
+    </li>
+  </v-clicks>
+</ul>
+
+<style>
+  .tiles {
+    @apply grid grid-cols-3 gap-2;
+    @apply my-10;
+
+    li {
+      @apply list-none m-0 text-center;
+      @apply flex flex-col items-center;
+      @apply max-w-2/3 mx-auto;
+
+      &.slidev-vclick-target {
+        transition-property: transform, opacity;
+        transform: translateZ(0) scale(0); opacity: 0;
+      }
+      &.slidev-vclick-prior,
+      &.slidev-vclick-current {
+        transform: translateZ(0) scale(1); opacity: 1;
+      }
+
+      li {
+        @apply p-0 py-1 m-0 w-full;
+      }
+
+      code {
+        @apply whitespace-nowrap border-none m-auto px-2;
+        @apply text-xs;
+      }
+    }
+
+    .slidev-icon {
+      @apply w-20 h-auto;
+      @apply mb-4;
+    }
+  }
+</style>
+
+---
+class: text-3xl leading-22
+---
+
+# Defining **Your** Language <br> and **Your** Grammar
+
+---
+class: text-3xl leading-22
+---
+
+# Components Library <br> is only **one** part <br> of your ==Design System==
+
+---
+layout: media
+url: <Gif id="1oEttHTW7Dh6WFabZd"/>
+variant: left
+class: text-3xl leading-22
+---
+
+# A **World** of Abstractions
+
+
+---
+layout: media
+url: <Gif id="xT5LMyV3wwx20bNKtq" />
+variant: right
+overlay: true
+class: text-3xl leading-22
+---
+
+# The **Shift Left** Principle
+
+---
+layout: section
+background: https://source.unsplash.com/QN6NkYi3CKs/1920x1080
+---
+
+# The Mushin Way
 
 ---
 
-# Built-in support for cols
+# We Want to Build **Components** That Are:
 
-All layouts come with a build in support for up to 3 cols.
+<ul class="tiles">
+  <v-clicks>
+    <li><clarity-recycle-solid /> Reuseable</li>
+    <li><clarity-flask-solid />Testable</li>
+    <li><clarity-atom-solid /> Customizable</li>
+    <li><clarity-employee-group-solid /> Collaborative</li>
+  </v-clicks>
+</ul>
 
-::col-2::
+<style>
+  .tiles {
+    @apply grid grid-cols-4 gap-8;
+    @apply my-10;
 
-Simply prefix content with the marker `::col-2::` to start the second one.
+    li {
+      @apply list-none m-0 text-center;
+      @apply flex flex-col items-center;
+      @apply max-w-2/3 mx-auto;
+
+      &.slidev-vclick-target {
+        transition-property: transform, opacity;
+        transform: translateZ(0) scale(0); opacity: 0;
+      }
+      &.slidev-vclick-prior,
+      &.slidev-vclick-current {
+        transform: translateZ(0) scale(1); opacity: 1;
+      }
+    }
+
+    .slidev-icon {
+      @apply w-20 h-auto;
+      @apply mb-4;
+    }
+  }
+</style>
+
+---
+layout: media
+url: ./img/a-wordle-ds.png
+class: text-sm text-center
+---
+
+# Living **Components** in a ==Design Sytems==
 
 ---
 
-# For a 3 cols view
+# Building a Component for **Reusability**
 
-Do the same
+<ul class="tiles">
+  <v-clicks>
+    <li><ic-outline-cruelty-free/> Technology Free</li>
+    <li><ph-plugs-bold />Interface / API</li>
+    <li><grommet-icons-clone /> Variants</li>
+  </v-clicks>
+</ul>
 
-::col-2::
+<style>
+  .tiles {
+    @apply grid grid-cols-3 gap-8;
+    @apply my-10;
 
-Just start a new col
+    li {
+      @apply list-none m-0 text-center;
+      @apply flex flex-col items-center;
+      @apply max-w-2/3 mx-auto;
 
-::col-3::
+      &.slidev-vclick-target {
+        transition-property: transform, opacity;
+        transform: translateZ(0) scale(0); opacity: 0;
+      }
+      &.slidev-vclick-prior,
+      &.slidev-vclick-current {
+        transform: translateZ(0) scale(1); opacity: 1;
+      }
+    }
 
-With the `::col-3::` prefix.
+    .slidev-icon {
+      @apply w-20 h-auto;
+      @apply mb-4;
+    }
+  }
+</style>
 
 ---
-class: center
+layout: media
+url: <Gif id="xT1XGNoBS2mY59LWvu" />
+variant: left
+overlay: true
+class: text-4xl leading-22
 ---
 
-# The `center` layout prop class center the contentn horizontally
+# **Burning** ==complexity== into the DS
 
 ---
-class: text-8xl
+links:
+  - https://css-tricks.com/a-complete-guide-to-css-media-queries/
+  - https://tomquinonero.com/blog/a-guide-to-css-container-queries/
+  - https://css-tricks.com/say-hello-to-css-container-queries/
 ---
 
-Important content can be emphasized using the regular tailwind `text-` classes.
+::header::
+# Screensizes
+
+::default::
+## media-queries
+
+```css
+@media (30em <= width <= 50em ) {
+
+}
+```
+```css
+@media screen and (prefers-reduced-motion: reduce) {
+  * {
+
+  }
+}
+```
+```css
+@media (prefers-contrast: high) {
+  :root {
+
+  }
+}
+```
+
+::col2::
+## container-queries
+
+```css
+.parent {
+  contain: layout inline-size;
+}
+
+@container (min-width: 400px) {
+  .child {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+```
+
+<style>
+  .slidev-layout h1 { @apply mb-4 }
+  .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 my-2 mt-6 }
+  .slidev-code code { @apply !text-xs }
+</style>
 
 ---
-
-You can also rely on built-in [Slidev](https://sli.dev) components, like tweets:
-
-<Tweet id="20" />
-
+links
+  - https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API
 ---
 
-Or YouTube embeded videos:
+# Network: Network Information API
 
-<!-- <Youtube id="luoMHjh-XcQ" /> -->
+```js
+var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+var type = connection.effectiveType;
+
+function updateConnectionStatus() {
+  console.log("Connection type changed from " + type + " to " + connection.effectiveType);
+  type = connection.effectiveType;
+}
+
+connection.addEventListener('change', updateConnectionStatus);
+```
+```js
+let preloadVideo = true;
+var connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+if (connection) {
+  if (connection.effectiveType === 'slow-2g') {
+    preloadVideo = false;
+  }
+}
+```
+
+<style>
+  .slidev-code code { @apply !text-xs }
+</style>
+
+---
+links:
+  - https://developer.mozilla.org/en-US/docs/Web/API/Media_Capabilities_API
+---
+
+# GPU/SoC: Media Capabilities API
+
+```js
+if ('mediaCapabilities' in navigator) {
+  const audioFileConfiguration = {
+    type : 'file',
+    audio : {
+      contentType: "audio/mp3",
+        channels: 2,
+        bitrate: 132700,
+        samplerate: 5200
+    }
+  };
+
+  navigator.mediaCapabilities.decodingInfo(audioFileConfiguration).then(result => {
+    console.log('This configuration is ' +
+        (result.supported ? '' : 'not ') + 'supported, ' +
+        (result.smooth ? '' : 'not ') + 'smooth, and ' +
+        (result.powerEfficient ? '' : 'not ') + 'power efficient.')
+    })
+    .catch(() => {
+      console.log("decodingInfo error: " + contentType)
+    });
+}
+```
+
+<style>
+  .slidev-code code { @apply !text-xs }
+</style>
+
+---
+links:
+  - https://developer.mozilla.org/en-US/docs/Web/API/Battery_Status_API
+---
+
+# Battery: Battery Status API
+
+```js
+navigator.getBattery().then((battery) => {
+  battery.addEventListener('chargingchange', function(){
+
+    });
+
+  battery.addEventListener('levelchange', function(){
+
+    });
+
+  battery.addEventListener('chargingtimechange', function(){
+
+    });
+
+  battery.addEventListener('dischargingtimechange', function(){
+
+    });
+});
+```
+
+<style>
+  .slidev-code code { @apply !text-xs }
+</style>
+
+---
+links:
+  - https://codepen.io/argyleink/pen/XWaYyWe
+---
+
+```css
+:where(html) {
+  --color-white: #fff;
+  --color-black: #212121;
+  --color-purple: #639;
+}
+
+html {
+  --light-primary: var(--color-white);
+  --light-contrast: var(--color-black);
+
+  --dark-primary: var(--color-black);
+  --dark-contrast: var(--color-white);
+
+  --purple-primary: var(--color-purple);
+  --purple-contrast: var(--color-white);
+}
+```
+```scss
+[color-scheme=light] { @include light; }
+[color-scheme=dark] { @include dark; }
+[color-scheme=purple] { @include purple; }
+```
+
+::header::
+# Theme/Variants
+
+::col2::
+```scss
+@mixin theme-light {
+  color-scheme: light;
+  --app-color-surface: var(--light-primary);
+  --app-color-text: var(--light-contrast);
+}
+@mixin theme-dark {
+  color-scheme: dark;
+  --app-color-surface: var(--dark-primary);
+  --app-color-text: var(--dark-contrast);
+}
+@mixin theme-purple {
+  color-scheme: dark;
+  --app-color-surface: var(--purple-primary);
+  --app-color-text: var(--purple-contrast);
+}
+```
+```scss
+:root {
+  @include light;
+  @media (prefers-color-scheme: dark) {
+    @include dark;
+  }
+}
+
+```
+
+<style>
+  .slidev-code code { @apply !text-xs }
+</style>
+
+---
+layout: media
+url: <Gif id="fDNGJgYm6xIfm" />
+variant: left
+class: text-2xl leading-16
+---
+
+# Use-case: <br> **Video Player**
+
+- Bandwidth Status (Pre)Load
+- Adapt to Container Size
+- Detect Battery Updates
+- Use Tokens
+
+---
+layout: section
+background: https://source.unsplash.com/8-9hqGiqgR4/1920x1080
+---
+
+# The Performance Promise
+
+---
+layout: media
+url: ./img/backlight-publish.png
+variant: right
+class: text-2xl leading-16
+---
+
+# Reusing **components** in your final product
+
+---
+layout: media
+url: https://gameprogrammingpatterns.com/images/format-ebook.jpg
+variant: left
+class: text-xl
+links:
+  - https://gameprogrammingpatterns.com/
+---
+
+# External **logic**
+
+- State Machines
+- WASM: Business Logic
+- Multi-threading: Workers
+- Communication Bus
+
+---
+class: text-xl
+links:
+  - https://a11yphant.com
+  - https://www.invisionapp.com/inside-design/storybook-excerpt/
+---
+
+# Unit _vs_ Real World **Testing**
+
+- Unit testing frameworks
+- Integration tests
+- Stories
+- A11y tests
+- Views E2E
+
+---
+links:
+  - https://www.matuzo.at/blog/2022/cascade-layers/
+  - https://developer.mozilla.org/en-US/docs/Web/CSS/@layer
+---
+
+# The Layout Design
+
+```css
+@layer base, third-party, components;
+
+@layer base {
+  /* Base styles */
+}
+
+@import url(slider.css) layer(third-party);
+
+@layer third-party {
+  @layer overwrites {
+    .slider-item {
+      /* 2rd party component overrides */
+    }
+  }
+}
+
+@layer components {
+  /* Component styles */
+}
+```
+
+<style>
+  .slidev-code code { @apply !text-xs }
+</style>
+
+---
+layout: media
+url: <Gif id="lNOpVpGhgYGJ3S4Qcc"/>
+variant: right
+overlay: true
+class: text-3xl
+---
+
+# Fixing **issues**
+
+--- <!-- outro -->
+class: text-3xl
+---
+
+# Shifting Left an **existing** UI<span v-click>?</span>
+
+---
+class: text-3xl
+---
+
+# From ==design== to **development**
+
+---
+layout: media
+url: <Gif id="3o7ZeEZUzRjyvWuuIg"/>
+variant: left
+class: text-3xl leading-22
+---
+
+# You should start <span v-click>right **now**!</span>
 
 ---
 layout: qa
 ---
 
-<!-- The `qa` layout is a variant of the `section` one to introduce Q/A sessions. -->
+---
+layout: thanks
+---
