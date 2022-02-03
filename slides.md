@@ -35,6 +35,10 @@ dates:
   - name: WeAreDevelopers JavaScript Congress
     logo: wearedevelopers.png
     datetime: 2021-11-25T21:00:00+01:00
+  - name: SnowCamp
+    datetime: 2022-02-03T10:45+0100
+    permalink: https://snowcamp2022.sched.com/event/qHQU/the-eternal-sunshine-of-the-zero-build-pipeline
+    logo: snowcamp.webp
 ---
 
 <p class="tagline">The Eternal Sunshine of the</p>
@@ -42,8 +46,10 @@ dates:
 # Zero Build Pipeline
 
 ---
+class: text-2xl leading-18
+---
 
-# TL;DR
+# TL;**DR**
 
 <v-clicks>
 
@@ -102,12 +108,10 @@ variant: full
 </style>
 
 ---
+class: text-3xl leading-22
+---
 
 # Did you see ==HTML/CSS/JS== <br> in the previous list?
-
-<style>
-  h1 { @apply text-7xl leading-22 }
-</style>
 
 ---
 layout: media
@@ -119,7 +123,7 @@ overlay: true
 `npm install`
 
 <style>
-  code { @apply text-4xl }
+  .slidev-layout code { @apply !text-4xl }
 </style>
 
 ---
@@ -130,24 +134,18 @@ background: ./img/danist-8Gg2Ne_uTcM-unsplash.jpg
 # Why Do We Compile Websites?
 
 ---
+class: text-2xl leading-22
+---
 
-# Developer eXperience is bloated, <br> thanks to our ==DevTools==
-
-<style>
-  h1 { @apply text-5xl leading-22 }
-</style>
+# Developer eXperience is **bloated**, <br> thanks to our ==DevTools==
 
 ---
 logo: ./img/IconParkOutlineRobot.svg
 ratio: 1/3
-class: self-center
+class: self-center text-xl leading-18
 ---
 
-# Coding in the Browser, the Antique Way
-
-<style>
-  h1 { @apply text-4xl leading-12 }
-</style>
+# Coding in the **Browser**, the Antique Way
 
 ::col2::
 
@@ -168,6 +166,7 @@ window.addEventListener('DOMContentLoaded', (e) => {
 ---
 logo: ./img/IconParkOutlineRobot.svg
 ratio: 2/3
+class: text-xl leading-14
 links:
   - https://developer.mozilla.org/en-US/docs/Glossary/IIFE
   - https://requirejs.org/docs/whyamd.html#commonjs
@@ -175,15 +174,11 @@ links:
   - https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program/
 ---
 
-# Modules Everywhere
+# **Modules** Everywhere
 
 - IIFE pattern
 - CommonJS vs. ES Modules
 - Bundling for the Web (Browserify, etc.)
-
-<style>
-  h1 { @apply leading-12 }
-</style>
 
 ::col2::
 
@@ -205,7 +200,7 @@ overlay: true
 class: text-left
 ---
 
-# The Transpilers
+# The **Transpilers**
 
 - Inherited from ActiveScript and CoffeeScript
 - Better doesn't mean simpler
@@ -214,7 +209,7 @@ class: text-left
 
 ---
 
-# The Browser-as-a-VM Era
+# The **Browser-as-a-VM** Era
 
 ```rust
 mod utils;
@@ -241,7 +236,7 @@ layout: media
 url: <Gif id="b8l8TWWxcUcAAAPo/backpack-bag" provider="tenor" />
 variant: right
 overlay: true
-class: text-left
+class: text-left text-xl leading-14
 ---
 
 # This is why we're now <br> **compiling** our Websites
@@ -255,25 +250,19 @@ class: text-left
 
 </v-clicks>
 
-<style>
-  h1 { @apply text-4xl leading-12 }
-</style>
-
+---
+class: text-2xl leading-14
 ---
 
 # Web Evolved
 
 <v-clicks>
 
-# We still stand on its foundations <small>(HTML/CSS/JS)</small>
+# We still stand on its **foundations** <small>(HTML/CSS/JS)</small>
 
 # But we needed ==high-level== tools
 
 </v-clicks>
-
-<style>
-  h1 { @apply text-5xl leading-16 }
-</style>
 
 ---
 layout: section
@@ -288,7 +277,7 @@ url: <Gif id="OKHsKFTRGHqI8" />
 variant: left
 ---
 
-# The Usual Suspects
+# The **Usual** Suspects
 
 <v-clicks>
 
@@ -304,12 +293,10 @@ variant: left
 </v-clicks>
 
 ---
+class: text-3xl leading-22
+---
 
-# ==Easier== developers life <br> means ==overly complex== <br> DevTools Stack
-
-<style>
-  h1 { @apply text-7xl leading-24 }
-</style>
+# ==Easier== developers life <br> means **overly complex** <br> DevTools Stack
 
 ---
 class: text-3xl
@@ -325,16 +312,14 @@ a shitload of tools that mimic my browser features
 can wait eternally rather than coding my stuff
 
 ---
+class: text-3xl leading-22
+---
 
 # **Compiling** for production <br> doesn't mean we need it <br> during ==development==
 
-<style>
-  h1 { @apply text-7xl leading-22 }
-</style>
-
 ---
 
-# Web Developer Superpowers
+# Web Developer **Superpowers**
 
 <ul class="tiles">
   <v-clicks>
@@ -373,7 +358,7 @@ can wait eternally rather than coding my stuff
 
 ---
 
-# Improving the ~~User~~ Developer eXperience
+# Improving the ~~User~~ **Developer eXperience**
 
 - Standardized ESM
 - Superset of languages (TS, JSX...)
@@ -391,8 +376,10 @@ background: ./img/emre-karatas-Ib2e4-Qy9mQ-unsplash.jpg
 # Solving the bottleneck
 
 ---
-class: self-center
+class: text-2xl
 ---
+
+# How does it **work**?
 
 <v-clicks>
 
@@ -404,54 +391,13 @@ class: self-center
 
 </v-clicks>
 
-<v-click>
-
-```tsx
-import React from 'react'
-import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-)
-```
-
-</v-click>
-
-::col2::
-
-<v-after>
-
-```tsx
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-
-export default function App() {
-  const [count, setCount] = useState(0)
-  return (
-    <div className="App">
-      <img src={logo} className="App-logo" />
-      <button
-        type="button"
-        onClick={() => setCount(c => c + 1)}
-      >
-        count is: {count}
-      </button>
-    </div>
-  )
-}
-```
-
-</v-after>
-
-::header::
-
-# How does it work?
+---
+layout: media
+url: ./img/vite-react.png
+variant: full
+links:
+  - https://vite.new/react
+---
 
 ---
 
@@ -489,16 +435,17 @@ links:
   - https://www.snowpack.dev/concepts/how-snowpack-works | How Snowpack Works
 ---
 
-# On-Request Build Oriented
+# **On-Request** Build Oriented
 
 ---
 layout: media
 url: <Gif id="s2qXK8wAvkHTO" />
 variant: left
 overlay: true
+class: text-2xl leading-18
 ---
 
-# Why a Single File approach?
+# Why a **Single File** approach?
 
 - Fast builds
 - Deterministic
@@ -506,9 +453,50 @@ overlay: true
 - Dev speed unrelated to project size
 - Better cache
 
-<style>
-  h1 { @apply leading-12 }
-</style>
+---
+class: text-2xl
+links:
+  - https://jasonformat.com/islands-architecture/
+---
+
+# The Partial Hydration concept
+
+<v-clicks>
+
+- Most of the content is **static**
+- Dynamic content **hydrated on the back**
+- Client only loads **super-hot data**
+- Components SSR
+- `<script>` components loading
+
+</v-clicks>
+
+---
+class: text-2xl
+links:
+  - https://www.youtube.com/watch?app=desktop&v=k-A2VfuUROg
+---
+
+# The Progressive Hydration concept
+
+- Initialize **over time**
+- **Scheduling**:
+  - Idle
+  - Viewport
+  - Interaction
+  - Update events
+  - ..
+
+---
+layout: media
+url: ./img/islands-architecture-1.png
+variant: left
+overlay: true
+class: text-2xl leading-16
+---
+
+# The Component **Islands** Pattern
+
 
 ---
 layout: media
@@ -520,13 +508,10 @@ variant: full
 layout: media
 url: <Gif id="dGtf1UhMLrcLm" />
 variant: left
+class: text-3xl leading-22
 ---
 
-# The ==Challengers==
-
-<style>
-  h1 { @apply text-7xl leading-22 }
-</style>
+# The **Challengers**
 
 ---
 
@@ -568,11 +553,12 @@ variant: left
 # The Challengers
 
 <style>
-  h1 { @apply mb-12 }
-  h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
+  .slidev-layout h1 { @apply mb-4 }
+  .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 my-2 mt-6 }
 </style>
 
 ---
+class: text-center
 links:
   - https://backlight.dev/ | Backlight.dev Design System IDE
 ---
@@ -616,12 +602,11 @@ links:
   ```
 
 ::header::
-
-# Is it Hot?
+# Is it **Hot**?
 
 <style>
-  h1 { @apply mb-12 }
-  h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
+  .slidev-layout h1 { @apply mb-4 }
+  .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 my-2 mt-6 }
 </style>
 
 ---
@@ -632,12 +617,10 @@ background: ./img/caroline-selfors-r2jpr8MDw0I-unsplash.jpg
 # Keep building for Production
 
 ---
+class: text-4xl leading-22
+---
 
-# You're <small>(probably)</small> not your ==end-user==
-
-<style>
-  h1 { @apply text-8xl leading-28 }
-</style>
+# You're <small>(probably)</small> <br> **not** your ==end-user==
 
 ---
 layout: media
@@ -662,23 +645,21 @@ layout: media
 url: <Gif id="3sZv" provider="gifer" />
 variant: left
 overlay: true
+class: text-3xl leading-22
 links:
   - https://exploringjs.com/es6/ch_modules.html#_benefit-dead-code-elimination-during-bundling | Dead code elimination
 ---
 
 # The **Treeshaking** Mystery
 
-<style>
-  h1 { @apply text-7xl leading-22 }
-</style>
-
 ---
 layout: media
 url: ./img/cesar-carlevarino-aragon-NL_DF0Klepc-unsplash.jpg
+class: text-2xl leading-14
 variant: right
 ---
 
-# Extending the Build
+# **Extending** the Build
 
 - Plugins Interface
 - Snowpack: Custom API
@@ -686,15 +667,11 @@ variant: right
 - Support external asset types
 - Allow types mix (MD Vue...)
 
+--- <!-- Outro -->
+class: text-2xl leading-18
 ---
 
-<!-- Outro -->
-
 # It's a new generation of Devtools <br> built by great **communities** <br> <small>(Skypack, Vue, Preact...)</small>
-
-<style>
-  h1 { @apply text-5xl leading-18 }
-</style>
 
 ---
 links:
@@ -709,9 +686,9 @@ links:
 - [UNPkG](https://unpkg.com/)
 
 ::col2::
-
 ## New Advanced <emojione-high-voltage /> Tools
 
+- [Vitest](https://vitest.dev/)
 - [Vitepress](https://vitepress.vuejs.org/)
 - [Slidev](https://sli.dev/)
 - [Viteshot](https://viteshot.com/)
@@ -719,34 +696,32 @@ links:
 - [îles](https://iles-docs.netlify.app/)
 
 ::header::
-
 # <emojione-waving-hand />
 
 <style>
-  h1 { @apply mb-12 }
-  h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 mb-4 }
+  .slidev-layout h1 { @apply mb-4 }
+  .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 my-2 mt-6 }
 </style>
 
 ---
-ratio: 1/2
-class: self-center
+ratio: 2/3
+class: self-center text-xl leading-16
 links:
   - https://framagit.org/kresusapp/kresus/-/merge_requests/1440 | kresus - Use Vite for bundling
 ---
 
-# ==Migrate== Your Current Code-base
+# **Migrate** Your Code-base
 
 <v-clicks>
 
 1. Imports will still work
 2. Few adjustments on edges (`resolve.alias`...)
 3. Update `npm scripts`
-4. Add `vite.config.js`, and remove Webpack <emojione-party-popper class="inline" />
+4. Add `vite.config.js`, <br> and remove Webpack <emojione-party-popper class="inline" />
 
 </v-clicks>
 
 ::col2::
-
 <v-after>
 
 ```js
@@ -762,10 +737,6 @@ export default defineConfig({
 ```
 
 </v-after>
-
-<style>
-  h1 { @apply leading-12 }
-</style>
 
 ---
 layout: author
