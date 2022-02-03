@@ -24,7 +24,7 @@ dates:
 
 <p class="tagline">The Mushin Way to Frontend Performance</p>
 
-# Switch Left to a Pure Design System
+# Shift Left to a Pure Design System
 
 ---
 class: text-3xl leading-22
