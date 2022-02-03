@@ -413,7 +413,7 @@ links:
 <v-click>
 
 ```js
-import confetti from 'canvas-confetti';
+import confetti from 'https://unpkg.com/canvas-confetti';
 
 confetti.create(document.getElementById('can'),
 {
@@ -443,6 +443,12 @@ url: <Gif id="s2qXK8wAvkHTO" />
 variant: left
 overlay: true
 class: text-2xl leading-18
+---
+
+---
+layout: media
+url: ./img/snowpack-unbundled-example-3.png
+variant: full
 ---
 
 # Why a **Single File** approach?
@@ -496,13 +502,6 @@ class: text-2xl leading-16
 ---
 
 # The Component **Islands** Pattern
-
-
----
-layout: media
-url: ./img/snowpack-unbundled-example-3.png
-variant: full
----
 
 ---
 layout: media
@@ -750,6 +749,10 @@ author: https://www.telegraph.co.uk/multimedia/archive/02751/George-Orwell-_2751
 
 > Who Controls the Past
 > Controls the Future
+
+---
+layout: qa
+---
 
 ---
 layout: thanks
