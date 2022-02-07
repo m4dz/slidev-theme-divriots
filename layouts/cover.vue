@@ -17,12 +17,10 @@ const now = new Date();
 const dates = computed(() => {
   return configs.dates?.map((date) => {
     const _d = new Date(date.datetime);
-    const logo = new URL(`../img/${date.logo}`, import.meta.url).href;
     return {
       ...date,
       _d,
       i18n: format(_d, "PP"),
-      logo
     }
   })
 })
