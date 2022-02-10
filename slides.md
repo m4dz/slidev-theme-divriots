@@ -20,8 +20,8 @@ info: >
 # Only one date displayed, the closest upcoming one
 dates:
   - name: ConfName
-    logo: confname.svg
-    datetime: 2021-10-10T15:00:00+02:00
+    logo: /img/confname.svg
+    datetime: 2030-01-01T14:00+0200
 
 # `light` or `dark`
 colorSchema: dark

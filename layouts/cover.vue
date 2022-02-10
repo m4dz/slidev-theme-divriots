@@ -17,10 +17,12 @@ const now = new Date();
 const dates = computed(() => {
   return configs.dates?.map((date) => {
     const _d = new Date(date.datetime);
+    const logo = `${import.meta.env.BASE_URL}${date.logo}`.replace('//', '/');
     return {
       ...date,
       _d,
       i18n: format(_d, "PP"),
+      logo
     }
   })
 })
