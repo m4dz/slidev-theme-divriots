@@ -1,5 +1,5 @@
 {
-  "name": "slidev-theme-divRIOTS",
+  "name": "slidev-theme-divriots",
   "version": "0.1.0",
   "engines": {
     "node": ">=14.0.0",
@@ -29,7 +29,7 @@
     "screenshot": "slidev export slides.md --format png"
   },
   "dependencies": {
-    "@slidev/types": "^0.28.2",
+    "@slidev/types": "^0.28.6",
     "codemirror-theme-vars": "^0.1.1",
     "date-fns": "^2.28.0",
     "markdown-it-mark": "^3.0.1",
@@ -39,8 +39,12 @@
     "theme-vitesse": "^0.1.14"
   },
   "devDependencies": {
-    "@slidev/cli": "^0.28.2",
-    "eslint": "^8.8.0",
+    "@iconify-json/bi": "^1.0.12",
+    "@iconify-json/codicon": "^1.0.13",
+    "@iconify-json/ic": "^1.1.1",
+    "@iconify-json/mdi-light": "^1.1.0",
+    "@slidev/cli": "^0.28.6",
+    "eslint": "^8.9.0",
     "eslint-plugin-vue": "^7.20.0"
   }
 }
