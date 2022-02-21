@@ -1,30 +1,29 @@
 ---
 theme: ./
 
-# Display a permalink on the cover / end slides
-# with an automated QRCode
-permalink: https://domain.tld/t/permalink
-# Display avatar in footer
-# Must have a PNG in `img` named as the value
-author: m4dz
-# Display Twitter link on cover
-twitter: m4d_z
+colorSchema: dark
 
 info: >
   Here is the slides content description for SEO
 
-# Dates the talk is given, collection of objects:
-# - name: string, event name
-# - logo?: string, logo SVG file in `img`
-# - datetime: datetime
-# Only one date displayed, the closest upcoming one
-dates:
-  - name: ConfName
-    logo: /img/confname.svg
-    datetime: 2030-01-01T14:00+0200
-
-# `light` or `dark`
-colorSchema: dark
+themeConfig:
+  # Display a permalink on the cover / end slides
+  # with an automated QRCode
+  permalink: https://domain.tld/t/permalink
+  # Display avatar in footer
+  # Must have a PNG in `img` named as the value
+  author: m4dz
+  # Display Twitter link on cover
+  twitter: m4d_z
+  # Dates the talk is given, collection of objects:
+  # - name: string, event name
+  # - logo?: string, logo SVG file in `img`
+  # - datetime: datetime
+  # Only one date displayed, the closest upcoming one
+  dates:
+    - name: ConfName
+      logo: /img/confname.svg
+      datetime: 2030-01-01T14:00+0200
 ---
 
 <p class="tagline">Here is the Intro tagline</p>
