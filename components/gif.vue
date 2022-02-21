@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { computed } from "vue";
+import { computed, onMounted, ref, defineExpose } from "vue";
+
+const player = ref();
+const loopCounter = ref(0);
+const maxLoop = 3;
 
 const props = withDefaults(
   defineProps<{
@@ -12,6 +16,8 @@ const props = withDefaults(
     provider: "giphy",
   }
 );
+
+defineExpose({ player })
 
 const base = computed(() => {
   let base = "";
@@ -28,12 +34,23 @@ const base = computed(() => {
   }
   return base;
 });
+
+onMounted(() => {
+  player.value.addEventListener('ended', () => {
+    loopCounter.value += 1;
+    if (loopCounter.value < maxLoop) {
+      player.value.play();
+    } else {
+      player.value.classList.add('stopped');
+    }
+  })
+})
 </script>
 
 <template>
   <figure class="gif" :class="`embed-media__${provider} ${props.class}`">
     <div>
-      <video muted playsinline autoplay loop>
+      <video muted playsinline autoplay ref="player">
         <source :src="`${base}.mp4`" />
         <source :src="`${base}.mp4`" v-if="props.provider === 'tenor'" />
         <img :src="`${base}.gif`" alt="" v-if="props.provider != 'tenor'" />
@@ -60,6 +77,10 @@ figcaption {
 
 video {
   @apply rounded;
+
+  &.stopped {
+    @apply opacity-60;
+  }
 }
 
 figure:not(.in-media) video {
