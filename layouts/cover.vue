@@ -5,17 +5,10 @@ import { format, closestIndexTo, isPast, addHours } from "date-fns";
 
 import logo from '../img/divriots_square_typo_black.svg?raw'
 
-const props =
-  defineProps<{
-    permalink?: string;
-    twitter?: string;
-    author?: string;
-  }>();
-
 const now = new Date();
 
 const dates = computed(() => {
-  return configs.dates?.map((date) => {
+  return configs.themeConfig.dates?.map((date) => {
     const _d = new Date(date.datetime);
     const logo = `${import.meta.env.BASE_URL}${date.logo}`.replace('//', '/');
     return {
@@ -36,20 +29,27 @@ const nextDateIndex = computed(() => {
 <template>
   <div class="slidev-layout cover">
     <header>
-      <div class="logo" v-html="logo"></div>
+      <div
+        class="logo"
+        v-html="logo"
+      />
       <ul v-if="dates">
         <li
-          class="datetime"
           v-for="(date, index) in dates"
-          :key="index"
           v-show="index === nextDateIndex"
+          :key="index"
+          class="datetime"
         >
           <div>
             <span>{{ date.name }}</span>
             <br>
             <time :datetime="date.datetime">{{ date.i18n }}</time>
           </div>
-          <img v-if="date.logo" :src="date.logo" alt />
+          <img
+            v-if="date.logo"
+            :src="date.logo"
+            alt=""
+          >
         </li>
       </ul>
     </header>
@@ -60,9 +60,8 @@ const nextDateIndex = computed(() => {
 
     <Footer
       class="footer"
-      :permalink="permalink"
-      :twitter="twitter"
       no-slideno
+      is-cover
     />
   </div>
 </template>

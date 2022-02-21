@@ -1,16 +1,18 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import { configs } from "@slidev/client/env";
 import { currentRoute } from '@slidev/client/logic/nav'
 import QrcodeVue from "qrcode.vue";
 
 const props =
   defineProps<{
-    noSlideno?: boolean;
-    twitter?: string;
-    permalink?: string;
+    noSlideno: boolean;
     links?: Array<string>
-    noAvatar?: boolean;
+    noAvatar: boolean;
+    isCover: boolean;
   }>();
+
+const { permalink, twitter } = configs.themeConfig;
 
 const linkrolls = computed(() => {
   const links = props.links?.map((link) => {
@@ -30,7 +32,7 @@ const hasLinks = computed(() => {
 
 <template>
   <footer>
-    <div v-if="permalink && $slidev.configs.permalink" class="permalink">
+    <div v-if="permalink && isCover" class="permalink">
       <qrcode-vue
         class="qrcode"
         :value="permalink"
@@ -40,12 +42,16 @@ const hasLinks = computed(() => {
         background="transparent"
         foreground="var(--color-dark)"
       />
-      <a :href="permalink">{{ permalink }}</a>
+      <a
+        :href="permalink"
+      >
+        {{ permalink }}
+      </a>
     </div>
 
     <hr class="flex-auto" />
 
-    <a v-if="twitter && $slidev.configs.twitter" class="twitter" :href="`https://twitter.com/${twitter}`">
+    <a v-if="twitter && isCover" class="twitter" :href="`https://twitter.com/${twitter}`">
       <bx-bxl-twitter class="icn" />
       @{{ twitter }}
     </a>

@@ -2,20 +2,22 @@
 import { computed } from "vue";
 import { configs } from "@slidev/client/env";
 
+const { author } = configs.themeConfig;
+
 const src = computed(() => {
-  return new URL(`../img/${configs.author}.png`, import.meta.url).href;
+  return new URL(`../img/${author}.png`, import.meta.url).href;
 })
 
 </script>
 
 <template>
-  <div class="avatar" v-if="$slidev.configs.author">
+  <div class="avatar" v-if="author">
     <img
       :src="src"
       width="512"
       height="512"
       alt=""
-    />
+    >
   </div>
 </template>
 
