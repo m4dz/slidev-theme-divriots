@@ -16,6 +16,8 @@ info: >
   Here's how to proceed to build context-proof UI as an Interface Developer in 2022.
 
 dates:
+  - name: Angular Global Summit 22
+    datetime: 2022-03-30T20:05+0200
   - name: SnowCamp
     datetime: 2022-02-03T14:00+0100
     permalink: https://snowcamp2022.sched.com/event/vebU/the-mushin-way-to-frontend-performance-switch-left-to-a-pure-design-system
@@ -27,14 +29,8 @@ dates:
 # Shift Left to a Pure Design System
 
 ---
-class: text-3xl leading-22
----
 
-# It's 2022, <br> we use the **Web** ==everywhere==
-
----
-
-# We build ==apps==
+# We build Web ==apps==
 
 <ul class="tiles">
   <v-clicks>
@@ -72,19 +68,13 @@ class: text-3xl leading-22
 </style>
 
 ---
-class: text-3xl leading-22
----
-
-# Sad News: <br> the web is still **versatile**
-
----
 layout: media
-url: <Gif id="H6DymKKx6vLvXXJcM6"/>
+url: <Gif id="24NFlkLka4VvwGVsjj"/>
 variant: left
 class: text-3xl leading-22
 ---
 
-# A **World** of Inconsistencies
+# The web is still a **World** of Inconsistencies
 
 ---
 layout: media
@@ -105,7 +95,7 @@ background: https://source.unsplash.com/MskbR8VLNrA/1920x1080
 
 ---
 layout: media
-url: ./img/caniuse_webp.png
+url: ./img/caniuse_container-queries.png
 variant: full
 ---
 
@@ -203,23 +193,13 @@ class: text-4xl leading-22
 ---
 
 Issue #7:
-# Performance & Best-practices
+# Performance, Best-practices, Dos & Donts
 
 ---
 class: text-3xl leading-18
 ---
 
 # You have to deal with **all of them** <span v-click>at the same time,</span> <span v-click>combined,</span> <span v-click>in **one** codebase</span><span v-click>? <mdi-sunglasses/></span>
-
----
-layout: media
-url: <Gif id="92S5gReZGnDgY"/>
-variant: left
-overlay: true
-class: text-4xl leading-22
----
-
-# How do you ==proceed==?
 
 ---
 layout: section
@@ -238,10 +218,10 @@ links:
 
 <ul class="tiles">
   <v-clicks>
-    <li><clarity-atom-solid class="inline" /> Design Tokens</li>
-    <li><clarity-design-solid class="inline" /> Design Kit</li>
-    <li><clarity-blocks-group-solid class="inline" /> Components Library</li>
-    <li><clarity-lightbulb-solid class="inline" /> Dynamic Documentation</li>
+    <li><clarity-atom-solid class="inline slidev-icon" /> Design Tokens</li>
+    <li><clarity-design-solid class="inline slidev-icon" /> Design Kit</li>
+    <li><clarity-blocks-group-solid class="inline slidev-icon" /> Components Library</li>
+    <li><clarity-lightbulb-solid class="inline slidev-icon" /> Dynamic Documentation</li>
   </v-clicks>
 </ul>
 
@@ -266,7 +246,7 @@ links:
     }
 
     .slidev-icon {
-      @apply w-20 h-auto;
+      @apply w-20 h-20;
       @apply mb-4;
     }
   }
@@ -274,18 +254,6 @@ links:
 
 ---
 layout: author
----
-
----
-class: text-5xl text-center
----
-
-# Design **<mdi-cards-heart/>** Tokens
-
----
-layout: media
-url: ./img/design-systems.jpg
-variant: full
 ---
 
 ---
@@ -361,18 +329,6 @@ links:
 </style>
 
 ---
-class: text-3xl leading-22
----
-
-# Defining **Your** Language <br> and **Your** Grammar
-
----
-class: text-3xl leading-22
----
-
-# Components Library <br> is only **one** part <br> of your ==Design System==
-
----
 layout: media
 url: <Gif id="1oEttHTW7Dh6WFabZd"/>
 variant: left
@@ -381,6 +337,20 @@ class: text-3xl leading-22
 
 # A **World** of Abstractions
 
+---
+layout: media
+url: ./img/a-wordle-ds.png
+class: text-sm text-center
+---
+
+# Live **Components** in a ==Design Sytems==
+
+---
+layout: section
+background: https://source.unsplash.com/QN6NkYi3CKs/1920x1080
+---
+
+# The Mushin Way
 
 ---
 layout: media
@@ -391,100 +361,6 @@ class: text-3xl leading-22
 ---
 
 # The **Shift Left** Principle
-
----
-layout: section
-background: https://source.unsplash.com/QN6NkYi3CKs/1920x1080
----
-
-# The Mushin Way
-
----
-
-# We Want to Build **Components** That Are:
-
-<ul class="tiles">
-  <v-clicks>
-    <li><clarity-recycle-solid /> Reuseable</li>
-    <li><clarity-flask-solid />Testable</li>
-    <li><clarity-atom-solid /> Customizable</li>
-    <li><clarity-employee-group-solid /> Collaborative</li>
-  </v-clicks>
-</ul>
-
-<style>
-  .tiles {
-    @apply grid grid-cols-4 gap-8;
-    @apply my-10;
-
-    li {
-      @apply list-none m-0 text-center;
-      @apply flex flex-col items-center;
-      @apply max-w-2/3 mx-auto;
-
-      &.slidev-vclick-target {
-        transition-property: transform, opacity;
-        transform: translateZ(0) scale(0); opacity: 0;
-      }
-      &.slidev-vclick-prior,
-      &.slidev-vclick-current {
-        transform: translateZ(0) scale(1); opacity: 1;
-      }
-    }
-
-    .slidev-icon {
-      @apply w-20 h-auto;
-      @apply mb-4;
-    }
-  }
-</style>
-
----
-layout: media
-url: ./img/a-wordle-ds.png
-class: text-sm text-center
----
-
-# Living **Components** in a ==Design Sytems==
-
----
-
-# Building a Component for **Reusability**
-
-<ul class="tiles">
-  <v-clicks>
-    <li><ic-outline-cruelty-free/> Technology Free</li>
-    <li><ph-plugs-bold />Interface / API</li>
-    <li><grommet-icons-clone /> Variants</li>
-  </v-clicks>
-</ul>
-
-<style>
-  .tiles {
-    @apply grid grid-cols-3 gap-8;
-    @apply my-10;
-
-    li {
-      @apply list-none m-0 text-center;
-      @apply flex flex-col items-center;
-      @apply max-w-2/3 mx-auto;
-
-      &.slidev-vclick-target {
-        transition-property: transform, opacity;
-        transform: translateZ(0) scale(0); opacity: 0;
-      }
-      &.slidev-vclick-prior,
-      &.slidev-vclick-current {
-        transform: translateZ(0) scale(1); opacity: 1;
-      }
-    }
-
-    .slidev-icon {
-      @apply w-20 h-auto;
-      @apply mb-4;
-    }
-  }
-</style>
 
 ---
 layout: media
@@ -714,67 +590,6 @@ html {
 </style>
 
 ---
-layout: media
-url: <Gif id="fDNGJgYm6xIfm" />
-variant: left
-class: text-2xl leading-16
----
-
-# Use-case: <br> **Video Player**
-
-- Bandwidth Status (Pre)Load
-- Adapt to Container Size
-- Detect Battery Updates
-- Use Tokens
-
----
-layout: section
-background: https://source.unsplash.com/8-9hqGiqgR4/1920x1080
----
-
-# The Performance Promise
-
----
-layout: media
-url: ./img/backlight-publish.png
-variant: right
-class: text-2xl leading-16
----
-
-# Reusing **components** in your final product
-
----
-layout: media
-url: https://gameprogrammingpatterns.com/images/format-ebook.jpg
-variant: left
-class: text-xl
-links:
-  - https://gameprogrammingpatterns.com/
----
-
-# External **logic**
-
-- State Machines
-- WASM: Business Logic
-- Multi-threading: Workers
-- Communication Bus
-
----
-class: text-xl
-links:
-  - https://a11yphant.com
-  - https://www.invisionapp.com/inside-design/storybook-excerpt/
----
-
-# Unit _vs_ Real World **Testing**
-
-- Unit testing frameworks
-- Integration tests
-- Stories
-- A11y tests
-- Views E2E
-
----
 links:
   - https://www.matuzo.at/blog/2022/cascade-layers/
   - https://developer.mozilla.org/en-US/docs/Web/CSS/@layer
@@ -808,40 +623,48 @@ links:
   .slidev-code code { @apply !text-xs }
 </style>
 
+
 ---
 layout: media
-url: <Gif id="lNOpVpGhgYGJ3S4Qcc"/>
+url: <Gif id="fDNGJgYm6xIfm" />
+variant: left
+class: text-2xl leading-16
+---
+
+# Use-case: <br> **Video Player**
+
+- Bandwidth Status (Pre)Load
+- Adapt to Container Size
+- Detect Battery Updates
+- Use Tokens
+
+---
+layout: media
+url: ./img/backlight-publish.png
+variant: right
+class: text-2xl leading-16
+---
+
+# Everything is a **stateless component**
+
+---
+layout: media
+url: <Gif id="lVBtp4SRW6rvDHf1b6"/>
 variant: right
 overlay: true
-class: text-3xl
+class: text-2xl leading-16
 ---
 
-# Fixing **issues**
+# Fixing **issues** at component's level
 
 --- <!-- outro -->
-class: text-3xl
----
-
-# Shifting Left an **existing** UI<span v-click>?</span>
-
----
-class: text-3xl
----
-
-# From ==design== to **development**
-
----
 layout: media
 url: <Gif id="3o7ZeEZUzRjyvWuuIg"/>
 variant: left
 class: text-3xl leading-22
 ---
 
-# You should start <span v-click>right **now**!</span>
-
----
-layout: qa
----
+# You can start <span v-click>right **now**!</span>
 
 ---
 layout: thanks
