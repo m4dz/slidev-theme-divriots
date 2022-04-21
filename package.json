@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build --base /t/mushin-way/ slides.md",
+    "build": "slidev build --base /t/painted-app/ slides.md",
     "export": "slidev export slides.md",
     "screenshot": "slidev export slides.md --format png"
   },
