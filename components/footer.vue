@@ -136,7 +136,7 @@ footer {
 .links {
   @apply absolute inset-x-0 bottom-0 z-50;
   @apply px-14 pb-5 pt-4;
-  @apply dark:(bg-opacity-10 bg-light) light:(bg-opacity-10 bg-dark);
+  @apply dark:(bg-opacity-80 bg-dark) light:(bg-opacity-10 bg-dark);
   @apply text-sm;
   @apply shadow-inner; /* TODO: Improve inner shadow */
 

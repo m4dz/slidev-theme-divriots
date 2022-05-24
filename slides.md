@@ -32,6 +32,10 @@ themeConfig:
       datetime: 2022-01-28T10:00+0100
       logo: devconf-logo-cz-reverse.svg
       permalink: https://devconfcz2022.sched.com/event/siHC/design-systems-of-a-down-steal-this-guide
+    - name: Techorama.be
+      datetime: 2022-05-25T16:30:00+02:00
+      logo: techorama.svg
+      permalink: https://techorama.be/agenda/session/design-systems-of-a-down-steal-this-guide/
 ---
 
 <p class="tagline">Design Systems of a Down</p>
@@ -74,7 +78,7 @@ background: ./img/bill-oxford-tR0PPLuN6Pw-unsplash.jpg
 
 ---
 links:
-  - https://www.linkedin.com/posts/georges-gomes-6580541_designsystem-designsystems-webdevelopment-activity-6839102889185607680-dOFX/ | Hey Georges, what is a Design System?
+  - https://backlight.dev/mastery/what-is-a-design-system | Backlight Mastery - What is a Design System?
 ---
 
 # Design **System**
@@ -145,8 +149,28 @@ url: ./img/atomic-design.png
 ---
 layout: media
 variant: full
-url: ./img/1630569192609.jpg
+url: ./img/design-systems-mastery.png
 ---
+
+---
+layout: media
+url: <Gif id="CZaFzQEd5idfa">
+variant: left
+overlay: true
+class: text-3xl leading-18
+---
+
+# Everything leads back to **tokens**
+
+==(Viva Las Vegas, Baby!)==
+
+---
+class: text-2xl leading-18
+---
+
+# ==Devs SupaPowa==: <br> We know how to name things!
+
+(even we may suck at design)
 
 ---
 
@@ -531,6 +555,8 @@ it("has a default rendering", () => {
 layout: media
 variant: left
 url: https://source.unsplash.com/-3wygakaeQc/1920x1080
+links:
+  - https://youtu.be/r54J4tF7xMI | Coding Design Systems - Testing your Design Systems Components, with Gil Tayar
 ---
 
 # Test Extensively
@@ -779,6 +805,24 @@ url: <Gif id="OqprHEhrBpmdq" />
 
 ---
 layout: media
+variant: right
+ratio: 2/3
+url: <Gif id="2csuIJj6TmuKA" />
+---
+
+# **Cascading** the Tokens
+
+- ⏬ Design Tokens <br> `colors.red.100` <br> `colors.red.500`
+- ⏬ Application Tokens <br> `app.colors.primary ← colors.red.500` <br> `app.colors.primary.light ← colors.red.100`
+- ⏬ Component Tokens <br> `button.colors.surface ← app.colors.primary`
+- ⏬ Component Variants Tokens <br> `button.colors.surface.highlight ← app.colors.primary.light`
+
+<style>
+  h1 { @apply text-7xl leading-22; }
+</style>
+
+---
+layout: media
 variant: left
 overlay: true
 url: <Gif id="GdJz3mScUhC5W" />
@@ -845,12 +889,16 @@ url: https://source.unsplash.com/TxP44VIqlA8/1920x1080
 - E.g.: Cards, Carousels, FAQ entries, etc...
 
 ---
+class: text-4xl leading-24
+---
 
-# Designers Have ==High-Level Tools==, **Developers Need** the Same
+# It's way **more** than ==just== a **components library**
 
-<style>
-  .slidev-layout h1 { @apply text-5xl leading-18; }
-</style>
+---
+class: text-4xl leading-24
+---
+
+# Designers have ==High-Level Tools==, **Developers Need** the same
 
 ---
 layout: media
@@ -864,12 +912,15 @@ url: <Gif id="32dfpYx8kBX1bXSEu8" />
   .slidev-layout h1 { @apply text-5xl leading-18; }
 </style>
 
-
 ---
 layout: quote
 ---
 
 > Developers are users just like **you**.
+
+---
+layout: qa
+---
 
 ---
 layout: thanks
