@@ -17,6 +17,9 @@ dates:
     lang: fr
     logo: codeurs.svg
     datetime: 2021-11-18T09:30:00+01:00
+  - name: DevDays
+    logo: devdaysai-min.png
+    datetime: 2022-04-28T12:55:00+03:00
 ---
 
 <p class="tagline">The Revenge of the</p>
@@ -538,6 +541,7 @@ class: self-center
 links:
   - https://astro.build/
   - https://iles-docs.netlify.app/
+  - https://slinkity.dev
 ---
 
 ## Astro 🚀
@@ -557,6 +561,16 @@ links:
 - Vue based Devtools
 - Meta-tags access
 - Progressive Hydration
+
+::col3::
+
+## Slinkity
+
+- 11ty Plugin
+- Use component frameworks
+- Shortcodes compatible
+- Full-hydration strategies
+- Bundle for production
 
 ::header::
 
@@ -780,15 +794,6 @@ layout: author
 
 ---
 layout: qa
----
-
----
-layout: media
-url: ./img/frank.jpg
-variant: full
-links:
-  - https://sudweb.github.io/frank/
-  - https://jekyllrb.com/news/2021/09/14/goodbye-dear-frank/
 ---
 
 ---
