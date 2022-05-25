@@ -58,3 +58,14 @@ h1 {
         }
     }
 }
+
+// HOTFIX: foreground on gradient (cover)
+.slidev-layout.cover {
+    footer {
+        --color-dark: #fff;
+
+        a {
+            color: var(--color-dark);
+        }
+    }
+}

@@ -27,18 +27,28 @@ info: >
 
   Introducing Snowpack, Vite, and other Bare Modules tools concepts!
 
-dates:
-  - name: Infobip Shift Conference
-    datetime: 2021-09-08
-  - name: ‹ React Global ›
-    datetime: 2021-11-04T18:40:00+00:00
-  - name: WeAreDevelopers JavaScript Congress
-    logo: wearedevelopers.png
-    datetime: 2021-11-25T21:00:00+01:00
-  - name: SnowCamp
-    datetime: 2022-02-03T10:45+0100
-    permalink: https://snowcamp2022.sched.com/event/qHQU/the-eternal-sunshine-of-the-zero-build-pipeline
-    logo: snowcamp.webp
+themeConfig:
+  permalink: https://m4dz.net/t/zero-build
+
+  author: m4dz
+  twitter: m4d_z
+
+  dates:
+    - name: Infobip Shift Conference
+      datetime: 2021-09-08
+    - name: ‹ React Global ›
+      datetime: 2021-11-04T18:40:00+00:00
+    - name: WeAreDevelopers JavaScript Congress
+      logo: wearedevelopers.png
+      datetime: 2021-11-25T21:00:00+01:00
+    - name: SnowCamp
+      datetime: 2022-02-03T10:45+0100
+      permalink: https://snowcamp2022.sched.com/event/qHQU/the-eternal-sunshine-of-the-zero-build-pipeline
+      logo: snowcamp.webp
+    - name: Techorama NL
+      datetime: 2022-10-11T17:45:00+02:00
+      permalink: https://techorama-netherlands-2022.sessionize.com/session/332450
+      logo: ./img/techorama.svg
 ---
 
 <p class="tagline">The Eternal Sunshine of the</p>
