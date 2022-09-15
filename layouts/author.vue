@@ -5,15 +5,14 @@ import { configs } from "@slidev/client/env";
 
 import Media from './media.vue'
 
-import drc from '../img/divriots_square_typo_black.svg?raw'
-import bkl from '../img/Backlight_-_Icon_YB.svg?raw'
+import logo from '../img/alwaysdata.svg?raw'
 
 const showAvatar = computed(() => {
   return currentRoute.value?.meta?.layout === 'author';
 })
 
 const urlCover = computed(() => {
-  return new URL(`../img/${configs.author}.jpg`, import.meta.url).href
+  return new URL(`../img/${configs.themeConfig.author}.jpg`, import.meta.url).href
 })
 </script>
 
@@ -29,16 +28,15 @@ const urlCover = computed(() => {
       >
         <Avatar class="avatar" />
         <h1>m4dz</h1>
-        <p>Principal Developer Advocate</p>
+        <p>
+          DX Engineer <br>
+          (Dev)tools Nerd
+        </p>
       </div>
       <div class="company">
         <div>
-          <span class="logo divriots" v-html="drc"></span>
-          <span>‹div›RIOTS · http://divriots.com</span>
-        </div>
-        <div>
-          <span class="logo backlight" v-html="bkl"></span>
-          <span>Backlight.dev · http://backlight.dev</span>
+          <span class="logo" v-html="logo"></span>
+          <span>alwaysdata · http://alwaysdata.com</span>
         </div>
       </div>
     </div>
@@ -64,6 +62,10 @@ const urlCover = computed(() => {
   h1 {
     @apply text-4xl my-4;
   }
+  p {
+    @apply font-mono;
+    @apply text-center;
+  }
 }
 
 .company {
@@ -79,7 +81,6 @@ const urlCover = computed(() => {
   @apply grid items-center;
   @apply w-8 h-8 p-1;
   @apply rounded;
-  @apply dark:bg-light;
 }
 
 .backlight {
