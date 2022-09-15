@@ -53,6 +53,11 @@ const show = computed(() => {
 
 <style>
 .slidev-layout.section h1 {
-  @apply text-8xl mr-2/3 my-auto;
+  @apply text-7xl
+  @apply mr-1/3 -ml-14 mb-auto mt-1/4;
+  @apply px-14 py-8;
+  @apply bg-gradient-to-l opacity-85 dark:to-dark-800 dark:from-dark-900;
+  @apply shadow-md dark:shadow-dark-800;
+  /* @apply rounded-r-2xl; */
 }
 </style>

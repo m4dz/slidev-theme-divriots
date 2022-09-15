@@ -114,6 +114,7 @@ footer {
 .permalink {
   @apply flex items-center;
   @apply flex-auto;
+  @apply font-mono;
 
   .qrcode {
     @apply mr-2;
@@ -122,6 +123,7 @@ footer {
 
 .twitter {
   @apply flex items-center;
+  @apply font-mono;
 
   .icn {
     @apply mx-2;
@@ -139,6 +141,7 @@ footer {
   @apply dark:(bg-opacity-10 bg-light) light:(bg-opacity-10 bg-dark);
   @apply text-sm;
   @apply shadow-inner; /* TODO: Improve inner shadow */
+  @apply font-mono;
 
   &::before {
     content: "";

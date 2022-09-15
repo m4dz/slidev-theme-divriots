@@ -3,7 +3,7 @@ import { computed } from "vue";
 import { configs } from "@slidev/client/env";
 import { format, closestIndexTo, isPast, addHours } from "date-fns";
 
-import logo from '../img/divriots_square_typo_black.svg?raw'
+import logo from '../img/alwaysdata.svg?raw'
 
 const now = new Date();
 

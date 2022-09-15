@@ -99,9 +99,9 @@ const style = computed(() => {
 <style scoped>
 .in-media.embed {
   @apply max-w-8/10 m-auto p-1 overflow-hidden;
-  @apply rounded border-2 dark:border-dark-700;
+  @apply rounded border-2 dark:border-dark-800;
   @apply bg-dark;
-  @apply shadow-md dark:shadow-dark-400;
+  @apply shadow-md dark:shadow-dark-900;
 
   img {
     @apply rounded;
