@@ -1,10 +1,6 @@
 ---
 theme: ./
 
-permalink: https://m4dz.net/t/zero-build
-
-author: m4dz
-twitter: m4d_z
 
 info: >
   For many years, we have migrated all our DevTools to Node.js for the sake of
@@ -85,7 +81,7 @@ variant: full
     <li><ion:logo-sass />CSS Pre-processors</li>
     <li><ic:round-style />PostCSS</li>
     <li><ion:logo-react/>Reactive UI Framework</li>
-    <li><clarity:bundle-solid />Packer/Bundler</li>
+    <li><ph:package />Packer/Bundler</li>
     <li><ic:baseline-local-fire-department />Web Dev Server/HMR</li>
   </v-clicks>
 </ul>
@@ -184,7 +180,7 @@ links:
   - https://www.davidhaney.io/npm-left-pad-have-we-forgotten-how-to-program/
 ---
 
-# **Modules** Everywhere
+# **Modules**
 
 - IIFE pattern
 - CommonJS vs. ES Modules
@@ -297,7 +293,7 @@ variant: left
 - TypeScript: Improve the language
 - Prettier: Reformat
 - ESLint: Check the syntax
-- NPM/Yarn: Manage dependencies
+- npm/Yarn/pnpm: Manage dependencies
 - any tools specific to your frameworks
 
 </v-clicks>
@@ -309,6 +305,10 @@ class: text-3xl leading-22
 # ==Easier== developers life <br> means **overly complex** <br> DevTools Stack
 
 ---
+layout: media
+url: https://imgs.xkcd.com/comics/compiling.png
+variant: left
+overlay: true
 class: text-3xl
 ---
 
@@ -333,7 +333,7 @@ class: text-3xl leading-22
 
 <ul class="tiles">
   <v-clicks>
-    <li><fa-solid:boxes />JS Modules</li>
+    <li><fa-solid:boxes />ES Modules</li>
     <li><ic:round-cached />Advanced Cache</li>
     <li><ic:baseline-https />HTTP/2</li>
   </v-clicks>
@@ -402,15 +402,8 @@ class: text-2xl
 </v-clicks>
 
 ---
-layout: media
-url: ./img/vite-react.png
-variant: full
-links:
-  - https://vite.new/react
+ratio: 1/3
 ---
-
----
-
 # Dependencies
 
 - Loaded from `node_modules` directly
@@ -439,13 +432,25 @@ confetti.create(document.getElementById('can'),
 
 ---
 layout: media
-url: ./img/esm.3070012d.png
-links:
-  - https://vitejs.dev/guide/why.html | Why Vite?
-  - https://www.snowpack.dev/concepts/how-snowpack-works | How Snowpack Works
+url: ./img/snowpack-unbundled-example-3.png
+variant: full
 ---
 
-# **On-Request** Build Oriented
+---
+class: text-2xl
+---
+
+# Why a **Single File** approach?
+
+<v-clicks>
+
+- Fast builds
+- Deterministic
+- Easy to Debug
+- Dev speed unrelated to project size
+- Better cache
+
+</v-clicks>
 
 ---
 layout: media
@@ -455,63 +460,46 @@ overlay: true
 class: text-2xl leading-18
 ---
 
+# **Split** the bundle!
+
+---
+layout: section
+background: https://source.unsplash.com/xD5SWy7hMbw/1920x1080
+---
+
+# The '22 Web Building Pipeline
+
+
 ---
 layout: media
-url: ./img/snowpack-unbundled-example-3.png
+url: ./img/esm.3070012d.png
+links:
+  - https://vitejs.dev/guide/why.html | Why Vite?
+  - https://www.snowpack.dev/concepts/how-snowpack-works | How Snowpack Works
+---
+
+# **On-Request** Build Oriented
+
+
+---
+layout: media
+url: ./img/vite-react.png
 variant: full
+links:
+  - https://vite.new/react
 ---
-
-# Why a **Single File** approach?
-
-- Fast builds
-- Deterministic
-- Easy to Debug
-- Dev speed unrelated to project size
-- Better cache
 
 ---
 class: text-2xl
-links:
-  - https://jasonformat.com/islands-architecture/
 ---
 
-# The Partial Hydration concept
+# The **Magic**
 
-<v-clicks>
-
-- Most of the content is **static**
-- Dynamic content **hydrated on the back**
-- Client only loads **super-hot data**
-- Components SSR
-- `<script>` components loading
-
-</v-clicks>
-
----
-class: text-2xl
-links:
-  - https://www.youtube.com/watch?app=desktop&v=k-A2VfuUROg
----
-
-# The Progressive Hydration concept
-
-- Initialize **over time**
-- **Scheduling**:
-  - Idle
-  - Viewport
-  - Interaction
-  - Update events
-  - ..
-
----
-layout: media
-url: ./img/islands-architecture-1.png
-variant: left
-overlay: true
-class: text-2xl leading-16
----
-
-# The Component **Islands** Pattern
+- No bundle
+- Load ==original== files in source inspector
+- HMR
+- Live update, live debug
+- ==Portable==
 
 ---
 layout: media
@@ -524,7 +512,7 @@ class: text-3xl leading-22
 
 ---
 
-## Snowpack
+## ~~Snowpack~~
 
 - The First of Its Kind
 - Lightweight and fast
@@ -585,38 +573,119 @@ links:
 </style>
 
 ---
+layout: media
+url: ./img/awesome-vite.svg
+variant: left
+overlay: true
 links:
+  - https://github.com/vitejs/awesome-vite
   - https://github.com/divriots/vite | Browser Vite
 ---
-## Pros
+
+# Is it **Hot**?
 
 - Blazingly Fast
 - Native HMR
 - Quick preview even on large codebases
-- MD Vue for embedding components
+- Lots of components out-of-the-box
+- Large community and ecosystem
 
-::col2::
-## Cons
+---
+class: text-2xl
+links:
+  - https://jasonformat.com/islands-architecture/
+---
 
-- Error-prone on code analysis for deps
-- No MDX native support
-- MD Vue isn't standard
-- Dedicated Worker for Vite previews
-  ```
-  preview
-    -> service-worker
-    -> vite worker
-    -> service-worker
-  -> preview
-  ```
+# The Partial Hydration concept
 
-::header::
-# Is it **Hot**?
+<v-clicks>
 
-<style>
-  .slidev-layout h1 { @apply mb-4 }
-  .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 my-2 mt-6 }
-</style>
+- Most of the content is **static**
+- Dynamic content **hydrated on the back**
+- Client only loads **super-hot data**
+- Components SSR
+- `<script>` components loading
+
+</v-clicks>
+
+---
+class: text-2xl
+links:
+  - https://www.youtube.com/watch?app=desktop&v=k-A2VfuUROg
+---
+
+# The Progressive Hydration concept
+
+- Initialize **over time**
+- **Scheduling**:
+  - Idle
+  - Viewport
+  - Interaction
+  - Update events
+  - ..
+
+---
+layout: media
+url: ./img/astro.png
+variant: left
+ratio: 2/3
+links:
+  - https://astro.build/
+  - https://astro.new/
+---
+
+# **Astro**
+
+- Component's oriented
+- Use any framework
+- Mix'em up!
+- Render in one place
+
+---
+layout: media
+url: ./img/islands-architecture-1.png
+variant: left
+overlay: true
+class: text-2xl leading-16
+---
+
+# The Component **Islands** Pattern
+
+---
+
+# Scheduling Islands ==Hydration==
+
+```astro
+---
+// Example: Use a dynamic React component on the page.
+import MyReactComponent from '../components/MyReactComponent.jsx';
+---
+<!-- This component is now interactive on the page!
+     The rest of your website remains static and zero JS. -->
+<MyReactComponent client:load />
+```
+
+```astro
+<SidebarToggle client:media="(max-width: 50em)" />
+```
+
+```astro
+<ShowHideButton client:idle />
+```
+
+---
+layout: media
+url: <Gif id="TEhsmeUSeRYgld3QDs" />
+variant: left
+class: text-2xl leading-16
+---
+
+# **S**erver **S**ide **R**endering
+
+- Avoid serving useless frontend runtime
+- Allow caching
+- Performance-first
+- Islands Pattern BFF
 
 ---
 layout: section
@@ -643,11 +712,11 @@ links:
 # Behind the Hood
 
 - Rollup/Parcel/esbuild
-- Plugins Support
+- ==Plugins== Support
 - Optimize for production
 - Browserlist support for legacy browsers
 - Code-splitting/Lazy-loading
-- Treeshaking for ESM
+- ==Treeshaking== for ESM/CSS
 
 ---
 layout: media
@@ -671,10 +740,9 @@ variant: right
 # **Extending** the Build
 
 - Plugins Interface
-- Snowpack: Custom API
-- Vite/WMR: Rollup Plugins
+- Based on Rollup Plugins
 - Support external asset types
-- Allow types mix (MD Vue...)
+- Allow types mix
 
 --- <!-- Outro -->
 class: text-2xl leading-18
@@ -711,6 +779,13 @@ links:
   .slidev-layout h1 { @apply mb-4 }
   .slidev-layout h2 { @apply text-xl font-bold border-b-1 border-primary border-opacity-75 pb-1 my-2 mt-6 }
 </style>
+
+---
+layout: media
+url: ./img/vitest.png
+---
+
+# Vitest
 
 ---
 ratio: 2/3
