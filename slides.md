@@ -2,93 +2,47 @@
 theme: ./
 
 info: >
-  Remember Atomic Design? It's been a while since we started talking about
-  Design Systems. They're supposed to solve our interfaces inconsistencies
-  issues, as a single source of truth. But do you know well how to build and use
-  them, from a developer perspective?
+  You're offering a fantastic brand new service, and it'll revolutionize your customers' world! Because it's smart, it delivers an API-first solution wrapped in an edge architecture. And because you're smart, you're offering to your end-users several SDKs to let them use those APIs at their full potential: PHP, Java, Ruby, Go, Python, JavaScript… Wait, JavaScript?
 
-  Here's your ultimate guide to Design Systems, for Devs! From the fundamentals
-  of Design Tokens definition, to how to build advanced versatile layouts.
-  You'll learn all best practices, tips & tricks, components splicing
-  strategies, from this comprehensive step-by-step handbook talk.
+  When entering the world of frontend architecture in an API-first world, we should take time to answer this simple question: SDK or Web Components? The frontend world comes with a UI-first paradigm, so should we switch our mindset?
 
-  Never be lost again in front of a creating Design System from scratch!
+  On the other hand, Web Components now have a mature ecosystem where you can build advanced UI elements that already embed all the logic they need.
+
+  API-first backend only requires HTTP streams, and Web Components embed the required network primitives. Should we distribute a JS SDK or a library of Web Components for our service? Here's the match between the two giants! SDKs vs Web Components: Place Your Bets.
 
 themeConfig:
-  permalink: https://m4dz.net/t/steal-this-guide/
+  permalink: https://m4dz.net/t/sdk-vs-wc/
 
   author: m4dz
   twitter: m4d_z
 
   dates:
     - name: React Finland
-      datetime: 2021-09-02T11:00:00+01:00
-      permalink: https://react-finland.fi/2021/schedule/#the-eternal-sunshine-of-the-zero-build-pipeline
-      video: https://www.youtube.com/watch?v=oUV2kZedlLU
-    - name: Codemotion
-      datetime: 2021-12-02T15:55:00+01:00
-      logo: codemotion-logo.png
-    - name: DevConf.CZ
-      datetime: 2022-01-28T10:00+0100
-      logo: devconf-logo-cz-reverse.svg
-      permalink: https://devconfcz2022.sched.com/event/siHC/design-systems-of-a-down-steal-this-guide
-    - name: Techorama.be
-      datetime: 2022-05-25T16:30:00+02:00
-      logo: techorama.svg
-      permalink: https://techorama.be/agenda/session/design-systems-of-a-down-steal-this-guide/
+      datetime: 2022-09-16T11:00:00+03:00
+      permalink: https://react-finland.fi/speakers/#-sdks-vs-web-components-place-your-bets
+      logo: ./img/react-finland.svg
+    - name: JavaScript Global Summit'22
+      datetime: 2022-09-28T11:30:00+02:00
+      permalink: https://geekle.us/schedule/js
+    - name: Techorama.nl 2022
+      datetime: 2022-10-11T15:00:00+02:00
+      permalink: https://www.techorama.nl/agenda/session/sdks-vs-web-components-place-your-bets/
 ---
 
-<p class="tagline">Design Systems of a Down</p>
+<p class="tagline">Place Your Bets!</p>
 
-# Steal This Guide!
-
----
-layout: media
-variant: right
-overlay: true
-url: <Gif id="3og0ISJtoddt1HkX9S" />
----
-
-# We Talked ==UX== For Years <br> but Developers Are **Users** Too
-
-<style>
-  .slidev-layout h1 { @apply text-6xl leading-18 }
-</style>
+# SDKs vs Web Components
 
 ---
-links:
-  - https://www.uxpin.com/create-design-system-guide/
-  - https://www.invisionapp.com/inside-design/guide-to-design-systems/
-  - https://xd.adobe.com/ideas/principles/design-systems/
-  - https://uxdesign.cc/everything-you-need-to-know-about-design-systems-54b109851969
----
 
-# We’ve Got Plenty of ==Designers’ Resources==, <br> but Not That Much **Dev Oriented**
-
-<style>
-  .slidev-layout h1 { @apply text-6xl leading-18 }
-</style>
-
----
-layout: section
-background: ./img/bill-oxford-tR0PPLuN6Pw-unsplash.jpg
----
-
-# Reminder: Atomic Design
-
----
-links:
-  - https://backlight.dev/mastery/what-is-a-design-system | Backlight Mastery - What is a Design System?
----
-
-# Design **System**
+# What's an **API**?
 
 <ul class="tiles">
   <v-clicks>
-    <li><clarity-atom-solid class="inline" /> Design Tokens</li>
-    <li><clarity-design-solid class="inline" /> Design Kit</li>
-    <li><clarity-blocks-group-solid class="inline" /> Components Library</li>
-    <li><clarity-lightbulb-solid class="inline" /> Dynamic Documentation</li>
+    <li><fluent:code-16-filled class="inline" /> Programming Interface</li>
+    <li><icon-park-outline:communication class="inline" /> Communication</li>
+    <li><icon-park-outline:hold-interface class="inline" /> Protocols</li>
+    <li><fluent:remote-16-filled class="inline" /> Remote control</li>
   </v-clicks>
 </ul>
 
@@ -119,75 +73,125 @@ links:
   }
 </style>
 
-<!--
-- Design Tokens
-  These are the foundation of the brand.
-
-- Design Kit
-  Also known as UI Kit, a Design Kit is a set of pattern or components existing in design tools like Sketch or Figma.
-
-- Component Library
-  A Component Library is the code side of the Design Kit. It's a list of reusable component.
-
-- Documentation site
-  The Documentation site, also called Reference site, aggregates all previous elements into a single explorable site.
--->
-
 ---
-layout: quote
-cite: Dan Mall
+layout: media
+url: <Gif id="fxIk8gAC4fHir5s8Su">
+variant: right
+overlay: true
+class: text-2xl leading-18
 ---
 
-> Design systems help product teams deliver software to customers faster & better.
+# What's an API-**first** backend/service?
 
 ---
 layout: media
-variant: full
-url: ./img/atomic-design.png
----
-
----
-layout: media
-variant: full
-url: ./img/design-systems-mastery.png
----
-
----
-layout: media
-url: <Gif id="CZaFzQEd5idfa">
+url: <Gif id="xT5LMMYbPOGNyKnCtW">
 variant: left
+overlay: true
+class: leading-12
+---
+
+# Different ==Types== of Remote APIs
+
+(but mainly based-on HTTP Requests)
+
+- SOAP
+- RPC
+- Websocket
+- REST
+- GraphQL
+
+---
+class: text-4xl
+---
+
+# You said, ==SDK==?
+
+---
+layout: author
+---
+
+<!-- time: 3' -->
+
+---
+layout: section
+background: https://source.unsplash.com/pHw08h_EvO4/1920x1080
+---
+
+# A Components Philosophy
+
+---
+class: text-2xl leading-18
+links:
+  - https://itnext.io/a-guide-to-component-driven-development-cdd-1516f65d8b55
+---
+
+# Component ==Driven== Development
+
+- Micro-services
+- Decoupled
+- Incremental Upgrade
+- Flexibility-driven
+
+---
+layout: media
+variant: left
+url: https://source.unsplash.com/9PkcuHSzzsw/1920x1080
+class: text-2xl leading-18
+---
+
+# Why a **CDD** approach?
+
+<v-clicks>
+
+- Faster development
+- Simpler maintenance
+- ==Better reusability==
+- Better TDD
+- ==Shorter learning curves==
+- Better modeling of the system
+
+</v-clicks>
+
+---
+layout: media
+overlay: true
+variant: left
+url: ./img/what-is-a-design-system.png
+class: text-3xl leading-18
+links:
+  - https://backlight.dev/mastery/what-is-a-design-system
+---
+
+# Thinking as a ==Design System==
+
+---
+layout: media
+url: <Gif id="AiEzloQTXzAeid9xQR">
+variant: right
 overlay: true
 class: text-3xl leading-18
 ---
 
-# Everything leads back to **tokens**
-
-==(Viva Las Vegas, Baby!)==
+# You said, ==Web Component==?
 
 ---
 class: text-2xl leading-18
 ---
 
-# ==Devs SupaPowa==: <br> We know how to name things!
-
-(even we may suck at design)
-
----
-
-# We Want to Build **Components** That Are:
+# Web Components are ==agnostic==
 
 <ul class="tiles">
   <v-clicks>
-    <li><clarity-recycle-solid /> Reuseable</li>
-    <li><clarity-flask-solid />Testable</li>
-    <li><clarity-atom-solid /> Customizable</li>
-    <li><clarity-employee-group-solid /> Collaborative</li>
+    <li><mdi:domino-mask class="inline" /> Shadow DOM</li>
+    <li><mdi:atom-variant class="inline" /> Attributes/Props</li>
+    <li><ic:outline-timer class="inline" /> Events' Loops</li>
   </v-clicks>
 </ul>
 
 <style>
   .tiles {
-    @apply grid grid-cols-4 gap-8;
+    @apply grid grid-cols-3 gap-8;
     @apply my-10;
 
     li {
@@ -214,638 +218,456 @@ class: text-2xl leading-18
 
 ---
 layout: section
-background: https://source.unsplash.com/V_y81v_lI4k/1920x1080
+background: https://source.unsplash.com/Q1p7bh3SHj8/1920x1080
 ---
 
-# Design Systems Foundations
+# An API-Driven Edge World
+
+---
+class: text-4xl leading-24
+---
+
+# ==Frontend== Design<br> <span v-click>**UI**-first/**UI**-Oriented</span>
+
+<!--
+- lambda
+- function as a service
+-->
 
 ---
 layout: media
-variant: left
+url: <Gif id="l2Sq29cFXoF80ADlK">
+variant: right
 overlay: true
-url: <Gif id="9UqRcQHzBou6A" />
+class: text-5xl leading-24
 ---
 
-# 1. Design **Tokens**
+# <span v-click>Visual</span> <mark v-click>Feedback</mark>
+
+---
+class: text-2xl leading-18
+---
+
+# Web Components ==interface==
+
+<ul class="tiles">
+  <v-clicks>
+    <li><mdi:atom-variant class="inline" /> Attributes/Props <br> → IN</li>
+    <li><ic:round-loop class="inline" /> Events <br> → OUT</li>
+    <li><mdi:package-variant class="inline" /> Internal logic</li>
+  </v-clicks>
+</ul>
 
 <style>
-  .slidev-layout h1 { @apply text-6xl leading-18 }
-</style>
+  .tiles {
+    @apply grid grid-cols-3 gap-8;
+    @apply my-10;
 
----
+    li {
+      @apply list-none m-0 text-center;
+      @apply flex flex-col items-center;
+      @apply max-w-2/3 mx-auto;
 
-# Writing Your ~~Atoms~~ Tokens
+      &.slidev-vclick-target {
+        transition-property: transform, opacity;
+        transform: translateZ(0) scale(0); opacity: 0;
+      }
+      &.slidev-vclick-prior,
+      &.slidev-vclick-current {
+        transform: translateZ(0) scale(1); opacity: 1;
+      }
+    }
 
-- Think them as variables
-- Externalize as much as you can
-- Composition:
-  - realm: `color`, `spacing`, `typography`, `border`...
-  - group: `color.font`, `spacing.sizes`, `typography.family`...
-  - name: `color.font.base`, `spacing.sizes.md`, `typography.family.sans`...
-  - value: `color.font.base.value = #121212`, `spacing.sizes.md.value = 1rem`...
-  - attributes: `color.font.base.themeable = true`...
-
----
-
-# From a Developer Perspective
-
-```json
-"tokens" = {
-  "color": {
-    "palette": {
-      "gray-100": { value: "#121212" }
-    },
-    "font": {
-      "base": {
-        "value": "{colors.palette.gray-100}",
-        "themeable": true,
-        "comment": "Default font color"
+    .slidev-icon {
+      @apply w-20 h-auto;
+      @apply mb-4;
     }
   }
-}
-```
+</style>
+
+---
+layout: media
+url: <Gif id="d0NnEG1WnnXqg">
+overlay: true
+variant: left
+class: text-4xl leading-24
+---
+
+# It'a basically <span v-click>an ==API== definition!</span>
+
+<!--
+visual representation of an API
+-->
+
+---
+layout: media
+url: ./img/api.video_home.png
+---
+
+# ==api.video== example
+
+<!-- time: 8' -->
 
 ---
 layout: media
 variant: full
-url: ./img/style-dictionary-play.png
-links:
-  - https://www.style-dictionary-play.dev/
-  - https://open-props.style/
+url: ./img/api.video_catalog.png
 ---
 
 ---
 layout: media
-variant: left
-overlay: true
-url: <Gif id="26xBC0xYwcSWzTL2g" />
+url: ./img/api.video_getting_started.png
 ---
 
-# 2. Creating Your <br> **Base Components**
-
-<style>
-  .slidev-layout h1 { @apply text-5xl leading-18 }
-</style>
+# **1.** Uploading
 
 ---
 layout: media
-variant: right
-url: https://source.unsplash.com/FLAHpMC1Yp4/1920x1080
+url: ./img/api.video_player_sdk.png
 ---
 
-# Creating Molecules
-
-- Component Driven Development
-- Pick your Framework
-- Stick to the basics
-- Features, Features, Features!
-
----
-
-```tsx
-import { useButton } from '@react-aria/button';
-import styles from './button.module.scss';
-
-export type ButtonProps = AriaButtonProps<ElementType> & {
-  size: 'small' | 'medium' | 'large';
-};
-
-export const Button = ({
-  size = 'medium',
-  ...rest
-}: ButtonProps): ButtonAria<HTMLAttributes<any>> => {
-  const ref = useRef();
-  const { buttonProps } = useButton(rest, ref);
-  const { children } = rest;
-
-  return (
-    <button
-      {...buttonProps}
-      ref={ref}
-      className={`${styles.button} ${styles[size]}`}
-    >
-      {children}
-    </button>
-  );
-};
-```
-
-::col2::
-```tsx
-import { Button } from '../index';
-
-export default {
-  parameters: {
-    layout: 'centered',
-  },
-};
-
-export const small_button = () => (
-  <Button
-    size="small"
-    onPress={() => alert('Button pressed!')}
-  >
-    Test
-  </Button>
-);
-
-export const medium_button = () => (
-  <Button
-    size="medium"
-  >
-    Test
-  </Button>
-);
-```
-
-<style>
-  .slidev-layout pre code { @apply !text-xs; }
-</style>
-
----
-
-```scss
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-width: 0px;
-  border-radius: var(--aria-border-radius-medium);
-  font-weight: var(--aria-font-weight-semibold);
-  min-width: var(--aria-spacing-xx-large);
-  padding-inline-start: var(--aria-spacing-medium);
-  padding-inline-end: var(--aria-spacing-medium);
-  background: var(--aria-color-primary);
-  color: var(--aria-color-white);
-}
-
-```
-
-::col2::
-```scss
-.small {
-  font-size: var(--aria-font-size-small);
-  height: var(--aria-spacing-x-large);
-}
-```
-
-```scss
-.medium {
-  font-size: var(--aria-font-size-medium);
-  height: var(--aria-spacing-xx-large);
-}
-```
-
-::header::
-# Exploiting Tokens
-
-<style>
-  .slidev-layout pre code { @apply !text-sm; }
-</style>
-
----
-layout: media
-variant: left
-overlay: true
-url: <Gif id="WoWm8YzFQJg5i" />
----
-
-# 3. **Documentation**, the Right Way
-
-<style>
-  .slidev-layout h1 { @apply text-5xl leading-18 }
-</style>
-
----
-layout: media
-variant: full
-url: ./img/diataxis.png
-links:
-  - https://diataxis.fr/
----
-
----
-
-```mdx
-import {Chart} from './snowfall.js'
-export const year = 2018
-
-# Last year’s snowfall
-
-In {year}, the snowfall was above average.
-It was followed by a warm spring which caused
-flood conditions in many of the nearby rivers.
-
-<Chart year={year} color="#fcb32c" />
-```
-
-::col2::
-~~~md
-```js script
-import '@mdjs/mdjs-story/define';
-```
-
-## This is my-card
-
-Here's an example of the component:
-
-```html preview-story
-<my-card>
-  <h2>Hello world!</h2>
-</my-card>
-```
-
-```js story
-export const JsStory = () => html`
-<demo-wc-card>JS Story</demo-wc-card>
-`;
-```
-~~~
-
-::header::
-# Advanced Documentation: <br> MDX / Markdown JavaScript
-
-<style>
-  .slidev-layout h1 { @apply leading-10 }
-  .slidev-layout pre code { @apply !text-sm; }
-</style>
-
----
-layout: media
-variant: left
-url: ./img/playground.gif
-links:
-  - https://github.com/divriots/dockit-react
----
-
-# Coding Your Doc
-
-- `<Playground />`
-- `<PropsTable />`
-- Utils: Descriptions, extracts, _etc._
-
-```mdx
-import { Button } from '../index';
-
-# Button
-
-<Description of={Button} />
-
-## Example
-
-<Playground scope={{ Button }} code={`
-<Button variant="primary" mr="2">Primary</Button>
-<Button disabled>Disabled</Button>
-`}
-/>
-
-## Props
-
-<Props of={Button} />
-```
-
-<style>
-  .slidev-layout pre code { @apply !text-xs; }
-</style>
-
----
-layout: media
-variant: left
-overlay: true
-url: <Gif id="l0MYGb1LuZ3n7dRnO" />
----
-
-# 4. **Test** 'em Hard
-
-<style>
-  .slidev-layout h1 { @apply text-5xl leading-18 }
-</style>
-
----
-
-# **Unit Test** Your Components
-
-```js
-import React, { Component } from 'react';
-import { configure, render, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import Snippet from './index';
-
-configure({ adapter: new Adapter() })
-
-it("has a default rendering", () => {
-  const data = {
-    title: 'This is my H1 title',
-    content: 'Here is somme ipsum to test as content.',
-    buttonText: 'Click me!'
-  }
-
-  const component = shallow( <Snippet { ...data } /> );
-  expect(component.find('h1').text()).equal(data.title);
-  expect(component.find('p').text()).equal(data.content);
-  expect(component.find('button').text()).equal(data.buttonText);
-});
-```
-
-<style>
-  .slidev-layout pre code { @apply !text-sm; }
-</style>
-
----
-layout: media
-variant: left
-url: https://source.unsplash.com/-3wygakaeQc/1920x1080
-links:
-  - https://youtu.be/r54J4tF7xMI | Coding Design Systems - Testing your Design Systems Components, with Gil Tayar
----
-
-# Test Extensively
-
-- Default values
-- Props
-- Slots
-- Regular testing frameworks: Mochai, Chai, Karma, Jest, Enzyme...
+# **2.** Playing
 
 ---
 layout: section
-background: https://source.unsplash.com/Kj2SaNHG-hg/1920x1080
+background: https://source.unsplash.com/4icpQA-5eJY/1920x1080
 ---
 
-# Future-Proof Architecture
+# Web Components Wrapping
+
+---
+
+# Let's mimic it as a ==component API==
+
+<ul class="tiles">
+  <v-clicks>
+    <li><ic:round-vpn-key class="inline" /> Prop: Token</li>
+    <li><ph:coins class="inline" /> State: Counter/Progress</li>
+    <li><ph:clock-counter-clockwise-bold class="inline" /> Events Lifecycle</li>
+  </v-clicks>
+</ul>
+
+<style>
+  .tiles {
+    @apply grid grid-cols-3 gap-8;
+    @apply my-10;
+
+    li {
+      @apply list-none m-0 text-center;
+      @apply flex flex-col items-center;
+      @apply max-w-2/3 mx-auto;
+
+      &.slidev-vclick-target {
+        transition-property: transform, opacity;
+        transform: translateZ(0) scale(0); opacity: 0;
+      }
+      &.slidev-vclick-prior,
+      &.slidev-vclick-current {
+        transform: translateZ(0) scale(1); opacity: 1;
+      }
+    }
+
+    .slidev-icon {
+      @apply w-20 h-auto;
+      @apply mb-4;
+    }
+  }
+</style>
 
 ---
 layout: media
-variant: left
-overlay: true
-url: <Gif id="R9zXHWAHyTjnq" />
+url: ./img/all-the-ways.png
+links:
+  - https://webcomponents.dev/blog/all-the-ways-to-make-a-web-component/
 ---
 
-# 5. Themes and **Variants**
+# Which ==Framework==...
 
-<style>
-  .slidev-layout h1 { @apply text-5xl leading-18 }
-</style>
+---
+
+#  ... and Why Stencil?
+
+```tsx
+/* @jsx h */
+import { h, Component } from "@stencil/core";
+
+@Component({
+  tag: "av-uploader",
+  styleUrl: "index.css",
+  shadow: true,
+})
+export class ApivideoUploader {
+
+}
+```
+
+---
+
+# Properties
+
+
+```tsx {all|5-7|9-12|15}
+import { Prop, State } from "@stencil/core";
+
+...
+export class ApivideoUploader {
+  @Prop() token: string = 'to1R5LOYV0091XN3GQva27OS';
+  @Prop() chunkSize: number = 10;
+  @Prop() sandbox: boolean = false;
+
+  @State() counter: number = 0;
+  @State() chunkProgress: number;
+  @State() totalProgress: number;
+  @State() status: string = STATES.WAIT;
+
+  connectedCallback() {
+    this.url = `https://${this.sandbox? 'sandbox' : 'ws'}.api.video/upload?token=${this.token}`;
+    this.limit = this.chunkSize * 1000000; // chunkSize in MB
+  }
+}
+```
+
+---
+
+# Upload
+
+```tsx {all|10-12|3-7|6}
+export class ApivideoUploader {
+  ...
+  upload(event:any) {
+    this.file: VideoFile = { ... }
+    this.chunks = Math.ceil(this.size / this.limit);
+    this.createChunk(0);
+  }
+  render() {
+    return (<Host>
+      {this.status == STATES.WAIT &&
+        <input type="file" onChange={(event) => this.upload(event)} />
+      }
+      {this.status == STATES.PROGRESS &&
+        ...
+      }
+    </Host>);
+  }
+}
+```
+
+---
+
+# Internals
+
+```tsx {4-9|8|11-15|12}
+export class ApivideoUploader {
+  ...
+
+  createChunk(start:number, id?:string) {
+    this.status = STATES.PROGRESS;
+    this.counter++;
+    ...
+    this.uploadChunk(form, start, end);
+  }
+
+  uploadChunk(form:any, start:number, end:number) {
+    this.req = new XMLHttpRequest();
+    ...
+    this.req.send(form);
+  }
+}
+```
+
+---
+
+# Lifecycle
+
+```tsx
+import { Event, EventEmitter } from '@stencil/core';
+
+...
+export class ApivideoUploader {
+
+  @Event({
+    cancelable: true
+  }) uploadStarted: EventEmitter<VideoFile>;
+
+  @Event({
+    cancelable: true
+  }) uploadInProgress: EventEmitter<VideoFile>;
+
+  @Event() uploadCancelled: EventEmitter<VideoFile>;
+
+  @Event() uploadCompleted: EventEmitter<VideoFile>;
+}
+```
+
+---
+
+# Events
+
+```tsx {14-17|5|7|9,11}
+export class ApivideoUploader {
+  ...
+  uploadChunk(form:any, start:number, end:number) {
+    ...
+    this.req.onload = (event) => {
+      start += this.limit;
+      if (start < this.file.size)
+        this.createChunk(start);
+        this.uploadInProgress.emit(this.file)
+      else
+        this.uploadCompleted.emit(this.file)
+  }
+
+  upload(event: any) {
+    ...
+    this.uploadStarted.emit(this.file)
+  }
+}
+```
 
 ---
 links:
-  - https://codepen.io/argyleink/pen/XWaYyWe
+  - https://studio.webcomponents.dev/edit/XIxGWDrNYzZCqFGZkzEr/
 ---
 
-```css
-:where(html) {
-  /* light */
-  --brand-light: var(--orange-6);
-
-  --text1-light: var(--gray-8);
-  --text2-light: var(--gray-7);
-
-  --surface1-light: var(--gray-2);
-  --surface2-light: var(--gray-0);
-  --surface3-light: var(--gray-1);
-  --surface4-light: var(--gray-3);
-
-  /* grape */
-  --brand-grape: var(--grape-5);
-  --text1-grape: var(--grape-9);
-  --text2-grape: var(--grape-7);
-  --surface1-grape: var(--grape-0);
-  --surface2-grape: var(--grape-1);
-  --surface3-grape: var(--grape-2);
-  --surface4-grape: var(--grape-3);
-  --surface-shadow-grape: 288 30% 20%;
-  --shadow-strength-grape: .02;
-}
-```
-
-::col2::
-```css
-:root {
-  --brand: var(--brand-light);
-
-  --text1: var(--text1-light);
-  --text2: var(--text2-light);
-
-  --surface1: var(--surface1-light);
-  --surface2: var(--surface2-light);
-  --surface3: var(--surface3-light);
-  --surface4: var(--surface4-light);
-}
-```
-
-```css
-[color-scheme="grape"] {
-  --brand: var(--brand-grape);
-
-  --text1: var(--text1-grape);
-  --text2: var(--text2-grape);
-
-  --surface1: var(--surface1-grape);
-  --surface2: var(--surface2-grape);
-  --surface3: var(--surface3-grape);
-  --surface4: var(--surface4-grape);
-}
-```
-
-::header::
-# Extends the defaults
+<iframe
+  src="https://studio.webcomponents.dev/edit/XIxGWDrNYzZCqFGZkzEr/src/index.tsx?embed=1&sv=1&pm=1"
+  title="apivideo-uploader"
+  style="border:0; border-radius: 4px; overflow:hidden;"
+  sandbox="allow-scripts allow-same-origin allow-popups">
+</iframe>
 
 <style>
-  .slidev-layout pre code { @apply !text-xs; }
-</style>
-
----
-layout: media
-variant: right
-url: https://source.unsplash.com/d30sszrW7Vw/1920x1080
----
-
-# Variants Queries
-
-```css
-@media (--OSdark) {
-  :where(html) {
-    color-scheme: dark;
-
-    --brand: var(--pink-4);
-
-    --link: var(--indigo-3);
-    --link-visited: var(--grape-3);
-
-    --text-1: var(--gray-1);
-    --text-2: var(--gray-2);
-
-    --surface-1: var(--gray-9);
-    --surface-2: var(--gray-8);
-    --surface-3: var(--gray-7);
-    --surface-4: var(--gray-6);
+  iframe {
+    width: 100%;
+    height: 500px;
   }
-}
-```
-
-<style>
-  .slidev-layout pre code { @apply !text-sm; }
 </style>
 
 ---
 layout: media
-variant: full
-url: ./img/livedoc.gif
----
-
----
-layout: media
+url: <Gif id="l2Je04QBGjaVCuVs4">
 variant: left
 overlay: true
-url: <Gif id="OqprHEhrBpmdq" />
+class: text-2xl leading-18
 ---
 
-# 6. Advanced **Composition**
-
-<style>
-  .slidev-layout h1 { @apply text-5xl leading-18 }
-</style>
-
----
-
-# Organisms
-
-```jsx
-<Transition show={isOpen} as={Fragment}>
-  <HDialog as="div" className="fixed inset-0 z-top overflow-y-auto">
-    <div className="min-h-screen px-4 text-center">
-      <HDialog.Overlay className="fixed inset-0 bg-light-blue-900 opacity-see-through" />
-      <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left
-                      align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-        <HDialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
-          {title}
-        </HDialog.Title>
-        <div className="mt-2">
-          <p className="text-sm text-gray-500">{details}</p>
-        </div>
-        <div className="mt-4">
-          <button onClick={closeModal} className="inline-flex justify-center px-4 py-2 text-sm font-medium
-                                                  text-blue-900 bg-blue-100 border border-transparent rounded-md
-                                                  hover:bg-blue-200 focus:outline-none focus-visible:ring-2
-                                                  focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-          >{closeLabel}</button>
-        </div>
-      </div>
-    </div>
-  </HDialog>
-</Transition>
-```
-
-<style>
-  .slidev-layout pre code { @apply !text-xs; }
-</style>
-
----
-
-```jsx
-<button
-  type="button"
-  className="inline-flex justify-center px-4 py-2
-             text-sm font-medium
-             text-blue-900 bg-blue-100
-             border border-transparent rounded-md
-             hover:bg-blue-200
-             focus:outline-none focus-visible:ring-2
-             focus-visible:ring-offset-2
-             focus-visible:ring-blue-500"
-  onClick={closeModal}
->
-  {closeLabel}
-</button>
-```
-
-```jsx
-<button
-  type="button"
-  className="btn btn__modal btn__modal--close"
-  onClick={closeModal}
->
-  {closeLabel}
-</button>
-```
-
-::col2::
-```scss
-@layer base {
-  .btn {
-    @apply inline-flex justify-center px-4 py-2;
-    @apply text-sm font-medium;
-  }
-}
-
-@layer components {
-  .btn__modal { @apply border border-transparent rounded-md; }
-  .btn__modal--close { @apply text-blue-900 bg-blue-100; }
-}
-
-@layer utilities {
-  @variants hover {
-    .btn__modal--close { @apply bg-blue-200; }
-  }
-  @variants focus {
-    .btn { @apply outline-none; }
-  }
-  @variants focus-visible {
-    .btn { @apply ring-2 ring-offset-2; }
-    .btn__modal--close { @apply ring-blue-500; }
-  }
-}
-```
-
-::header::
-# Composition Tokens
-
-<style>
-  .slidev-layout pre code { @apply !text-xs; }
-</style>
+# Create a **reactive** environment
 
 ---
 layout: media
 variant: right
 ratio: 2/3
-url: <Gif id="2csuIJj6TmuKA" />
+url: https://source.unsplash.com/w423NnHFjFg/1920x1080
 ---
 
-# **Cascading** the Tokens
+# E.g. ==Hooks==
 
-- ⏬ Design Tokens <br> `colors.red.100` <br> `colors.red.500`
-- ⏬ Application Tokens <br> `app.colors.primary ← colors.red.500` <br> `app.colors.primary.light ← colors.red.100`
-- ⏬ Component Tokens <br> `button.colors.surface ← app.colors.primary`
-- ⏬ Component Variants Tokens <br> `button.colors.surface.highlight ← app.colors.primary.light`
+<v-clicks>
 
-<style>
-  h1 { @apply text-7xl leading-22; }
-</style>
+1. Emits Events
+2. Hooks: <br>
+   ```tsx
+   document
+     .querySelector('av-uploader')
+     .addEventListener('uploadCompleted', upCompleteHandler)
+   ```
+3. Update your State Machine: <br>
+   ```tsx
+   ...
+   const [isUploaded, setIsUploaded] = useState(false)
+
+   const upCompleteHandler = (VideoFile: file) => {
+      setIsUploaded = file.isUploaded
+   }
+   ```
+
+</v-clicks>
+
+<!-- time: 18' -->
+
+---
+
+# Before
+
+```html
+<script src="https://unpkg.com/@api.video/video-uploader" defer></script>
+<form><input type="file" id="input" onchange="uploadFile(this.files)"></form>
+<script type="text/javascript">
+    function uploadFile(files) {
+      const uploader = new VideoUploader({
+        file: files[0],
+        uploadToken: "YOUR_DELEGATED_TOKEN",
+        chunkSize: 1024*1024*10, // 10MB
+      });
+      uploader.upload()
+        .then((video) => console.log(video))
+        .catch((error) => console.log(error.status, error.message));
+      uploader.onProgress((event) => {
+        console.log(`uploaded bytes: ${event.uploadedBytes}.`);
+        console.log(`total size: ${event.totalBytes}.`);
+      });
+    }
+</script>
+```
 
 ---
 layout: media
 variant: left
+url: ./img/upload.gif
 overlay: true
-url: <Gif id="GdJz3mScUhC5W" />
+links:
+  - https://dribbble.com/shots/3520651-File-upload-icon-animation-Daily-UI-031
 ---
 
-# 7. **Release** and Share
+# After
 
-<style>
-  .slidev-layout h1 { @apply text-5xl leading-18 }
-</style>
+```html
+<av-uploader
+  token="YOUR_DELEGATED_TOKEN"
+/>
+```
 
 ---
 
-# **Share** Your Design System
+# **Control** the API with attributes
 
-- <mdi-recycle-variant /> Library Mode
-- <mdi-package-variant /> Packages export
-- <clarity-blocks-group-line /> Mono-repo architecture
-- <ph-target/> Multiple target
+```tsx {all|5,7,8|10}
+import { Prop, Watch } from '@stencil/core';
+
+...
+export class ApivideoUploader {
+  @Prop() cancelled: boolean;
+
+  @Watch('cancelled')
+  watchCancelledPropHandler(new: boolean, old: boolean) {
+    this.req.abort()
+    this.uploadCancelled.emit(this.file)
+  }
+}
+```
+
+```html {none|1}
+<av-uploader token="YOUR_DELEGATED_TOKEN" cancelled />
+```
+
+---
+class: text-3xl leading-22
+links:
+  - https://backlight.dev/sessions/coding-design-systems-the-clever-cloud-web-components-collection-with-hubert-sablonniere
+---
+
+# Components ==as a Service==
+
+<ul class="tiles">
+  <v-clicks>
+    <li><mdi:package-variant-closed class="inline" /> Packages Registry</li>
+    <li><mdi:server-network class="inline" /> CDN</li>
+  </v-clicks>
+</ul>
 
 <style>
-  ul {
-    @apply grid grid-cols-4 gap-8;
+  .tiles {
+    @apply grid grid-cols-2 gap-8;
     @apply my-10;
 
     li {
@@ -872,55 +694,86 @@ url: <Gif id="GdJz3mScUhC5W" />
 
 ---
 layout: media
-variant: full
-url: ./img/release.gif
+url: <Gif id="OI8TsOa9KFAPu">
+variant: left
+class: text-4xl leading-24
 ---
+
+# What about **my** Design System!?
+
+---
+
+```css {all|2-6}
+:host {
+  --c-bg: var(--background-color, #222);
+  --c-fg: var(--color, #e3e3e3);
+  --c-bd: var(--border-color, var(--c-fg));
+  --ff: var(--font-family, sans-serif);
+  --fs: var(--font-size, 1rem);
+}
+.info {
+  font-family: var(--fs) var(--ff);
+}
+.upload-btn {
+  background: var(--c-bg);
+  color: var(--c-fg)
+}
+.upload-bar {
+  border: 0.25rem solid var(--c-bd);
+}
+```
+
+::header::
+# Customization
+
+::col2::
+```tsx {all|4-5}
+<>
+  <av-uploader
+    style="
+      --background-color: orange;
+      --color: #222
+    "
+    token="..."
+  />
+</>
+```
 
 ---
 layout: media
-variant: right
-url: https://source.unsplash.com/TxP44VIqlA8/1920x1080
+variant: left
+url: https://source.unsplash.com/KOUvMTHK64I/640x969
+overlay: true
+class: text-2xl leading-18
 ---
 
-# Be Ready for **Hydration**
+# Your Web **Component** <span v-click>is an ==abstraction layer==</span >
 
-- Templates (and Pages)
-- Organisms w/ slots
-- E.g.: Cards, Carousels, FAQ entries, etc...
+<!--
+changes in the api doesn't have to be reflected in the WC
+-->
+
+---
+class: text-4xl
+---
+
+# <mark v-click>SDKs</mark> <span v-click>or ==Web Components==</span>?
+
+<!-- time: 23' -->
 
 ---
 class: text-4xl leading-24
 ---
 
-# It's way **more** than ==just== a **components library**
+# For the frontend: <br> <mark v-click>Web Components</mark>
+<p v-click>(+ fallback for edge-cases)</p>
 
 ---
 class: text-4xl leading-24
 ---
 
-# Designers have ==High-Level Tools==, **Developers Need** the same
 
----
-layout: media
-variant: right
-url: <Gif id="32dfpYx8kBX1bXSEu8" />
----
-
-# **Shift left** to your Design Sytems
-
-<style>
-  .slidev-layout h1 { @apply text-5xl leading-18; }
-</style>
-
----
-layout: quote
----
-
-> Developers are users just like **you**.
-
----
-layout: qa
----
+# For the backend: SDKs
 
 ---
 layout: thanks

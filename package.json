@@ -24,7 +24,7 @@
   },
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build --base /t/steal-this-guide/ slides.md",
+    "build": "slidev build --base /t/sdk-vs-wc/ slides.md",
     "export": "slidev export slides.md",
     "screenshot": "slidev export slides.md --format png"
   },
