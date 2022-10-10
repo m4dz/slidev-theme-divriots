@@ -24,9 +24,11 @@ themeConfig:
     - name: JavaScript Global Summit'22
       datetime: 2022-09-28T11:30:00+02:00
       permalink: https://geekle.us/schedule/js
-    - name: Techorama.nl 2022
-      datetime: 2022-10-11T15:00:00+02:00
-      permalink: https://www.techorama.nl/agenda/session/sdks-vs-web-components-place-your-bets/
+    - name: Techorama NL
+      datetime: 2022-10-11T12:45:00+02:00
+      permalink: https://techorama-netherlands-2022.sessionize.com/session/332450
+      logo: ./img/techorama.svg
+
 ---
 
 <p class="tagline">Place Your Bets!</p>
@@ -215,6 +217,35 @@ class: text-2xl leading-18
     }
   }
 </style>
+
+---
+layout: media
+url: ./img/ua-shadow-dom.png
+---
+
+# Shadow DOM: Fragments 101
+
+---
+layout: media
+url: <Gif id="cYmGBt2TBiOCA" />
+variant: left
+class: text-2xl leading-16
+links:
+  - https://www.solidjs.com/guides/reactivity
+---
+
+# Props ==Reactivity==
+
+- Attributes:
+  ```html
+  <div class="foo"></div>
+  ```
+- Properties:
+  ```js
+  $myDiv.className = 'foo'
+  $myDiv.classList.add('foo')
+  ```
+- ==No internal== logic
 
 ---
 layout: section
@@ -525,23 +556,12 @@ export class ApivideoUploader {
 ```
 
 ---
+layout: media
+url: ./img/studio-webcomponents.png
+variant: full
 links:
   - https://studio.webcomponents.dev/edit/XIxGWDrNYzZCqFGZkzEr/
 ---
-
-<iframe
-  src="https://studio.webcomponents.dev/edit/XIxGWDrNYzZCqFGZkzEr/src/index.tsx?embed=1&sv=1&pm=1"
-  title="apivideo-uploader"
-  style="border:0; border-radius: 4px; overflow:hidden;"
-  sandbox="allow-scripts allow-same-origin allow-popups">
-</iframe>
-
-<style>
-  iframe {
-    width: 100%;
-    height: 500px;
-  }
-</style>
 
 ---
 layout: media
@@ -693,6 +713,82 @@ links:
 </style>
 
 ---
+links:
+  - https://www.clever-cloud.com/doc/clever-components/?path=/story/%F0%9F%93%8C-docs-how-to-load-components-via-our-smart-cdn--page
+---
+
+# Distributing Components from **the Edge**
+
+```html {all|2}
+<link rel="stylesheet" href="https://components.my-service.org/styles.css
+  ?version=9.0.0
+">
+```
+
+```html {all|2|3-4}
+<script type="module" src="https://components.my-service.org/load.js
+  ?version=9.0.0
+  &lang=fr
+  &components=cc-toggle,cc-tile-requests
+"></script>
+```
+
+---
+class: text-sm
+links:
+  - https://custom-elements-manifest.open-wc.org/analyzer/getting-started/
+---
+
+```json
+{
+  "schemaVersion": "1.0.0",
+  "modules": [{
+    "kind": "javascript-module",
+    "path": "package/av-uploader.js",
+    "declarations": [{
+      "kind": "class",
+      "description": "",
+      "name": "ApivideoUploader",
+                                         →
+    },
+    "exports": [{
+      ...
+    }]]
+  }, { ... }]
+}
+```
+
+::header::
+# Improve the ==#DX==: **custom elements manifest**
+
+::col2::
+```json
+{
+  "members": [{
+    "kind": "field",
+    "name": "cancelled"
+  }, { ... }],
+  "events": [{
+    "name": "uploadStarted",
+    "type": { "text": "Event" }
+  }, { ... }],
+  "attributes": [{
+    "name": "token"
+  }, { ... }],
+  "superclass": {
+    "name": "HTMLElement"
+  },
+  "tagName": "av-upload"
+}
+```
+
+<style>
+  pre {
+    @apply text-xs
+  }
+</style>
+
+---
 layout: media
 url: <Gif id="OI8TsOa9KFAPu">
 variant: left
@@ -769,11 +865,48 @@ class: text-4xl leading-24
 <p v-click>(+ fallback for edge-cases)</p>
 
 ---
+class: leading-12
+links:
+  - https://web.dev/declarative-shadow-dom/
+---
+
+- Placeholders
+- Server-side rendered
+- Default states
+
+::header::
+# ==SSR==: <br> Declarative Shadow Root
+
+::col2::
+```html
+<host-element>
+  <template shadowroot="open">
+    <slot></slot>
+  </template>
+  <h2>Light content</h2>
+</host-element>
+```
+
+---
+layout: media
+url: ./img/islands-architecture.png
+variant: left
+overlay: true
+links:
+ - https://jasonformat.com/islands-architecture/
+---
+
+# **Islands** Pattern
+
+---
 class: text-4xl leading-24
 ---
 
-
 # For the backend: SDKs
+
+---
+layout: qa
+---
 
 ---
 layout: thanks
