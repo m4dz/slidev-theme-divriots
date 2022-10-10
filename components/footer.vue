@@ -6,10 +6,10 @@ import QrcodeVue from "qrcode.vue";
 
 const props =
   defineProps<{
-    noSlideno: boolean;
+    noSlideno?: boolean;
     links?: Array<string>
-    noAvatar: boolean;
-    isCover: boolean;
+    noAvatar?: boolean;
+    isCover?: boolean;
   }>();
 
 const { permalink, twitter } = configs.themeConfig;
