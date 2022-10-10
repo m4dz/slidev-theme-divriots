@@ -22,11 +22,15 @@
       }
     }
   },
+  "config": {
+    "slug": "sdk-vs-wc"
+  },
   "scripts": {
     "dev": "slidev slides.md",
-    "build": "slidev build --base /t/sdk-vs-wc/ slides.md",
+    "build": "slidev build --base /t/$npm_package_config_slug/ slides.md",
     "export": "slidev export slides.md",
-    "screenshot": "slidev export slides.md --format png"
+    "screenshot": "slidev export slides.md --format png",
+    "deploy": "rsync --progress --recursive --delete --compress dist/ lab.alwaysdata.net:~/net.m4dz/talks-ng/$npm_package_config_slug/"
   },
   "dependencies": {
     "@nuxt/kit": "npm:@nuxt/kit-edge@3.0.0-rc.12-27755545.c905a23",
